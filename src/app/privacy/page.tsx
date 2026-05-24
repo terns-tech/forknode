@@ -35,7 +35,7 @@ export default function PrivacyPage() {
             },
             {
               heading: "5. Data sharing",
-              body: "We use Supabase (data storage) and Appwrite (authentication) as sub-processors. We do not share personal data with challenge partners or sponsors without your explicit consent. Aggregate, anonymised statistics may be shared publicly.",
+              body: "We use Appwrite (authentication and data storage) as a sub-processor. We do not share personal data with challenge partners or sponsors without your explicit consent. Aggregate, anonymised statistics may be shared publicly.",
             },
             {
               heading: "6. Retention",

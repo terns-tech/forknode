@@ -88,7 +88,7 @@ export default function LoginPage() {
 
           <p className="text-center text-xs text-slate-gray mt-6">
             {t.login.noAccount}{" "}
-            <a href="mailto:hello@bridgr.io" className="text-link-blue hover:opacity-80 transition-colors">
+            <a href="mailto:hello@terns.tech" className="text-link-blue hover:opacity-80 transition-colors">
               {t.login.contact}
             </a>
           </p>

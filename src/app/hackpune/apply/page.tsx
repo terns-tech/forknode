@@ -128,10 +128,29 @@ function SuccessState({ message }: { message: string }) {
   );
 }
 
+async function submitApplication(payload: {
+  type: Tab;
+  email: string;
+  fullName: string;
+  data: Record<string, unknown>;
+}) {
+  const res = await fetch("/api/applications", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...payload, eventSlug: "hackpune" }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.error ?? "Submission failed");
+  }
+}
+
 export default function ApplyPage() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<Tab>("participant");
   const [submitted, setSubmitted] = useState<Tab | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   // Participant form state
   const [pForm, setPForm] = useState({
@@ -173,10 +192,21 @@ export default function ApplyPage() {
     message: "",
   });
 
-  const handleSubmit = (tab: Tab) => (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(tab);
-  };
+  const handleSubmit =
+    (tab: Tab, email: string, fullName: string, data: Record<string, unknown>) =>
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      setSubmitting(true);
+      setSubmitError("");
+      try {
+        await submitApplication({ type: tab, email, fullName, data });
+        setSubmitted(tab);
+      } catch {
+        setSubmitError("Could not submit your application. Please try again or email hello@terns.tech.");
+      } finally {
+        setSubmitting(false);
+      }
+    };
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "participant", label: t.apply.tabs.participant },
@@ -201,6 +231,12 @@ export default function ApplyPage() {
       {/* Form */}
       <section className="py-16 lg:py-24 bg-lifted">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
+          {submitError && (
+            <div className="mb-6 p-4 border border-border rounded-lg bg-surface text-sm text-ink">
+              {submitError}
+            </div>
+          )}
+
           {/* Tabs */}
           <div
             id="participant"
@@ -231,7 +267,17 @@ export default function ApplyPage() {
             submitted === "participant" ? (
               <SuccessState message={t.apply.participant.success} />
             ) : (
-              <form onSubmit={handleSubmit("participant")} className="flex flex-col gap-5">
+              <form
+                onSubmit={handleSubmit("participant", pForm.email, pForm.fullName, {
+                  github: pForm.github,
+                  linkedin: pForm.linkedin,
+                  skills: pForm.skills,
+                  motivation: pForm.motivation,
+                  teamStatus: pForm.teamStatus,
+                  travelNote: pForm.travelNote,
+                })}
+                className="flex flex-col gap-5"
+              >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.participant.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <InputField label={t.apply.participant.fields.fullName} id="p-name" value={pForm.fullName} onChange={(v) => setPForm({ ...pForm, fullName: v })} required />
@@ -265,8 +311,8 @@ export default function ApplyPage() {
                   </div>
                 </div>
                 <TextareaField label={t.apply.participant.fields.travelNote} id="p-travel" value={pForm.travelNote} onChange={(v) => setPForm({ ...pForm, travelNote: v })} rows={2} />
-                <Button type="submit" variant="primary" size="lg" className="mt-2">
-                  {t.apply.participant.submit}
+                <Button type="submit" variant="primary" size="lg" className="mt-2" disabled={submitting}>
+                  {submitting ? "Submitting…" : t.apply.participant.submit}
                 </Button>
               </form>
             )
@@ -277,7 +323,14 @@ export default function ApplyPage() {
             submitted === "volunteer" ? (
               <SuccessState message={t.apply.volunteer.success} />
             ) : (
-              <form onSubmit={handleSubmit("volunteer")} className="flex flex-col gap-5">
+              <form
+                onSubmit={handleSubmit("volunteer", vForm.email, vForm.fullName, {
+                  availability: vForm.availability,
+                  role: vForm.role,
+                  experience: vForm.experience,
+                })}
+                className="flex flex-col gap-5"
+              >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.volunteer.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <InputField label={t.apply.volunteer.fields.fullName} id="v-name" value={vForm.fullName} onChange={(v) => setVForm({ ...vForm, fullName: v })} required />
@@ -286,8 +339,8 @@ export default function ApplyPage() {
                 <InputField label={t.apply.volunteer.fields.availability} id="v-avail" value={vForm.availability} onChange={(v) => setVForm({ ...vForm, availability: v })} required />
                 <InputField label={t.apply.volunteer.fields.role} id="v-role" placeholder={t.apply.volunteer.fields.rolePlaceholder} value={vForm.role} onChange={(v) => setVForm({ ...vForm, role: v })} />
                 <TextareaField label={t.apply.volunteer.fields.experience} id="v-exp" value={vForm.experience} onChange={(v) => setVForm({ ...vForm, experience: v })} rows={4} />
-                <Button type="submit" variant="primary" size="lg" className="mt-2">
-                  {t.apply.volunteer.submit}
+                <Button type="submit" variant="primary" size="lg" className="mt-2" disabled={submitting}>
+                  {submitting ? "Submitting…" : t.apply.volunteer.submit}
                 </Button>
               </form>
             )
@@ -298,7 +351,16 @@ export default function ApplyPage() {
             submitted === "speaker" ? (
               <SuccessState message={t.apply.speaker.success} />
             ) : (
-              <form id="speaker" onSubmit={handleSubmit("speaker")} className="flex flex-col gap-5">
+              <form
+                id="speaker"
+                onSubmit={handleSubmit("speaker", sForm.email, sForm.fullName, {
+                  bio: sForm.bio,
+                  topic: sForm.topic,
+                  availability: sForm.availability,
+                  linkedin: sForm.linkedin,
+                })}
+                className="flex flex-col gap-5"
+              >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.speaker.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <InputField label={t.apply.speaker.fields.fullName} id="s-name" value={sForm.fullName} onChange={(v) => setSForm({ ...sForm, fullName: v })} required />
@@ -308,8 +370,8 @@ export default function ApplyPage() {
                 <InputField label={t.apply.speaker.fields.topic} id="s-topic" value={sForm.topic} onChange={(v) => setSForm({ ...sForm, topic: v })} required />
                 <InputField label={t.apply.speaker.fields.availability} id="s-avail" value={sForm.availability} onChange={(v) => setSForm({ ...sForm, availability: v })} />
                 <InputField label={t.apply.speaker.fields.linkedin} id="s-linkedin" value={sForm.linkedin} onChange={(v) => setSForm({ ...sForm, linkedin: v })} />
-                <Button type="submit" variant="primary" size="lg" className="mt-2">
-                  {t.apply.speaker.submit}
+                <Button type="submit" variant="primary" size="lg" className="mt-2" disabled={submitting}>
+                  {submitting ? "Submitting…" : t.apply.speaker.submit}
                 </Button>
               </form>
             )
@@ -320,7 +382,15 @@ export default function ApplyPage() {
             submitted === "sponsor" ? (
               <SuccessState message={t.apply.sponsor.success} />
             ) : (
-              <form id="sponsor" onSubmit={handleSubmit("sponsor")} className="flex flex-col gap-5">
+              <form
+                id="sponsor"
+                onSubmit={handleSubmit("sponsor", spForm.email, spForm.name, {
+                  company: spForm.company,
+                  intent: spForm.intent,
+                  message: spForm.message,
+                })}
+                className="flex flex-col gap-5"
+              >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.sponsor.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <InputField label={t.apply.sponsor.fields.company} id="sp-co" value={spForm.company} onChange={(v) => setSpForm({ ...spForm, company: v })} required />
@@ -329,8 +399,8 @@ export default function ApplyPage() {
                 <InputField label={t.apply.sponsor.fields.email} id="sp-email" type="email" value={spForm.email} onChange={(v) => setSpForm({ ...spForm, email: v })} required />
                 <SelectField label={t.apply.sponsor.fields.intent} id="sp-intent" options={[...t.apply.sponsor.fields.intentOptions]} value={spForm.intent} onChange={(v) => setSpForm({ ...spForm, intent: v })} required />
                 <TextareaField label={t.apply.sponsor.fields.message} id="sp-msg" value={spForm.message} onChange={(v) => setSpForm({ ...spForm, message: v })} rows={5} />
-                <Button type="submit" variant="primary" size="lg" className="mt-2">
-                  {t.apply.sponsor.submit}
+                <Button type="submit" variant="primary" size="lg" className="mt-2" disabled={submitting}>
+                  {submitting ? "Submitting…" : t.apply.sponsor.submit}
                 </Button>
               </form>
             )

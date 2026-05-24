@@ -64,12 +64,33 @@ export default function AdminPage() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<AdminTab>("overview");
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [authChecked, setAuthChecked] = useState(false);
+
+  useEffect(() => {
+    import("@/lib/appwrite").then(({ getCurrentUser }) => {
+      getCurrentUser().then((user) => {
+        if (!user) {
+          window.location.href = "/login";
+          return;
+        }
+        setAuthChecked(true);
+      });
+    });
+  }, []);
 
   const handleSignOut = async () => {
     const { signOut } = await import("@/lib/appwrite");
     await signOut();
     window.location.href = "/login";
   };
+
+  if (!authChecked) {
+    return (
+      <div className="min-h-screen bg-canvas flex items-center justify-center text-slate-gray text-sm">
+        Checking session…
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-canvas flex">
@@ -285,7 +306,7 @@ export default function AdminPage() {
               <h1 className="text-2xl font-semibold text-ink mb-6">Notion Sync</h1>
               <div className="max-w-xl bg-white border border-border rounded-pill p-7">
                 <p className="text-body text-slate-gray font-[450] mb-6">
-                  Connect a Notion database to power the Updates/Announcements section. The site caches results in Supabase — Notion outages won&apos;t take the site down.
+                  Connect a Notion database to power the Updates/Announcements section. Results can be cached in Appwrite — Notion outages won&apos;t take the site down.
                 </p>
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-1.5">
@@ -327,7 +348,7 @@ export default function AdminPage() {
                   {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} management coming in the next build.
                 </p>
                 <p className="text-xs text-dust-taupe mt-2">
-                  Connect Supabase to enable full CRUD operations.
+                  Configure Appwrite collections to enable full CRUD operations (see docs/APPWRITE_SETUP.md).
                 </p>
               </div>
             </div>
