@@ -37,7 +37,7 @@ export default function LoginPage() {
         </div>
 
         {/* Card */}
-        <div className="bg-white border border-border rounded-pill p-8 shadow-elevated">
+        <div className="content-card shadow-elevated w-full">
           <h1 className="text-2xl font-semibold text-ink mb-6 text-center">{t.login.title}</h1>
 
           {error && (

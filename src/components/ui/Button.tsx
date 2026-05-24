@@ -23,9 +23,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const sizes = {
-      sm: "px-5 py-2 text-[14px]",
-      md: "px-6 py-1.5 text-[16px] tracking-[-0.32px]",
-      lg: "px-7 py-2 text-[16px] tracking-[-0.32px]",
+    sm: "px-5 py-2.5 text-[14px] min-h-[44px]",
+    md: "px-6 py-2.5 text-[16px] tracking-[-0.32px] min-h-[44px]",
+    lg: "px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px]",
     };
 
     return (
@@ -59,15 +59,15 @@ export function LinkButton({
 
   const variants = {
     primary: "bg-ink text-canvas border border-ink hover:translate-y-[1px]",
-    secondary: "bg-white text-ink border-[1.5px] border-ink hover:translate-y-[1px]",
+    secondary: "bg-surface text-ink border-[1.5px] border-ink hover:translate-y-[1px]",
     ghost: "bg-transparent text-ink border border-transparent hover:underline",
     accent: "bg-ink text-canvas rounded-[24px] px-7 py-1.5 text-[13px] font-normal tracking-[0.13px]",
   };
 
   const sizes = {
-    sm: "px-5 py-2 text-[14px]",
-    md: "px-6 py-1.5 text-[16px] tracking-[-0.32px]",
-    lg: "px-7 py-2 text-[16px] tracking-[-0.32px]",
+    sm: "px-5 py-2.5 text-[14px] min-h-[44px]",
+    md: "px-6 py-2.5 text-[16px] tracking-[-0.32px] min-h-[44px]",
+    lg: "px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px]",
   };
 
   return (

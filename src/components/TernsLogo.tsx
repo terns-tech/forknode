@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const SIZE_MAP = { sm: 64, md: 72, lg: 80 } as const;
+const SIZE_MAP = { xs: 44, sm: 56, md: 72, lg: 80 } as const;
 
 export const TERN_ICON = {
-  light: "/icon-light.png",
-  dark: "/icon2.png",
+  white: "/icon-white.png",
+  black: "/icon-black.png",
 } as const;
 
 export type TernsLogoProps = {
@@ -17,8 +17,8 @@ export type TernsLogoProps = {
   href?: string | null;
   className?: string;
   priority?: boolean;
-  /** When set, always shows that icon (e.g. light logo on dark footer). */
-  iconVariant?: "auto" | "light" | "dark";
+  /** auto = theme-aware; white = always white icon (footer); black = always black icon */
+  iconVariant?: "auto" | "white" | "black" | "light" | "dark";
 };
 
 export function TernsLogo({
@@ -33,47 +33,54 @@ export function TernsLogo({
 }: TernsLogoProps) {
   const px = typeof size === "number" ? size : SIZE_MAP[size];
   const imageClass = "rounded-full object-cover";
+  const forcedWhite = iconVariant === "white" || iconVariant === "light";
+  const forcedBlack = iconVariant === "black" || iconVariant === "dark";
 
-  const icon =
-    iconVariant === "auto" ? (
-      <>
-        <Image
-          src={TERN_ICON.light}
-          alt="Terns"
-          fill
-          className={cn(imageClass, "dark:hidden")}
-          priority={priority}
-        />
-        <Image
-          src={TERN_ICON.dark}
-          alt="Terns"
-          fill
-          className={cn(imageClass, "hidden dark:block")}
-          priority={priority}
-        />
-      </>
-    ) : (
+  const icon = forcedWhite ? (
+    <Image
+      src={TERN_ICON.white}
+      alt="Terns"
+      fill
+      className={imageClass}
+      priority={priority}
+    />
+  ) : forcedBlack ? (
+    <Image
+      src={TERN_ICON.black}
+      alt="Terns"
+      fill
+      className={imageClass}
+      priority={priority}
+    />
+  ) : (
+    <>
       <Image
-        src={iconVariant === "light" ? TERN_ICON.light : TERN_ICON.dark}
+        src={TERN_ICON.black}
         alt="Terns"
         fill
-        className={imageClass}
+        className={cn(imageClass, "dark:hidden")}
         priority={priority}
       />
-    );
+      <Image
+        src={TERN_ICON.white}
+        alt="Terns"
+        fill
+        className={cn(imageClass, "hidden dark:block")}
+        priority={priority}
+      />
+    </>
+  );
 
   const content = (
-    <div className={cn("flex items-center gap-2.5", className)}>
-      <div
-        className="relative flex-shrink-0"
-        style={{ width: px, height: px }}
-      >
+    <div className={cn("flex items-center gap-2 sm:gap-2.5 min-w-0", className)}>
+      <div className="relative shrink-0" style={{ width: px, height: px }}>
         {icon}
       </div>
       {showName && (
         <span
           className={cn(
-            "font-semibold text-[17px] tracking-[-0.5px] text-ink",
+            "font-semibold text-[15px] sm:text-[17px] tracking-[-0.5px] truncate",
+            forcedWhite ? "footer-wordmark" : "text-ink",
             nameClassName
           )}
         >
@@ -85,7 +92,7 @@ export function TernsLogo({
 
   if (href) {
     return (
-      <Link href={href} aria-label="Terns home" className="inline-flex">
+      <Link href={href} aria-label="Terns home" className="inline-flex min-w-0 max-w-full">
         {content}
       </Link>
     );

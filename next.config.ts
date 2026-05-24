@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Reduces noisy SegmentViewNode devtools manifest errors in `next dev`
+  devIndicators: false,
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },

@@ -8,8 +8,8 @@ import { ArrowRight, Globe, Zap, Users, Trophy, Map, Star, MessageCircle } from 
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LinkButton } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { TernsLogo } from "@/components/TernsLogo";
 import { HeroAtmosphere } from "@/components/HeroAtmosphere";
+import { StoryVisual } from "@/components/StoryVisual";
 
 /* ─── Animation Variants ─────────────────────────────────────────────────── */
 const fadeUp = {
@@ -68,9 +68,9 @@ function BentoCard({
   return (
     <Reveal delay={delay}>
       <motion.div
-        className={`relative rounded-pill border border-border p-8 card-hover overflow-hidden h-full ${
-          accent ? "bg-ink text-canvas" : "bg-surface"
-        } ${large ? "p-10" : ""}`}
+        className={`relative content-card card-hover h-full ${
+          accent ? "content-card--accent" : ""
+        }`}
         whileHover={{ scale: 1.015 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
       >
@@ -109,7 +109,7 @@ function StatPill({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8 + delay, duration: 0.5, ease: "easeOut" }}
-      className="glass-card rounded-pill px-5 py-3 flex flex-col items-center"
+      className="glass-card px-5 py-3 flex flex-col items-center"
     >
       <span className="text-2xl font-semibold text-white tracking-tight leading-none mb-0.5">
         {value}
@@ -157,7 +157,7 @@ export default function HomePage() {
       >
         <HeroAtmosphere />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-40 pb-16 lg:pt-48 lg:pb-20">
+        <div className="relative z-10 page-container pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-44 lg:pb-20">
 
           {/* Hero text */}
           <motion.div
@@ -172,7 +172,6 @@ export default function HomePage() {
             <motion.h1
               variants={fadeUp}
               className="text-h1 text-ink mb-7 whitespace-pre-line leading-[1.02]"
-              style={{ letterSpacing: "-1.5px" }}
             >
               {t.home.hero.title}
             </motion.h1>
@@ -228,7 +227,7 @@ export default function HomePage() {
 
               {/* Bottom-left: stats overlay */}
               <motion.div
-                className="absolute bottom-6 left-6 flex flex-wrap gap-3"
+                className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto flex flex-wrap gap-2 sm:gap-3 max-w-full"
                 style={{ opacity: heroOpacity }}
               >
                 <StatPill value="24h" label="Non-stop" delay={0} />
@@ -259,7 +258,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── BRAND STORY: WHY TERNS ─────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted relative overflow-hidden">
+      <section className="section-pad bg-lifted relative overflow-hidden">
         {/* Ghost watermark */}
         <div
           className="ghost-headline absolute -top-4 left-0 opacity-60 whitespace-nowrap pointer-events-none select-none"
@@ -268,9 +267,9 @@ export default function HomePage() {
           TERNS
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="page-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="section-copy">
               <Reveal>
                 <p className="eyebrow mb-4">THE STORY</p>
               </Reveal>
@@ -304,58 +303,16 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            {/* Right: Stats constellation */}
             <Reveal delay={0.2}>
-              <div className="relative">
-                {/* Decorative circular orbit */}
-                <div className="relative w-full aspect-square max-w-[400px] mx-auto">
-                  {/* Central orb */}
-                  <motion.div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-2 border-border flex items-center justify-center"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  >
-                    <TernsLogo size={160} showName={false} href={null} />
-                  </motion.div>
-
-                  {/* Outer ring */}
-                  <div className="absolute inset-0 rounded-full border border-border" />
-                  <div className="absolute inset-8 rounded-full border border-border/60" />
-
-                  {/* Satellite stat pills */}
-                  {[
-                    { label: "Countries", value: "15+", angle: 0 },
-                    { label: "Builders", value: "1K+", angle: 90 },
-                    { label: "Events", value: "2026", angle: 180 },
-                    { label: "Challenges", value: "6+", angle: 270 },
-                  ].map((stat, i) => {
-                    const rad = (stat.angle * Math.PI) / 180;
-                    const r = 155;
-                    const x = 50 + (r / 4) * Math.cos(rad) * 1.4;
-                    const y = 50 + (r / 4) * Math.sin(rad) * 1.4;
-                    return (
-                      <motion.div
-                        key={stat.label}
-                        className="absolute bg-surface border border-border rounded-pill px-4 py-2 text-center shadow-nav-pill -translate-x-1/2 -translate-y-1/2"
-                        style={{ left: `${x}%`, top: `${y}%` }}
-                        animate={{ y: [0, -6, 0] }}
-                        transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.8 }}
-                      >
-                        <div className="text-lg font-semibold text-ink leading-none">{stat.value}</div>
-                        <div className="text-[9px] uppercase tracking-[0.56px] text-slate-gray font-bold">{stat.label}</div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
+              <StoryVisual />
             </Reveal>
           </div>
         </div>
       </section>
 
       {/* ─── FEATURES BENTO GRID ────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-canvas">
+        <div className="page-container">
           <Reveal>
             <div className="mb-14 max-w-2xl">
               <p className="eyebrow mb-4">{t.home.what.eyebrow}</p>
@@ -365,7 +322,7 @@ export default function HomePage() {
           </Reveal>
 
           {/* Bento grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {/* Large accent card */}
             <div className="lg:col-span-2 lg:row-span-1">
               <BentoCard
@@ -425,8 +382,8 @@ export default function HomePage() {
 
 
       {/* ─── GLOBAL COMMUNITY ───────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <Reveal>
@@ -456,7 +413,7 @@ export default function HomePage() {
 
             {/* Stats grid */}
             <Reveal delay={0.2}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 {[
                   { value: "15+", label: "Countries", sub: "Builders from around the world" },
                   { value: "1K+", label: "Community Members", sub: "Across Discord & Slack" },
@@ -464,7 +421,7 @@ export default function HomePage() {
                   { value: "2026", label: "HackPune", sub: "Flagship event, Pune India" },
                 ].map((stat, i) => (
                   <Reveal key={stat.label} delay={0.1 * i}>
-                    <div className="bg-surface border border-border rounded-pill p-6 card-hover">
+                    <div className="content-card card-hover">
                       <div className="text-3xl font-medium text-ink mb-1 tracking-tight">
                         {stat.value}
                       </div>
@@ -480,10 +437,10 @@ export default function HomePage() {
       </section>
 
       {/* ─── PUNE GALLERY ───────────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-canvas">
+        <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="section-copy">
               <Reveal>
                 <p className="eyebrow mb-4">{t.home.pune.eyebrow}</p>
               </Reveal>
@@ -494,9 +451,9 @@ export default function HomePage() {
                 <p className="text-body text-slate-gray font-[450] mb-10">{t.home.pune.subtitle}</p>
               </Reveal>
               <Reveal delay={0.3}>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3">
                   {t.home.pune.facts.map((fact, i) => (
-                    <div key={i} className="bg-surface border border-border rounded-pill p-5">
+                    <div key={i} className="content-card content-card--compact">
                       <div className="text-2xl font-medium text-ink mb-1">{fact.stat}</div>
                       <div className="text-sm text-slate-gray font-[450]">{fact.label}</div>
                     </div>
@@ -507,7 +464,7 @@ export default function HomePage() {
 
             {/* Photo mosaic with actual pune images */}
             <Reveal delay={0.2}>
-              <div className="grid grid-cols-2 gap-3 h-[420px]">
+              <div className="grid grid-cols-2 gap-3 min-h-[320px] lg:min-h-[400px] auto-rows-fr">
                 <div className="relative rounded-lg overflow-hidden row-span-2">
                   <Image
                     src="/pune1.jpg"
@@ -545,8 +502,8 @@ export default function HomePage() {
       </section>
 
       {/* ─── HOW IT WORKS ───────────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <Reveal>
             <div className="mb-14">
               <p className="eyebrow mb-4">{t.home.howItWorks.eyebrow}</p>
@@ -554,11 +511,11 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {t.home.howItWorks.steps.map((step, i) => (
               <Reveal key={i} delay={i * 0.07}>
                 <motion.div
-                  className="bg-surface border border-border rounded-pill p-8 card-hover h-full"
+                  className="content-card card-hover h-full"
                   whileHover={{ scale: 1.015 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -584,8 +541,8 @@ export default function HomePage() {
       </section>
 
       {/* ─── UPDATES ────────────────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-canvas">
+        <div className="page-container">
           <Reveal>
             <div className="flex items-end justify-between mb-12">
               <div>
@@ -602,7 +559,7 @@ export default function HomePage() {
             {t.home.updates.items.map((item, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <motion.div
-                  className="bg-surface border border-border rounded-pill p-7 card-hover flex flex-col gap-3 h-full"
+                  className="content-card card-hover h-full"
                   whileHover={{ scale: 1.015 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -626,11 +583,11 @@ export default function HomePage() {
       </section>
 
       {/* ─── FINAL CTA ──────────────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-ink relative overflow-hidden">
+      <section className="section-pad bg-ink relative overflow-hidden">
         {/* Background ambient glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-ink/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className="page-container text-center relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 bg-canvas/10 border border-canvas/15 rounded-pill px-5 py-2 mb-8">
               <span className="text-xs text-canvas font-bold uppercase tracking-[0.56px]">

@@ -21,7 +21,7 @@ export default function UpdatesPage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="bg-canvas py-20 lg:py-28 relative overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 page-container">
           <p className="eyebrow mb-6">{t.updates.eyebrow}</p>
           <h1 className="text-h1 text-ink">
             {t.updates.title}
@@ -42,7 +42,7 @@ export default function UpdatesPage() {
                   {/* Dot */}
                   <div className="absolute left-[-5px] top-6 w-2.5 h-2.5 rounded-full bg-ink border-2 border-canvas" />
 
-                  <article className="bg-white border border-border rounded-pill p-7 card-hover">
+                  <article className="content-card card-hover h-full">
                     <div className="flex flex-wrap items-center gap-3 mb-4">
                       <Badge variant={tagVariant[item.tag] ?? "default"}>{item.tag}</Badge>
                       <time className="text-xs text-slate-gray">{item.date}</time>

@@ -158,6 +158,40 @@ export const translations = {
           { phase: "Phase 6", title: "Winners & Celebration", status: "upcoming", detail: "Final pitches, awards, networking" },
         ],
       },
+      schedule: {
+        eyebrow: "24 HOURS · TWO DAYS · ONE GOAL",
+        title: "The schedule",
+        subtitle:
+          "From first coffee to final pitch — the key moments that shape your HackPune weekend. Exact times may shift slightly as we finalise the venue.",
+        items: [
+          {
+            time: "Day 1 · 9:00",
+            title: "Welcome & orientation",
+            details: [
+              "9:30 — Challenge presentations by all partners (5 min each)",
+              "10:15 — Team assignments & challenge deep-dives",
+            ],
+          },
+          {
+            time: "Day 1 · 11:00",
+            title: "Start hacking",
+            details: ["Lunch, dinner, snacks & drinks throughout the day and night"],
+          },
+          {
+            time: "Day 2 · 10:00",
+            title: "Pre-pitches (internal per challenge)",
+            details: [
+              "Each team presents in 3 minutes — sharp, concise, straight to the point.",
+              "Jury gives feedback and selects finalists for the main stage.",
+            ],
+          },
+          {
+            time: "Day 2 · 11:30",
+            title: "Final pitches in the auditorium",
+            details: ["13:00 — Winners announced, group photo, lunch & celebration"],
+          },
+        ],
+      },
       partners: {
         eyebrow: "TECH PARTNERS IN CONVERSATION",
         title: "Building with the best tools.",
@@ -197,7 +231,9 @@ export const translations = {
     },
     faq: {
       eyebrow: "FAQ",
-      title: "Frequently asked questions.",
+      title: "FAQs",
+      subtitle:
+        "Get answers to your questions about HackPune, Terns, and how to participate.",
       items: [
         { q: "What is HackPune?", a: "HackPune is Terns' flagship 24-hour AI hackathon in Pune, India. Participants work on real challenges from leading companies and pitch working prototypes to judges." },
         { q: "What is Terns?", a: "Terns is a global hackathon ecosystem — a platform and community for builders, founders, hackers, and creators worldwide. HackPune is our flagship event in Pune, India." },
@@ -527,6 +563,40 @@ export const translations = {
           { phase: "Phase 6", title: "Gewinner & Feier", status: "upcoming", detail: "Final-Pitches, Awards, Networking" },
         ],
       },
+      schedule: {
+        eyebrow: "24 STUNDEN · ZWEI TAGE · EIN ZIEL",
+        title: "Der Ablauf",
+        subtitle:
+          "Vom ersten Kaffee bis zum Final Pitch — die wichtigsten Momente deines HackPune-Wochenendes. Genaue Zeiten können sich leicht ändern.",
+        items: [
+          {
+            time: "Tag 1 · 9:00",
+            title: "Willkommen & Orientierung",
+            details: [
+              "9:30 — Challenge-Präsentationen aller Partner (je 5 Min.)",
+              "10:15 — Team-Zuweisung & Challenge Deep-Dives",
+            ],
+          },
+          {
+            time: "Tag 1 · 11:00",
+            title: "Hacking startet",
+            details: ["Mittagessen, Abendessen, Snacks & Getränke den ganzen Tag und die Nacht"],
+          },
+          {
+            time: "Tag 2 · 10:00",
+            title: "Pre-Pitches (intern pro Challenge)",
+            details: [
+              "Jedes Team präsentiert in 3 Minuten — prägnant und auf den Punkt.",
+              "Jury gibt Feedback und wählt Finalisten für die Hauptbühne.",
+            ],
+          },
+          {
+            time: "Tag 2 · 11:30",
+            title: "Final Pitches im Auditorium",
+            details: ["13:00 — Gewinner, Gruppenfoto, Mittagessen & Feier"],
+          },
+        ],
+      },
       partners: {
         eyebrow: "TECH-PARTNER IM GESPRÄCH",
         title: "Mit den besten Tools bauen.",
@@ -566,7 +636,9 @@ export const translations = {
     },
     faq: {
       eyebrow: "FAQ",
-      title: "Häufig gestellte Fragen.",
+      title: "FAQs",
+      subtitle:
+        "Antworten auf deine Fragen zu HackPune, Terns und deiner Teilnahme.",
       items: [
         { q: "Was ist HackPune?", a: "HackPune ist Terns' Flagship-Hackathon in Pune, Indien. 24 Stunden, echte Challenges, echte Unternehmen." },
         { q: "Was ist Terns?", a: "Terns ist ein globales Hackathon-Ökosystem. HackPune ist unser Flagship-Event in Pune, Indien." },

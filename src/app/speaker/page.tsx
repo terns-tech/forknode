@@ -32,7 +32,7 @@ export default function SpeakerPortalPage() {
             {steps.map((step) => (
               <div
                 key={step.num}
-                className={`bg-white border rounded-pill p-5 flex gap-4 items-start ${
+                className={`content-card content-card--compact flex gap-4 items-start ${
                   step.status === "active" ? "border-ink/40" : "border-border"
                 }`}
               >
@@ -61,7 +61,7 @@ export default function SpeakerPortalPage() {
         {/* Profile quick edit */}
         <section className="mb-10">
           <h2 className="text-h3 text-ink mb-5">Your profile</h2>
-          <div className="bg-white border border-border rounded-pill p-6 flex flex-col gap-4">
+          <div className="content-card content-card--compact">
             <div className="flex gap-4 items-start">
               <div className="w-16 h-16 rounded-full bg-white border border-border flex items-center justify-center">
                 <Upload size={18} className="text-dust-taupe" />
@@ -95,7 +95,7 @@ export default function SpeakerPortalPage() {
         </section>
 
         {/* Contact */}
-        <div className="bg-white border border-border rounded-pill p-6 text-center">
+        <div className="content-card content-card--compact text-center">
           <p className="text-body text-slate-gray font-[450] mb-2">Questions? Your Bridgr contact is here.</p>
           <a href="mailto:speakers@bridgr.io" className="text-link-blue text-sm hover:opacity-80 transition-colors">
             speakers@bridgr.io →

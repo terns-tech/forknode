@@ -5,8 +5,9 @@ import { ArrowRight, Clock, Users, Zap, MessageCircle, Target, Coffee } from "lu
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LinkButton } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-
-const techPartnerLogos = ["Cursor", "OpenAI", "Lovable", "Manus"];
+import { EventSchedule } from "@/components/EventSchedule";
+import { TechPartnersGrid } from "@/components/TechPartnersGrid";
+import { FAQSection } from "@/components/FAQSection";
 
 export default function HackPunePage() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export default function HackPunePage() {
     <div className="min-h-screen">
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-24 lg:pt-32 lg:pb-32">
+        <div className="page-container pt-24 pb-24 lg:pt-32 lg:pb-32">
           <p className="eyebrow mb-6">{t.hackpune.hero.eyebrow}</p>
           <h1 className="text-h1 text-ink mb-6 whitespace-pre-line max-w-4xl">
             {t.hackpune.hero.title}
@@ -43,7 +44,7 @@ export default function HackPunePage() {
           {/* Stats row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {t.hackpune.hero.stats.map((stat) => (
-              <div key={stat.value} className="border border-border rounded-pill p-5 bg-white">
+              <div key={stat.value} className="content-card content-card--compact">
                 <div className="text-3xl font-medium text-ink mb-1">{stat.value}</div>
                 <div className="text-xs text-slate-gray uppercase tracking-[0.56px]">{stat.label}</div>
               </div>
@@ -53,15 +54,15 @@ export default function HackPunePage() {
       </section>
 
       {/* ─── WHAT TO EXPECT ──────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.expect.eyebrow}</p>
           <h2 className="text-h2 text-ink mb-14">
             {t.hackpune.expect.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {t.hackpune.expect.items.map((item, i) => (
-              <div key={i} className="rounded-pill bg-white border border-border p-8 card-hover">
+              <div key={i} className="content-card card-hover h-full">
                 <h3 className="text-h3 text-ink mb-3">{item.title}</h3>
                 <p className="text-body text-slate-gray font-[450]">{item.body}</p>
               </div>
@@ -71,8 +72,8 @@ export default function HackPunePage() {
       </section>
 
       {/* ─── CHALLENGES ──────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-canvas">
+        <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.tracks.eyebrow}</p>
           <h2 className="text-h2 text-ink mb-5">
             {t.hackpune.tracks.title}
@@ -82,9 +83,9 @@ export default function HackPunePage() {
           </p>
 
           {/* Placeholder challenge slots */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="border border-dashed border-border rounded-pill p-8 flex flex-col items-start gap-4 opacity-60">
+              <div key={i} className="content-card content-card--dashed opacity-60 min-h-[150px]">
                 <div className="w-10 h-10 rounded-full bg-white border border-border flex items-center justify-center">
                   <Target size={18} className="text-slate-gray" />
                 </div>
@@ -97,29 +98,29 @@ export default function HackPunePage() {
             ))}
           </div>
 
-          <div className="mt-10 p-5 bg-white border border-border rounded-pill text-center">
+          <div className="mt-10 content-card content-card--compact text-center">
             <p className="text-body text-slate-gray font-[450]">{t.hackpune.tracks.placeholder}</p>
           </div>
         </div>
       </section>
 
       {/* ─── WHO SHOULD APPLY ────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.who.eyebrow}</p>
           <h2 className="text-h2 text-ink mb-14">
             {t.hackpune.who.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {t.hackpune.who.items.map((item, i) => {
               const icons = [Zap, Users, Coffee, Target];
               const Icon = icons[i % icons.length];
               return (
-                <div key={i} className="bg-white border border-border rounded-pill p-8 card-hover flex gap-5">
+                <div key={i} className="content-card card-hover flex flex-col sm:flex-row gap-4 sm:gap-5">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-soft-bone flex items-center justify-center">
                     <Icon size={18} className="text-ink" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-h3 text-ink mb-2">{item.title}</h3>
                     <p className="text-body text-slate-gray font-[450]">{item.body}</p>
                   </div>
@@ -130,9 +131,11 @@ export default function HackPunePage() {
         </div>
       </section>
 
+      <EventSchedule />
+
       {/* ─── TIMELINE ────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-canvas">
+        <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.timeline.eyebrow}</p>
           <h2 className="text-h2 text-ink mb-4">
             {t.hackpune.timeline.title}
@@ -148,7 +151,7 @@ export default function HackPunePage() {
                   <div className="hidden md:flex shrink-0 w-10 h-10 rounded-full border border-border bg-white items-center justify-center z-10 relative">
                     <div className="w-2 h-2 rounded-full bg-ink" />
                   </div>
-                  <div className="flex-1 bg-white border border-border rounded-pill p-6">
+                  <div className="flex-1 content-card content-card--compact min-w-0">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-xs font-medium text-ink">{m.phase}</span>
                       <Badge variant="outline">{m.status === "upcoming" ? "Upcoming" : "Done"}</Badge>
@@ -164,28 +167,21 @@ export default function HackPunePage() {
       </section>
 
       {/* ─── TECH PARTNERS IN CONVERSATION ──────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.partners.eyebrow}</p>
           <h2 className="text-h2 text-ink mb-4">
             {t.hackpune.partners.title}
           </h2>
-          <p className="text-body text-slate-gray font-[450] max-w-2xl mb-12">
+          <p className="text-body text-slate-gray font-[450] max-w-2xl mb-10">
             {t.hackpune.partners.subtitle}
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-8">
-            {t.hackpune.partners.companies.map((name, i) => (
-              <div key={i} className="bg-white border border-dashed border-border rounded-pill px-6 py-3 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-signal-orange" />
-                <span className="text-slate-gray text-sm font-medium">{name}</span>
-              </div>
-            ))}
-          </div>
+          <TechPartnersGrid variant="light" />
 
           <Link
             href="/hackpune/partners"
-            className="inline-flex items-center gap-2 text-link-blue text-sm hover:opacity-80 transition-colors"
+            className="inline-flex items-center gap-2 text-link-blue text-sm hover:opacity-80 transition-colors mt-8"
           >
             View partner info hub <ArrowRight size={14} />
           </Link>
@@ -193,36 +189,21 @@ export default function HackPunePage() {
       </section>
 
       {/* ─── MINI FAQ ────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <p className="eyebrow mb-4">FAQ</p>
-          <h2 className="text-h2 text-ink mb-12">Quick answers.</h2>
-          <div className="flex flex-col gap-4">
-            {t.faq.items.slice(0, 5).map((item, i) => (
-              <details
-                key={i}
-                className="group bg-white border border-border rounded-pill overflow-hidden"
-              >
-                <summary className="flex items-center justify-between p-6 cursor-pointer list-none text-ink font-medium hover:bg-lifted transition-colors">
-                  {item.q}
-                  <span className="ml-4 text-slate-gray group-open:rotate-45 transition-transform text-xl leading-none">+</span>
-                </summary>
-                <div className="px-6 pb-6 text-body text-slate-gray font-[450]">{item.a}</div>
-              </details>
-            ))}
-          </div>
-          <div className="mt-6">
-            <Link href="/hackpune/faq" className="text-link-blue text-sm hover:opacity-80">
-              View all FAQs →
-            </Link>
-          </div>
+      <section className="section-pad bg-canvas">
+        <div className="page-container">
+          <FAQSection
+            title={t.faq.title}
+            subtitle={t.faq.subtitle}
+            items={t.faq.items.slice(0, 6)}
+            viewAllHref="/hackpune/faq"
+          />
         </div>
       </section>
 
       {/* ─── CTA ─────────────────────────────────────────────── */}
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-white border border-border rounded-lg p-12 lg:p-20 text-center shadow-elevated">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
+          <div className="content-card content-card--center shadow-elevated max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-lifted rounded-pill px-3 py-1.5 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-ink" />
               <span className="text-xs text-ink font-medium uppercase tracking-[0.56px]">Applications opening soon</span>

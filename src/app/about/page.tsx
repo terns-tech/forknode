@@ -186,7 +186,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-canvas py-20 lg:py-32">
         <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-ink/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 page-container">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -214,8 +214,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
             <Reveal>
               <div>
@@ -228,11 +228,11 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {values.map((v, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <motion.div
-                  className="bg-surface border border-border rounded-pill p-7 card-hover h-full"
+                  className="content-card card-hover h-full"
                   whileHover={{ scale: 1.015 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -246,7 +246,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-canvas relative overflow-hidden">
+      <section className="section-pad bg-canvas relative overflow-hidden">
         <div
           className="ghost-headline absolute top-0 right-0 translate-x-8 opacity-40 pointer-events-none select-none"
           aria-hidden
@@ -254,7 +254,7 @@ export default function AboutPage() {
           FOUNDERS
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="page-container relative z-10">
           <div className="mb-16 max-w-3xl">
             <Reveal>
               <p className="eyebrow mb-4">{t.about.team.eyebrow}</p>
@@ -274,7 +274,7 @@ export default function AboutPage() {
           </div>
 
           <Reveal delay={0.4}>
-            <div className="mt-16 p-10 lg:p-14 bg-ink rounded-pill text-canvas relative overflow-hidden">
+            <div className="mt-16 content-card content-card--accent relative overflow-hidden">
               <div className="relative z-10 max-w-3xl">
                 <p className="eyebrow mb-5 text-canvas/60">THE STORY</p>
                 <blockquote className="text-[22px] lg:text-[28px] font-medium tracking-[-0.5px] leading-[1.3] mb-6">
@@ -289,8 +289,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-lifted">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <Reveal>
@@ -317,7 +317,7 @@ export default function AboutPage() {
             </div>
 
             <Reveal delay={0.2}>
-              <div className="grid grid-cols-2 gap-3 h-[420px]">
+              <div className="grid grid-cols-2 gap-3 min-h-[320px] lg:min-h-[400px] auto-rows-fr">
                 <div className="relative rounded-lg overflow-hidden row-span-2">
                   <Image
                     src="/pune1.jpg"
@@ -351,8 +351,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-canvas">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <section className="section-pad bg-canvas">
+        <div className="page-container text-center">
           <Reveal>
             <h2 className="text-h2 text-ink mb-5">Want to be part of the story?</h2>
           </Reveal>

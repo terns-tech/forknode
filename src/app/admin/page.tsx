@@ -174,7 +174,7 @@ export default function AdminPage() {
                   { label: "Speakers", value: "0", trend: "TBA", icon: Mic },
                   { label: "Submissions", value: "31", trend: "+8 today", icon: Inbox },
                 ].map((s) => (
-                  <div key={s.label} className="bg-white border border-border rounded-pill p-5">
+                  <div key={s.label} className="content-card content-card--compact">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs text-dust-taupe uppercase tracking-[0.56px]">{s.label}</span>
                       <s.icon size={14} className="text-ink" />
@@ -186,7 +186,7 @@ export default function AdminPage() {
               </div>
 
               {/* Recent submissions preview */}
-              <div className="bg-white border border-border rounded-pill">
+              <div className="content-card content-card--clip content-card--flush">
                 <div className="p-5 border-b border-border flex items-center justify-between">
                   <h2 className="font-semibold text-ink text-sm">Recent Submissions</h2>
                   <button onClick={() => setActiveTab("submissions")} className="text-xs text-link-blue hover:opacity-80">View all →</button>
@@ -229,7 +229,7 @@ export default function AdminPage() {
                 ))}
               </div>
 
-              <div className="bg-white border border-border rounded-pill overflow-hidden">
+              <div className="content-card content-card--clip content-card--flush overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-border">
@@ -268,7 +268,7 @@ export default function AdminPage() {
           {activeTab === "events" && (
             <div>
               <h1 className="text-2xl font-semibold text-ink mb-6">Event Settings</h1>
-              <div className="max-w-xl bg-white border border-border rounded-pill p-7">
+              <div className="max-w-xl content-card">
                 <h2 className="font-semibold text-ink mb-5">HackPune 2026</h2>
                 <div className="flex flex-col gap-4">
                   {[
@@ -304,7 +304,7 @@ export default function AdminPage() {
           {activeTab === "notion" && (
             <div>
               <h1 className="text-2xl font-semibold text-ink mb-6">Notion Sync</h1>
-              <div className="max-w-xl bg-white border border-border rounded-pill p-7">
+              <div className="max-w-xl content-card">
                 <p className="text-body text-slate-gray font-[450] mb-6">
                   Connect a Notion database to power the Updates/Announcements section. Results can be cached in Appwrite — Notion outages won&apos;t take the site down.
                 </p>
@@ -343,7 +343,7 @@ export default function AdminPage() {
           {!["overview", "submissions", "events", "notion"].includes(activeTab) && (
             <div>
               <h1 className="text-2xl font-semibold text-ink mb-6 capitalize">{activeTab}</h1>
-              <div className="bg-white border border-dashed border-border rounded-pill p-12 text-center">
+              <div className="content-card content-card--dashed text-center">
                 <p className="text-body text-slate-gray font-[450]">
                   {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} management coming in the next build.
                 </p>

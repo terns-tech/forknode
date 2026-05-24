@@ -32,7 +32,7 @@ export default function PartnerPortalPage() {
             {steps.map((step) => (
               <div
                 key={step.num}
-                className={`bg-white border rounded-pill p-5 flex gap-4 items-start ${
+                className={`content-card content-card--compact flex gap-4 items-start ${
                   step.status === "active" ? "border-ink/40" : "border-border"
                 }`}
               >
@@ -83,7 +83,7 @@ export default function PartnerPortalPage() {
             ].map((doc) => (
               <div
                 key={doc.title}
-                className="bg-white border border-border rounded-pill p-5 flex items-center justify-between"
+                className="content-card content-card--compact flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 <div>
                   <p className="text-sm font-medium text-ink">{doc.title}</p>
@@ -99,7 +99,7 @@ export default function PartnerPortalPage() {
         </section>
 
         {/* Contact */}
-        <div className="bg-white border border-border rounded-pill p-6 text-center">
+        <div className="content-card content-card--compact text-center">
           <p className="text-body text-slate-gray font-[450] mb-2">Questions? Your Bridgr contact is available.</p>
           <a href="mailto:partners@bridgr.io" className="text-link-blue text-sm hover:opacity-80 transition-colors">
             partners@bridgr.io →
