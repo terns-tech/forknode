@@ -1,0 +1,43 @@
+{
+  "name": "Terns — Global Hackathon Ecosystem",
+  "short_name": "Terns",
+  "description": "A global hackathon ecosystem connecting builders, founders, hackers, and creators across borders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F3F0EE",
+  "theme_color": "#F3F0EE",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-light.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon2.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon-light.png",
+      "sizes": "360x360",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon-dark.png",
+      "sizes": "360x360",
+      "type": "image/png"
+    }
+  ]
+}
