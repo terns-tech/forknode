@@ -11,7 +11,6 @@ import { FAQSection } from "@/components/FAQSection";
 
 export default function HackPunePage() {
   const { t } = useTranslation();
-  const discordUrl = process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/bridgr";
 
   return (
     <div className="min-h-screen">
@@ -22,23 +21,38 @@ export default function HackPunePage() {
           <h1 className="text-h1 text-ink mb-6 whitespace-pre-line max-w-4xl">
             {t.hackpune.hero.title}
           </h1>
-          <p className="text-body text-slate-gray font-[450] max-w-2xl mb-10">
+          <p className="text-body text-slate-gray font-[450] max-w-2xl mb-8">
             {t.hackpune.hero.subtitle}
           </p>
+
+          {/* Save the Date */}
+          <div className="mb-10 inline-flex flex-col gap-1 border-l-2 border-ink pl-4">
+            <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-ink">
+              Save the Date
+            </span>
+            <span className="text-[16px] font-medium text-ink tracking-[-0.2px]">
+              3 &amp; 4 October 2026 (Sat &amp; Sun) · Pune, India
+            </span>
+          </div>
+
           <div className="flex flex-wrap gap-4 mb-14">
             <LinkButton href="/hackpune/apply" variant="primary" size="lg">
               {t.hackpune.hero.ctaPrimary}
               <ArrowRight size={18} className="ml-2" />
             </LinkButton>
-            <a
-              href={discordUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-ink border border-ink px-6 py-2 rounded-md font-medium hover:translate-y-[1px] transition-all"
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              title="Coming soon - community channel not live yet"
+              className="relative inline-flex items-center gap-2 bg-white text-ink border border-ink px-6 py-2 rounded-md font-medium opacity-40 blur-[0.4px] cursor-not-allowed select-none"
             >
               <MessageCircle size={18} />
               {t.hackpune.hero.ctaSecondary}
-            </a>
+              <span className="ml-2 text-[10px] uppercase tracking-[0.6px] font-bold bg-ink/10 border border-ink/25 rounded-pill px-2 py-0.5">
+                Coming Soon
+              </span>
+            </button>
           </div>
 
           {/* Stats row */}
@@ -75,31 +89,20 @@ export default function HackPunePage() {
       <section className="section-pad bg-canvas">
         <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.tracks.eyebrow}</p>
-          <h2 className="text-h2 text-ink mb-5">
-            {t.hackpune.tracks.title}
-          </h2>
-          <p className="text-body text-slate-gray font-[450] max-w-2xl mb-12">
-            {t.hackpune.tracks.subtitle}
-          </p>
-
-          {/* Placeholder challenge slots */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="content-card content-card--dashed opacity-60 min-h-[150px]">
-                <div className="w-10 h-10 rounded-full bg-white border border-border flex items-center justify-center">
-                  <Target size={18} className="text-slate-gray" />
-                </div>
-                <div>
-                  <div className="h-4 bg-soft-bone rounded-pill w-32 mb-2" />
-                  <div className="h-3 bg-soft-bone rounded-pill w-24" />
-                </div>
-                <Badge variant="outline">{t.hackpune.tracks.tba}</Badge>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 content-card content-card--compact text-center">
-            <p className="text-body text-slate-gray font-[450]">{t.hackpune.tracks.placeholder}</p>
+          <div className="content-card content-card--center max-w-2xl mx-auto py-16">
+            <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-4">
+              Status
+            </span>
+            <h2 className="text-h2 text-ink mb-4">Coming Soon</h2>
+            <p className="text-body text-slate-gray font-[450] max-w-lg mx-auto">
+              We&apos;re lining up challenge partners and tracks for HackPune 2026. Confirmations will be shared on the updates page as soon as they&apos;re official.
+            </p>
+            <a
+              href="/updates"
+              className="mt-6 inline-flex items-center gap-2 text-link-blue hover:opacity-80 transition-colors text-sm font-medium"
+            >
+              Follow the updates <ArrowRight size={14} />
+            </a>
           </div>
         </div>
       </section>

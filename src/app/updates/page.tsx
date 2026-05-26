@@ -58,7 +58,7 @@ export default function UpdatesPage() {
             <div className="relative pl-8">
               <div className="absolute left-[-5px] top-3 w-2.5 h-2.5 rounded-full bg-border border-2 border-canvas" />
               <p className="text-xs text-slate-gray py-3">
-                More updates coming soon — join{" "}
+                More updates coming soon - join{" "}
                 <a
                   href={process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/bridgr"}
                   target="_blank"

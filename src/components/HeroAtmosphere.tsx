@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export function HeroAtmosphere() {
   return (
     <div className="hero-atmosphere" aria-hidden>
-      {/* Primary center wash — extends through navbar zone */}
+      {/* Primary center wash - extends through navbar zone */}
       <div className="hero-glow-primary absolute -top-[35%] left-1/2 -translate-x-1/2 w-[140%] max-w-[1400px] aspect-[4/3] rounded-full blur-[100px] opacity-90" />
 
       {/* Secondary accents */}

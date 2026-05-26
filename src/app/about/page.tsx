@@ -136,7 +136,7 @@ const founders = [
     image: "/yash_profile.jpeg",
     linkedin: "https://linkedin.com/in/yash-pawar",
     email: "yash.pawar@terns.tech",
-    bio: "Runs India's national AI supercomputing infrastructure. Builds LLM systems at scale and keeps complex operations moving.",
+    bio: "Works in India's national AI supercomputing space - building LLM systems at scale and contributing to complex HPC operations.",
     highlights: [
       "AI & HPC Engineer, C-DAC PARAM National Supercomputing Facility",
       "Post-Graduate Diploma in AI & Data Analytics, CDAC Pune (88.2%)",
@@ -304,7 +304,7 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={0.3}>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {["🇮🇳 Pune, India", "🇩🇪 Hamburg, Germany", "🌍 Global"].map((tag) => (
+                  {["Pune, India", "Hamburg, Germany", "Global"].map((tag) => (
                     <span
                       key={tag}
                       className="inline-flex items-center border border-border rounded-pill px-4 py-2 text-sm text-ink font-medium bg-surface"

@@ -68,14 +68,14 @@ export default function PartnersPage() {
         <div className="page-container">
           <p className="eyebrow mb-4">WHY PARTNER WITH BRIDGR</p>
           <h2 className="text-h2 text-ink mb-14">
-            More than sponsorship — direct talent access.
+            More than sponsorship - direct talent access.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
                 title: "Direct IP Access",
-                body: "Challenge partners retain all IP from solutions built on their problem. You get 4–6 working prototypes with full source code after the event.",
+                body: "Challenge partners retain all IP from solutions built on their problem. You get 4-6 working prototypes with full source code after the event.",
               },
               {
                 title: "Hire the Best",
@@ -87,7 +87,7 @@ export default function PartnersPage() {
               },
               {
                 title: "Mentorship Presence",
-                body: "Your team gets dedicated access to mentor the teams working on your challenge — building authentic relationships with top talent.",
+                body: "Your team gets dedicated access to mentor the teams working on your challenge - building authentic relationships with top talent.",
               },
               {
                 title: "Community Reach",

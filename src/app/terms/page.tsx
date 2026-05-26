@@ -23,7 +23,7 @@ export default function TermsPage() {
             },
             {
               heading: "2. Event Participation",
-              body: "Participation in HackPune events is subject to successful application and acceptance. Spots are limited. Bridgr reserves the right to decline any application without providing a reason. Acceptance does not guarantee continued participation — violation of the Code of Conduct may result in removal.",
+              body: "Participation in HackPune events is subject to successful application and acceptance. Spots are limited. Bridgr reserves the right to decline any application without providing a reason. Acceptance does not guarantee continued participation - violation of the Code of Conduct may result in removal.",
             },
             {
               heading: "3. Code of Conduct",

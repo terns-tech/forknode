@@ -75,7 +75,7 @@ export default function SpeakerPortalPage() {
             </div>
             {[
               { label: "Full name", placeholder: "Your name" },
-              { label: "Bio (2–3 sentences)", placeholder: "Tell attendees about yourself" },
+              { label: "Bio (2-3 sentences)", placeholder: "Tell attendees about yourself" },
               { label: "Talk title suggestion", placeholder: "Working title" },
               { label: "Availability notes", placeholder: "Any date/time constraints" },
             ].map((f) => (

@@ -273,7 +273,7 @@ export default function AdminPage() {
                 <div className="flex flex-col gap-4">
                   {[
                     { label: "Location", value: "Pune, India (TBA venue)", type: "text" },
-                    { label: "Date", value: "2026 — Date TBA", type: "text" },
+                    { label: "Date", value: "2026 - Date TBA", type: "text" },
                     { label: "Luma URL", value: "https://lu.ma/hackpune", type: "url" },
                     { label: "Discord URL", value: "https://discord.gg/bridgr", type: "url" },
                     { label: "Slack URL", value: "https://join.slack.com/bridgr", type: "url" },
@@ -306,7 +306,7 @@ export default function AdminPage() {
               <h1 className="text-2xl font-semibold text-ink mb-6">Notion Sync</h1>
               <div className="max-w-xl content-card">
                 <p className="text-body text-slate-gray font-[450] mb-6">
-                  Connect a Notion database to power the Updates/Announcements section. Results can be cached in Appwrite — Notion outages won&apos;t take the site down.
+                  Connect a Notion database to power the Updates/Announcements section. Results can be cached in Appwrite - Notion outages won&apos;t take the site down.
                 </p>
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-1.5">

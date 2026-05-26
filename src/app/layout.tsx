@@ -8,13 +8,13 @@ import { ThemeFavicon } from "@/components/ThemeFavicon";
 
 export const metadata: Metadata = {
   title: {
-    default: "Terns — Global Hackathon Ecosystem",
+    default: "Terns - Global Hackathon Ecosystem",
     template: "%s | Terns",
   },
   description:
     "Terns is a global hackathon ecosystem connecting builders, founders, hackers, and creators across borders. Born from friendship, designed for the world. Join our flagship event HackPune 2026.",
   keywords: [
-    "hackathon", "global hackathon", "builders", "Terns", "terns.tech",
+    "hackathon", "global hackathon", "builders", "Terns",
     "HackPune", "AI hackathon", "Pune", "India", "Germany", "Hamburg",
     "tech events", "startup community", "community-first", "founders", "innovation",
   ],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   publisher: "Terns",
   metadataBase: new URL("https://terns.tech"),
   openGraph: {
-    title: "Terns — Global Hackathon Ecosystem",
+    title: "Terns - Global Hackathon Ecosystem",
     description:
       "Where the world builders take flight. A global hackathon ecosystem built for community-first innovation.",
     siteName: "Terns",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terns — Global Hackathon Ecosystem",
-    description: "Where the world builders take flight. Join the global community at terns.tech",
+    title: "Terns - Global Hackathon Ecosystem",
+    description: "Where the world builders take flight. Join the global Terns community.",
     creator: "@ternstech",
     site: "@ternstech",
     images: ["/icon-light.png"],
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon-dark.ico", sizes: "48x48", type: "image/x-icon" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon-dark.ico",
     apple: [
       { url: "/apple-touch-icon-light.png", sizes: "360x360", type: "image/png" },
       { url: "/apple-touch-icon-dark.png", sizes: "360x360", type: "image/png" },
@@ -90,7 +90,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#F3F0EE" />
-        <link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon" />
+        <link rel="icon" href="/favicon-dark.ico" sizes="48x48" type="image/x-icon" />
         <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon-light.png" sizes="360x360" type="image/png" data-terns-theme />
         <script

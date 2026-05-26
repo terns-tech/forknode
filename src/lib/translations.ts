@@ -14,7 +14,7 @@ export const translations = {
     },
     home: {
       hero: {
-        eyebrow: "GLOBAL HACKATHON ECOSYSTEM · TERNS.TECH",
+        eyebrow: "GLOBAL HACKATHON ECOSYSTEM",
         title: "Where the world\nbuilders take flight.",
         subtitle:
           "Terns is a global ecosystem for hackathons, builders, and communities. Born from late-night sessions, designed for the world. We connect founders, hackers, creators, and students across borders.",
@@ -25,12 +25,12 @@ export const translations = {
         eyebrow: "WHAT WE BUILD",
         title: "Community-first. Builder-native. Globally-minded.",
         subtitle:
-          "We don't run generic hackathons. Terns curates real challenges, real mentors, and real outcomes — then wraps them in a global community that outlasts every event.",
+          "We don't run generic hackathons. Terns curates real challenges, real mentors, and real outcomes - then wraps them in a global community that outlasts every event.",
         cards: [
           {
             color: "orange",
             title: "Real Challenges",
-            body: "Every track comes from a company with a genuine problem. No toy prompts, no fake datasets — real business contexts you can build on.",
+            body: "Every track comes from a company with a genuine problem. No toy prompts, no fake datasets - real business contexts you can build on.",
           },
           {
             color: "blue",
@@ -60,24 +60,24 @@ export const translations = {
         steps: [
           { number: "01", title: "Apply", body: "Submit your application solo or with a team. We welcome developers, designers, and product thinkers." },
           { number: "02", title: "Get Accepted", body: "We review all applications and respond within two weeks. Diverse skill sets are celebrated." },
-          { number: "03", title: "Confirm Your Spot", body: "Secure your place with a quick confirmation. Spots are limited — act fast." },
+          { number: "03", title: "Confirm Your Spot", body: "Secure your place with a quick confirmation. Spots are limited - act fast." },
           { number: "04", title: "Get Matched", body: "We assign you to a challenge and team based on your skills and preferences." },
-          { number: "05", title: "Build", body: "24 hours to turn a real problem into a working prototype — with mentorship at every step." },
+          { number: "05", title: "Build", body: "24 hours to turn a real problem into a working prototype - with mentorship at every step." },
           { number: "06", title: "Pitch & Win", body: "Present your solution. Judges pick winners per challenge. Prizes, offers, recognition." },
         ],
       },
       hackpuneTeaser: {
         eyebrow: "FLAGSHIP EVENT · 2026",
-        title: "HackPune — India's AI Hackathon",
-        body: "The Terns flagship event lands in Pune, India — the Silicon Valley of South Asia. A 24-hour AI hackathon at the intersection of talent, ambition, and real-world problems. Applications opening soon.",
+        title: "HackPune - India's AI Hackathon",
+        body: "The Terns flagship event lands in Pune, India - the Silicon Valley of South Asia. A 24-hour AI hackathon at the intersection of talent, ambition, and real-world problems. Applications opening soon.",
         location: "Pune, India",
-        date: "2026 — Date TBA",
+        date: "2026 - Date TBA",
         cta: "Learn More",
       },
       pune: {
         eyebrow: "PUNE, INDIA",
         title: "Why we started in Pune.",
-        subtitle: "Pune is India's fastest-growing tech ecosystem — home to 4,000+ startups, a massive engineering talent pool, and a builder culture unlike any other. It's where Terns was born.",
+        subtitle: "Pune is India's fastest-growing tech ecosystem - home to 4,000+ startups, a massive engineering talent pool, and a builder culture unlike any other. Terns was born in Hamburg - Pune is our first reach, the city where the flagship event lands.",
         facts: [
           { stat: "4,000+", label: "Active startups" },
           { stat: "500K+", label: "Tech professionals" },
@@ -98,7 +98,7 @@ export const translations = {
         viewAll: "View all updates →",
         items: [
           { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue. Sign up to be the first to apply." },
-          { date: "April 2026", tag: "Community", title: "Terns community crosses 1,000 builders", body: "The movement is growing faster than we imagined. Join the conversation on Discord." },
+          { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We're growing our Discord and Slack channels. Join the conversation as we open the doors." },
           { date: "March 2026", tag: "Partnership", title: "Exploring partnerships with leading AI platforms", body: "In conversations with Cursor, OpenAI, Lovable, Manus, and more. Announcements coming." },
         ],
       },
@@ -132,15 +132,15 @@ export const translations = {
         eyebrow: "CHALLENGES",
         title: "Real problems. Real companies.",
         subtitle: "Challenge tracks will be announced soon. We're in conversations with leading companies across AI, fintech, healthtech, and logistics.",
-        placeholder: "Challenges announced soon — sign up for updates.",
+        placeholder: "Challenges announced soon - sign up for updates.",
         tba: "Challenge Partner TBA",
       },
       who: {
         eyebrow: "WHO SHOULD APPLY",
         title: "You don't need to be a developer.",
         items: [
-          { title: "Engineers & Developers", body: "Frontend, backend, full-stack, ML engineers — the core builders who turn ideas into prototypes." },
-          { title: "Designers & Product Thinkers", body: "UX designers, product managers, researchers — challenges need people who understand users." },
+          { title: "Engineers & Developers", body: "Frontend, backend, full-stack, ML engineers - the core builders who turn ideas into prototypes." },
+          { title: "Designers & Product Thinkers", body: "UX designers, product managers, researchers - challenges need people who understand users." },
           { title: "Founders & Builders", body: "Early-stage founders and indie hackers looking for validation, co-founders, and real-world problems." },
           { title: "Students & Fresh Grads", body: "Pune's engineering colleges produce world-class talent. HackPune is your stage." },
         ],
@@ -148,13 +148,13 @@ export const translations = {
       timeline: {
         eyebrow: "TIMELINE",
         title: "Applications open soon.",
-        subtitle: "Milestone-driven timeline. Exact dates TBA — sign up for updates.",
+        subtitle: "Milestone-driven timeline. Exact dates TBA - sign up for updates.",
         milestones: [
-          { phase: "Phase 1", title: "Applications Open", status: "upcoming", detail: "Registration opens — limited spots" },
+          { phase: "Phase 1", title: "Applications Open", status: "upcoming", detail: "Registration opens - limited spots" },
           { phase: "Phase 2", title: "Applications Close", status: "upcoming", detail: "Deadline TBA" },
           { phase: "Phase 3", title: "Acceptance Notifications", status: "upcoming", detail: "Within 2 weeks of close" },
           { phase: "Phase 4", title: "Team Matching", status: "upcoming", detail: "Skills + preferences based matching" },
-          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "24h hackathon — Pune, 2026" },
+          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "24h hackathon - Pune, 2026" },
           { phase: "Phase 6", title: "Winners & Celebration", status: "upcoming", detail: "Final pitches, awards, networking" },
         ],
       },
@@ -162,14 +162,14 @@ export const translations = {
         eyebrow: "24 HOURS · TWO DAYS · ONE GOAL",
         title: "The schedule",
         subtitle:
-          "From first coffee to final pitch — the key moments that shape your HackPune weekend. Exact times may shift slightly as we finalise the venue.",
+          "From first coffee to final pitch - the key moments that shape your HackPune weekend. Exact times may shift slightly as we finalise the venue.",
         items: [
           {
             time: "Day 1 · 9:00",
             title: "Welcome & orientation",
             details: [
-              "9:30 — Challenge presentations by all partners (5 min each)",
-              "10:15 — Team assignments & challenge deep-dives",
+              "9:30 - Challenge presentations by all partners (5 min each)",
+              "10:15 - Team assignments & challenge deep-dives",
             ],
           },
           {
@@ -181,21 +181,21 @@ export const translations = {
             time: "Day 2 · 10:00",
             title: "Pre-pitches (internal per challenge)",
             details: [
-              "Each team presents in 3 minutes — sharp, concise, straight to the point.",
+              "Each team presents in 3 minutes - sharp, concise, straight to the point.",
               "Jury gives feedback and selects finalists for the main stage.",
             ],
           },
           {
             time: "Day 2 · 11:30",
             title: "Final pitches in the auditorium",
-            details: ["13:00 — Winners announced, group photo, lunch & celebration"],
+            details: ["13:00 - Winners announced, group photo, lunch & celebration"],
           },
         ],
       },
       partners: {
         eyebrow: "TECH PARTNERS IN CONVERSATION",
         title: "Building with the best tools.",
-        subtitle: "We're exploring partnerships with leading AI platforms. Announcements coming soon — nothing is confirmed yet.",
+        subtitle: "We're exploring partnerships with leading AI platforms. Announcements coming soon - nothing is confirmed yet.",
         exploring: "Exploring partnerships with",
         companies: ["Cursor", "OpenAI", "Lovable", "Manus", "and more"],
       },
@@ -210,10 +210,10 @@ export const translations = {
       hero: {
         eyebrow: "PARTNER WITH TERNS",
         title: "Bring your hardest problems\nto the world's best builders.",
-        subtitle: "Become a challenge partner or sponsor and connect your company directly with top engineering talent — across India and beyond.",
+        subtitle: "Become a challenge partner or sponsor and connect your company directly with top engineering talent - across India and beyond.",
       },
       types: {
-        challenge: { title: "Challenge Partner", body: "Submit a real AI challenge. Get 4–6 teams building solutions for 24 hours. Keep the IP. Hire the talent." },
+        challenge: { title: "Challenge Partner", body: "Submit a real AI challenge. Get 4-6 teams building solutions for 24 hours. Keep the IP. Hire the talent." },
         tech: { title: "Tech Partner", body: "Give every participant access to your platform. Get brand visibility with 300+ active builders." },
         sponsor: { title: "Sponsor", body: "Fund the event, get stage time, branding, and direct access to participants and challenge partners." },
         community: { title: "Community Partner", body: "Amplify reach across your community. Cross-promote and co-create the event experience." },
@@ -236,10 +236,10 @@ export const translations = {
         "Get answers to your questions about HackPune, Terns, and how to participate.",
       items: [
         { q: "What is HackPune?", a: "HackPune is Terns' flagship 24-hour AI hackathon in Pune, India. Participants work on real challenges from leading companies and pitch working prototypes to judges." },
-        { q: "What is Terns?", a: "Terns is a global hackathon ecosystem — a platform and community for builders, founders, hackers, and creators worldwide. HackPune is our flagship event in Pune, India." },
+        { q: "What is Terns?", a: "Terns is a global hackathon ecosystem - a platform and community for builders, founders, hackers, and creators worldwide. HackPune is our flagship event in Pune, India." },
         { q: "Do I need to be a developer?", a: "No. We need engineers, designers, product managers, and strategic thinkers. Every team benefits from diverse skill sets." },
         { q: "Is it free to participate?", a: "Participation details including any fees will be announced with applications. Stay tuned for updates." },
-        { q: "Can I apply as a team?", a: "Yes. You can apply solo or with a team of up to 4–6 people. We also help with team matching based on skills." },
+        { q: "Can I apply as a team?", a: "Yes. You can apply solo or with a team of up to 4-6 people. We also help with team matching based on skills." },
         { q: "What happens after the hackathon?", a: "Winners receive prizes and recognition from challenge partners. Some partners actively hire. The Terns community stays active year-round globally." },
         { q: "Where will the event take place?", a: "HackPune is in Pune, India. The exact venue is TBA and will be announced with the event details." },
         { q: "What's covered?", a: "Food, drinks, workspace, and mentorship are included. Travel is not covered unless announced otherwise." },
@@ -320,11 +320,11 @@ export const translations = {
       eyebrow: "ABOUT TERNS",
       title: "Friends turned founders.\nBuilt for the world.",
       subtitle:
-        "Terns was born from a simple belief: the world's best builders deserve a global home. Three friends — an AI engineer, an HPC specialist, and a serial entrepreneur — came together to build it.",
+        "Terns was born from a simple belief: the world's best builders deserve a global home. Three friends - an AI engineer, an HPC specialist, and a serial entrepreneur - came together to build it.",
       mission: {
         eyebrow: "OUR MISSION",
         title: "Community-first. Builder-native. Globally-minded.",
-        body: "Most hackathons are marketing exercises. Too many sponsors, too little signal, zero real outcomes. Terns is different. We start with the problem — work with companies to surface their most pressing real-world challenges — then build a curated experience around the builders best placed to solve them. Every event is designed to produce something that could actually ship. And when the event ends, the community continues. That's the Terns promise.",
+        body: "Most hackathons are marketing exercises. Too many sponsors, too little signal, zero real outcomes. Terns is different. We start with the problem - work with companies to surface their most pressing real-world challenges - then build a curated experience around the builders best placed to solve them. Every event is designed to produce something that could actually ship. And when the event ends, the community continues. That's the Terns promise.",
       },
       values: [
         { color: "orange", title: "Authenticity", body: "No fake problems. No participation trophies. Real challenges from real companies with real stakes." },
@@ -333,19 +333,19 @@ export const translations = {
         { color: "green", title: "Globally rooted", body: "From Pune to Hamburg, we build for builders wherever they are. Movement without borders." },
       ],
       pune: {
-        eyebrow: "WHERE WE STARTED",
-        title: "Rooted in Pune, reaching the world.",
-        body: "Pune is not just where we launched — it's who we are. From the tech parks of Hinjewadi to the startup corridors of Koregaon Park, Pune's builder culture is electric. We want every engineer, designer, and founder here to have access to the kind of event that can change a career. And then we want to do that in every city on earth.",
+        eyebrow: "WHERE WE LAND FIRST",
+        title: "Born in Hamburg. First reach: Pune.",
+        body: "Terns was born in Hamburg, but Pune is where we land first. From the tech parks of Hinjewadi to the startup corridors of Koregaon Park, Pune's builder culture is electric. We want every engineer, designer, and founder here to have access to the kind of event that can change a career. And then we want to do that in every city on earth.",
       },
       team: {
         eyebrow: "THE FOUNDERS",
         title: "Three builders. One vision.",
-        subtitle: "Friends before founders. We met building things — and decided to build something bigger together.",
+        subtitle: "Friends before founders. We met building things - and decided to build something bigger together.",
         members: [
           {
             name: "Omkar Kondhalkar",
             role: "CEO & Founder",
-            bio: "AI engineer and data scientist currently building computer vision systems to detect landmines at reGround.systems in Hamburg. MSc Data Science & AI at Universität Hamburg. Originally from Pune — where Terns was born. He carries the technical depth and the product clarity that turns ideas into real systems.",
+            bio: "AI engineer and data scientist currently building computer vision systems to detect landmines at reGround.systems in Hamburg. MSc Data Science & AI at Universität Hamburg. Originally from Pune - Terns' first reach city. He carries the technical depth and the product clarity that turns ideas into real systems.",
             image: "/omkar_profile.jpg",
             linkedin: "https://linkedin.com/in/omkar-kondhalkar",
             email: "omkar@terns.tech",
@@ -353,7 +353,7 @@ export const translations = {
           {
             name: "Yash Pawar",
             role: "COO & Founder",
-            bio: "AI & HPC Engineer at C-DAC's PARAM National Supercomputing Facility — India's premier AI infrastructure. He builds LLM systems, runs multi-node GPU clusters, and was personally recognized by India's Ministry of Electronics for his contributions to the IndiaAI Impact Summit 2026. CGPA 9.69. He runs the machine.",
+            bio: "AI & HPC Engineer at C-DAC's PARAM National Supercomputing Facility - India's premier AI infrastructure. He works on LLM systems, contributes to multi-node GPU cluster operations, and was personally recognized by India's Ministry of Electronics for his contributions to the IndiaAI Impact Summit 2026. CGPA 9.69. Deeply technical, deeply hands-on.",
             image: "/yash_profile.jpeg",
             linkedin: "https://linkedin.com/in/yash-pawar",
             email: "yash.pawar@terns.tech",
@@ -373,11 +373,11 @@ export const translations = {
       eyebrow: "UPDATES",
       title: "What's happening at Terns.",
       all: [
-        { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue for HackPune 2026. Applications will open imminently — sign up to be first in line via Discord or Slack." },
-        { date: "April 2026", tag: "Community", title: "Terns community crosses 1,000 builders", body: "In under three months, the Terns community has grown to over 1,000 members across Discord and Slack. The energy and quality of conversations is exactly what we hoped for." },
-        { date: "March 2026", tag: "Partnership", title: "Exploring AI platform partnerships", body: "We're in active conversations with Cursor, OpenAI, Lovable, Manus, and several other leading AI platforms about tech partnerships for HackPune. Nothing confirmed yet — announcements coming." },
-        { date: "February 2026", tag: "Milestone", title: "Terns is live", body: "We've officially launched Terns — a global hackathon ecosystem. The mission: connect the world's builders across borders, through community-first events." },
-        { date: "January 2026", tag: "Team", title: "Three friends. One vision.", body: "Omkar, Yash, and Elias — three builders who met across Hamburg and Pune — came together to build something bigger: a global home for builders everywhere." },
+        { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue for HackPune 2026. Applications will open imminently - sign up to be first in line via Discord or Slack." },
+        { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We're spinning up Discord and Slack channels for the Terns community. Join us as we open the doors - early conversations set the tone." },
+        { date: "March 2026", tag: "Partnership", title: "Exploring AI platform partnerships", body: "We're in active conversations with Cursor, OpenAI, Lovable, Manus, and several other leading AI platforms about tech partnerships for HackPune. Nothing confirmed yet - announcements coming." },
+        { date: "February 2026", tag: "Milestone", title: "Terns is live", body: "We've officially launched Terns - a global hackathon ecosystem. The mission: connect the world's builders across borders, through community-first events." },
+        { date: "January 2026", tag: "Team", title: "Three friends. One vision.", body: "Omkar, Yash, and Elias - three builders who met across Hamburg and Pune - came together to build something bigger: a global home for builders everywhere." },
       ],
     },
     footer: {
@@ -439,7 +439,7 @@ export const translations = {
     },
     home: {
       hero: {
-        eyebrow: "GLOBALES HACKATHON-ÖKOSYSTEM · TERNS.TECH",
+        eyebrow: "GLOBALES HACKATHON-ÖKOSYSTEM",
         title: "Wo die Builder\nder Welt abheben.",
         subtitle:
           "Terns ist ein globales Ökosystem für Hackathons, Builder und Communities. Geboren aus späten Nächten, entworfen für die Welt.",
@@ -465,7 +465,7 @@ export const translations = {
         steps: [
           { number: "01", title: "Bewerben", body: "Reiche deine Bewerbung solo oder mit Team ein." },
           { number: "02", title: "Angenommen werden", body: "Wir prüfen alle Bewerbungen innerhalb von zwei Wochen." },
-          { number: "03", title: "Platz bestätigen", body: "Sichere deinen Platz. Begrenzte Plätze — schnell handeln." },
+          { number: "03", title: "Platz bestätigen", body: "Sichere deinen Platz. Begrenzte Plätze - schnell handeln." },
           { number: "04", title: "Gematcht werden", body: "Wir ordnen dich einer Challenge und einem Team zu." },
           { number: "05", title: "Bauen", body: "24 Stunden, um ein echtes Problem in einen Prototypen zu verwandeln." },
           { number: "06", title: "Pitchen & Gewinnen", body: "Präsentiere deine Lösung. Richter küren die Gewinner." },
@@ -473,16 +473,16 @@ export const translations = {
       },
       hackpuneTeaser: {
         eyebrow: "FLAGSHIP EVENT · 2026",
-        title: "HackPune — Indiens KI-Hackathon",
+        title: "HackPune - Indiens KI-Hackathon",
         body: "Terns' Flagship-Event in Pune, Indien. Ein 24-Stunden-KI-Hackathon an der Schnittstelle von Talent, Ambition und echten Problemen.",
         location: "Pune, Indien",
-        date: "2026 — Datum folgt",
+        date: "2026 - Datum folgt",
         cta: "Mehr erfahren",
       },
       pune: {
         eyebrow: "PUNE, INDIEN",
         title: "Warum wir in Pune gestartet haben.",
-        subtitle: "Pune ist Indiens am schnellsten wachsendes Tech-Ökosystem — mit über 4.000 Startups und einer Builder-Kultur ohnegleichen.",
+        subtitle: "Pune ist Indiens am schnellsten wachsendes Tech-Ökosystem - mit über 4.000 Startups und einer Builder-Kultur ohnegleichen.",
         facts: [
           { stat: "4.000+", label: "Aktive Startups" },
           { stat: "500K+", label: "Tech-Fachkräfte" },
@@ -503,7 +503,7 @@ export const translations = {
         viewAll: "Alle Updates ansehen →",
         items: [
           { date: "Mai 2026", tag: "Ankündigung", title: "HackPune-Bewerbungen öffnen bald", body: "Wir finalisieren Challenge-Partner und Veranstaltungsort." },
-          { date: "April 2026", tag: "Community", title: "Terns-Community überschreitet 1.000 Builder", body: "Die Bewegung wächst schneller als erwartet." },
+          { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir starten unsere Discord- und Slack-Kanäle. Sei dabei, wenn wir die Türen öffnen." },
           { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
         ],
       },
@@ -553,13 +553,13 @@ export const translations = {
       timeline: {
         eyebrow: "ZEITPLAN",
         title: "Bewerbungen öffnen bald.",
-        subtitle: "Genaue Daten folgen — melde dich für Updates an.",
+        subtitle: "Genaue Daten folgen - melde dich für Updates an.",
         milestones: [
           { phase: "Phase 1", title: "Bewerbungen öffnen", status: "upcoming", detail: "Begrenzte Plätze" },
           { phase: "Phase 2", title: "Bewerbungsschluss", status: "upcoming", detail: "Deadline folgt" },
           { phase: "Phase 3", title: "Zusagen", status: "upcoming", detail: "Innerhalb von 2 Wochen" },
           { phase: "Phase 4", title: "Team-Matching", status: "upcoming", detail: "Fähigkeitsbasiertes Matching" },
-          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "24h Hackathon — Pune, 2026" },
+          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "24h Hackathon - Pune, 2026" },
           { phase: "Phase 6", title: "Gewinner & Feier", status: "upcoming", detail: "Final-Pitches, Awards, Networking" },
         ],
       },
@@ -567,14 +567,14 @@ export const translations = {
         eyebrow: "24 STUNDEN · ZWEI TAGE · EIN ZIEL",
         title: "Der Ablauf",
         subtitle:
-          "Vom ersten Kaffee bis zum Final Pitch — die wichtigsten Momente deines HackPune-Wochenendes. Genaue Zeiten können sich leicht ändern.",
+          "Vom ersten Kaffee bis zum Final Pitch - die wichtigsten Momente deines HackPune-Wochenendes. Genaue Zeiten können sich leicht ändern.",
         items: [
           {
             time: "Tag 1 · 9:00",
             title: "Willkommen & Orientierung",
             details: [
-              "9:30 — Challenge-Präsentationen aller Partner (je 5 Min.)",
-              "10:15 — Team-Zuweisung & Challenge Deep-Dives",
+              "9:30 - Challenge-Präsentationen aller Partner (je 5 Min.)",
+              "10:15 - Team-Zuweisung & Challenge Deep-Dives",
             ],
           },
           {
@@ -586,21 +586,21 @@ export const translations = {
             time: "Tag 2 · 10:00",
             title: "Pre-Pitches (intern pro Challenge)",
             details: [
-              "Jedes Team präsentiert in 3 Minuten — prägnant und auf den Punkt.",
+              "Jedes Team präsentiert in 3 Minuten - prägnant und auf den Punkt.",
               "Jury gibt Feedback und wählt Finalisten für die Hauptbühne.",
             ],
           },
           {
             time: "Tag 2 · 11:30",
             title: "Final Pitches im Auditorium",
-            details: ["13:00 — Gewinner, Gruppenfoto, Mittagessen & Feier"],
+            details: ["13:00 - Gewinner, Gruppenfoto, Mittagessen & Feier"],
           },
         ],
       },
       partners: {
         eyebrow: "TECH-PARTNER IM GESPRÄCH",
         title: "Mit den besten Tools bauen.",
-        subtitle: "Partnerschaften in Sondierung — noch nichts bestätigt.",
+        subtitle: "Partnerschaften in Sondierung - noch nichts bestätigt.",
         exploring: "Partnerschaften in Verhandlung mit",
         companies: ["Cursor", "OpenAI", "Lovable", "Manus", "und mehr"],
       },
@@ -618,7 +618,7 @@ export const translations = {
         subtitle: "Werde Challenge-Partner oder Sponsor bei Terns.",
       },
       types: {
-        challenge: { title: "Challenge-Partner", body: "Reiche eine echte KI-Challenge ein. 4–6 Teams bauen 24 Stunden Lösungen." },
+        challenge: { title: "Challenge-Partner", body: "Reiche eine echte KI-Challenge ein. 4-6 Teams bauen 24 Stunden Lösungen." },
         tech: { title: "Tech-Partner", body: "Markensichtbarkeit bei 300+ aktiven Buildern." },
         sponsor: { title: "Sponsor", body: "Finanziere das Event, erhalte Bühnenzeit und Branding." },
         community: { title: "Community-Partner", body: "Cross-Promotion und gemeinsame Eventgestaltung." },
@@ -644,7 +644,7 @@ export const translations = {
         { q: "Was ist Terns?", a: "Terns ist ein globales Hackathon-Ökosystem. HackPune ist unser Flagship-Event in Pune, Indien." },
         { q: "Muss ich Entwickler sein?", a: "Nein. Wir brauchen Ingenieure, Designer, Produktmanager und strategische Denker." },
         { q: "Ist die Teilnahme kostenlos?", a: "Details werden mit dem Bewerbungsstart bekanntgegeben." },
-        { q: "Kann ich mich als Team bewerben?", a: "Ja. Solo oder mit einem Team von bis zu 4–6 Personen." },
+        { q: "Kann ich mich als Team bewerben?", a: "Ja. Solo oder mit einem Team von bis zu 4-6 Personen." },
         { q: "Was passiert nach dem Hackathon?", a: "Gewinner erhalten Preise. Die Terns-Community bleibt das ganze Jahr aktiv." },
         { q: "Wo findet das Event statt?", a: "Pune, Indien. Genaue Location folgt." },
         { q: "Was ist inklusive?", a: "Essen, Getränke, Workspace und Mentoring." },
@@ -729,28 +729,28 @@ export const translations = {
       mission: {
         eyebrow: "UNSERE MISSION",
         title: "Community-first. Builder-native. Global gedacht.",
-        body: "Die meisten Hackathons sind Marketing-Übungen. Zu viele Sponsoren, zu wenig Signal, keine echten Ergebnisse. Terns ist anders. Wir beginnen mit dem Problem — echte Challenges von echten Unternehmen — und bauen dann eine kuratierte Erfahrung um die Builder, die am besten geeignet sind, sie zu lösen.",
+        body: "Die meisten Hackathons sind Marketing-Übungen. Zu viele Sponsoren, zu wenig Signal, keine echten Ergebnisse. Terns ist anders. Wir beginnen mit dem Problem - echte Challenges von echten Unternehmen - und bauen dann eine kuratierte Erfahrung um die Builder, die am besten geeignet sind, sie zu lösen.",
       },
       values: [
         { color: "orange", title: "Authentizität", body: "Keine gefälschten Probleme. Echte Challenges von echten Unternehmen." },
         { color: "blue", title: "Qualität vor Skalierung", body: "300 fokussierte Builder sind besser als 3.000 abgelenkte." },
         { color: "pink", title: "Community forever", body: "Das Event dauert 24 Stunden. Die Community ist dauerhaft." },
-        { color: "green", title: "Global verwurzelt", body: "Von Pune bis Hamburg — wir bauen für Builder überall auf der Welt." },
+        { color: "green", title: "Global verwurzelt", body: "Von Pune bis Hamburg - wir bauen für Builder überall auf der Welt." },
       ],
       pune: {
-        eyebrow: "WO WIR GESTARTET SIND",
-        title: "In Pune verwurzelt, die Welt im Blick.",
-        body: "Pune ist nicht nur unser Startpunkt — es ist wer wir sind. Von den Tech-Parks in Hinjewadi bis zu den Startup-Korridoren in Koregaon Park ist Punes Builder-Kultur elektrisch. Und dann wollen wir das in jede Stadt der Welt bringen.",
+        eyebrow: "WO WIR ZUERST LANDEN",
+        title: "Geboren in Hamburg. Erste Zielstadt: Pune.",
+        body: "Terns wurde in Hamburg geboren, aber Pune ist unsere erste Zielstadt. Von den Tech-Parks in Hinjewadi bis zu den Startup-Korridoren in Koregaon Park ist Punes Builder-Kultur elektrisch. Und dann wollen wir das in jede Stadt der Welt bringen.",
       },
       team: {
         eyebrow: "DIE GRÜNDER",
         title: "Drei Builder. Eine Vision.",
-        subtitle: "Zuerst Freunde, dann Gründer. Wir haben uns beim Bauen kennengelernt — und beschlossen, etwas Größeres zu bauen.",
+        subtitle: "Zuerst Freunde, dann Gründer. Wir haben uns beim Bauen kennengelernt - und beschlossen, etwas Größeres zu bauen.",
         members: [
           {
             name: "Omkar Kondhalkar",
             role: "CEO & Gründer",
-            bio: "KI-Ingenieur und Data Scientist, der Computer-Vision-Systeme zur Minenentdeckung bei reGround.systems in Hamburg entwickelt. MSc Data Science & KI an der Universität Hamburg. Aus Pune — wo Terns geboren wurde.",
+            bio: "KI-Ingenieur und Data Scientist, der Computer-Vision-Systeme zur Minenentdeckung bei reGround.systems in Hamburg entwickelt. MSc Data Science & KI an der Universität Hamburg. Aus Pune - Terns' erste Zielstadt.",
             image: "/omkar_profile.jpg",
             linkedin: "https://linkedin.com/in/omkar-kondhalkar",
             email: "omkar@terns.tech",
@@ -758,7 +758,7 @@ export const translations = {
           {
             name: "Yash Pawar",
             role: "COO & Gründer",
-            bio: "KI & HPC-Ingenieur beim nationalen PARAM-Supercomputer Indiens (C-DAC). Baut LLM-Systeme und Multi-Node-GPU-Cluster. Von MeitY für Beiträge zum IndiaAI Impact Summit 2026 ausgezeichnet.",
+            bio: "KI- & HPC-Ingenieur am nationalen PARAM-Supercomputer Indiens (C-DAC). Arbeitet an LLM-Systemen und an Multi-Node-GPU-Cluster-Betrieb. Von MeitY für Beiträge zum IndiaAI Impact Summit 2026 ausgezeichnet.",
             image: "/yash_profile.jpeg",
             linkedin: "https://linkedin.com/in/yash-pawar",
             email: "yash.pawar@terns.tech",
@@ -779,9 +779,9 @@ export const translations = {
       title: "Was bei Terns passiert.",
       all: [
         { date: "Mai 2026", tag: "Ankündigung", title: "HackPune-Bewerbungen öffnen bald", body: "Wir finalisieren Challenge-Partner und Veranstaltungsort für HackPune 2026." },
-        { date: "April 2026", tag: "Community", title: "Terns-Community überschreitet 1.000 Builder", body: "In weniger als drei Monaten ist die Terns-Community auf über 1.000 Mitglieder angewachsen." },
+        { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir starten unsere Discord- und Slack-Kanäle. Die ersten Gespräche prägen den Ton - sei dabei." },
         { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Aktive Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
-        { date: "Februar 2026", tag: "Meilenstein", title: "Terns ist live", body: "Wir haben offiziell Terns gestartet — ein globales Hackathon-Ökosystem." },
+        { date: "Februar 2026", tag: "Meilenstein", title: "Terns ist live", body: "Wir haben offiziell Terns gestartet - ein globales Hackathon-Ökosystem." },
         { date: "Januar 2026", tag: "Team", title: "Drei Freunde. Eine Vision.", body: "Omkar, Yash und Elias kamen aus Hamburg und Pune zusammen, um etwas Größeres zu bauen." },
       ],
     },

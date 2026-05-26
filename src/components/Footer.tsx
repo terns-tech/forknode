@@ -66,7 +66,7 @@ export function Footer() {
           <h2 className="footer-heading text-2xl lg:text-[32px] font-medium tracking-[-0.64px] mb-3 max-w-xl leading-tight">
             {t.footer.tagline}
           </h2>
-          <p className="text-sm footer-muted max-w-sm">hello@terns.tech · terns.tech</p>
+          <p className="text-sm footer-muted max-w-sm">hello@terns.tech</p>
         </div>
 
         <div className="arc-divider mb-12 opacity-20" />

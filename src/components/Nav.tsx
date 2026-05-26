@@ -43,8 +43,18 @@ export function Nav() {
     { href: "/updates", label: t.nav.updates },
   ];
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  // Pick only the single best (longest prefix) match so just one nav item
+  // is underlined at a time. Exact match wins over prefix match.
+  const activeHref = (() => {
+    const exact = links.find((l) => l.href === pathname);
+    if (exact) return exact.href;
+    const prefixMatches = links
+      .filter((l) => l.href !== "/" && pathname.startsWith(l.href + "/"))
+      .sort((a, b) => b.href.length - a.href.length);
+    return prefixMatches[0]?.href ?? (pathname === "/" ? "/" : null);
+  })();
+
+  const isActive = (href: string) => href === activeHref;
 
   return (
     <>
@@ -60,18 +70,29 @@ export function Nav() {
             <TernsLogo priority size="sm" className="shrink-0 hidden sm:flex" />
 
             <div className="hidden lg:flex items-center gap-7 xl:gap-9 min-w-0">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "text-[15px] font-medium tracking-[-0.3px] transition-colors duration-150 whitespace-nowrap",
-                    isActive(link.href) ? "text-ink" : "text-ink/60 hover:text-ink"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {links.map((link) => {
+                const active = isActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "relative text-[15px] font-medium tracking-[-0.3px] transition-colors duration-150 whitespace-nowrap py-1",
+                      active ? "text-ink" : "text-ink/60 hover:text-ink"
+                    )}
+                  >
+                    {link.label}
+                    <span
+                      aria-hidden
+                      className={cn(
+                        "pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] rounded-full bg-ink origin-center transition-transform duration-200 ease-out",
+                        active ? "scale-x-100" : "scale-x-0"
+                      )}
+                    />
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="hidden lg:flex items-center gap-3 shrink-0">

@@ -256,7 +256,7 @@ body {
   box-shadow: var(--shadow-elevated);
 }
 
-/* Content cards — soft radius, auto height (scaled ~75% for calmer footprint) */
+/* Content cards - soft radius, auto height (scaled ~75% for calmer footprint) */
 .content-card {
   height: auto;
   min-height: 0;
@@ -349,7 +349,7 @@ body {
   margin-inline: auto;
 }
 
-/* Section headlines beside card grids — breathable line length */
+/* Section headlines beside card grids - breathable line length */
 @media (min-width: 1024px) {
   .section-copy .text-h2 {
     max-width: 20ch;
@@ -594,7 +594,7 @@ body {
   color: inherit;
 }
 
-/* ─── Partners — floating logo panel ────────────────────────────────────── */
+/* ─── Partners - floating logo panel ────────────────────────────────────── */
 .partners-float-panel {
   position: relative;
   overflow: hidden;
@@ -689,7 +689,7 @@ body {
   color: var(--slate-gray);
 }
 
-/* ─── Event schedule — horizontal timeline ──────────────────────────────── */
+/* ─── Event schedule - horizontal timeline ──────────────────────────────── */
 .event-schedule {
   position: relative;
 }
@@ -766,12 +766,15 @@ body {
   .event-schedule__track {
     display: block;
     position: absolute;
-    top: 2.35rem;
+    /* Align with the center of the marker dots:
+       time min-height (2.5rem) + flex gap (1.25rem) + half marker (5px) */
+    top: calc(2.5rem + 1.25rem + 5px);
     left: 12.5%;
     right: 12.5%;
     height: 1px;
     background: var(--border);
     z-index: 0;
+    transform: translateY(-0.5px);
   }
 
   .event-schedule__item {
@@ -889,7 +892,7 @@ body {
   }
 }
 
-/* FAQ — two-column divider accordion */
+/* FAQ - two-column divider accordion */
 .faq-section__header {
   text-align: center;
   margin-bottom: clamp(2.5rem, 5vw, 3.5rem);

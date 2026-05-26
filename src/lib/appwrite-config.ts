@@ -1,4 +1,4 @@
-/** Shared Appwrite IDs — set in Vercel / .env.local (see docs/APPWRITE_SETUP.md) */
+/** Shared Appwrite IDs - set in Vercel / .env.local (see docs/APPWRITE_SETUP.md) */
 
 export const appwriteConfig = {
   endpoint:

@@ -3,7 +3,6 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LinkButton } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 
 export default function SpeakersPage() {
   const { t } = useTranslation();
@@ -23,34 +22,24 @@ export default function SpeakersPage() {
         </div>
       </section>
 
-      {/* TBA state */}
+      {/* Coming soon */}
       <section className="section-pad bg-lifted">
         <div className="page-container">
-          <p className="eyebrow mb-4">SPEAKERS & MENTORS</p>
-          <h2 className="text-h2 text-ink mb-5">Line-up coming soon.</h2>
-          <p className="text-body text-slate-gray font-[450] max-w-xl mb-12">{t.speakers.tba}</p>
-
-          {/* Placeholder cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="content-card content-card--dashed items-center opacity-50">
-                <div className="w-16 h-16 rounded-full bg-white border border-border" />
-                <div className="text-center">
-                  <div className="h-3.5 bg-soft-bone rounded-pill w-20 mx-auto mb-2" />
-                  <div className="h-3 bg-soft-bone rounded-pill w-14 mx-auto" />
-                </div>
-                <Badge variant="outline">TBA</Badge>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 content-card content-card--compact text-center">
-            <p className="text-body text-slate-gray font-[450]">
-              Speaker and mentor confirmations will be announced via our Discord and updates page.{" "}
-              <a href="/updates" className="text-link-blue hover:opacity-80 transition-colors">
-                Stay updated →
-              </a>
+          <p className="eyebrow mb-4">SPEAKERS &amp; MENTORS</p>
+          <div className="content-card content-card--center max-w-2xl mx-auto py-16">
+            <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-4">
+              Status
+            </span>
+            <h2 className="text-h2 text-ink mb-4">Coming Soon</h2>
+            <p className="text-body text-slate-gray font-[450] max-w-lg mx-auto">
+              We&apos;re lining up speakers and mentors for HackPune 2026. Confirmations will be shared on the updates page as soon as they&apos;re official.
             </p>
+            <a
+              href="/updates"
+              className="mt-6 inline-flex items-center gap-2 text-link-blue hover:opacity-80 transition-colors text-sm font-medium"
+            >
+              Follow the updates <ArrowRight size={14} />
+            </a>
           </div>
         </div>
       </section>
@@ -62,9 +51,9 @@ export default function SpeakersPage() {
           <h2 className="text-h2 text-ink mb-14">What mentors do at HackPune.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { title: "Technical Unblocking", body: "Mentors sit with teams during the hackathon to help unblock technical challenges. No lectures — just practical help." },
+              { title: "Technical Unblocking", body: "Mentors sit with teams during the hackathon to help unblock technical challenges. No lectures - just practical help." },
               { title: "Product Feedback", body: "Experienced product leaders and founders give feedback on your approach, scope, and how to pitch your solution." },
-              { title: "Pitch Coaching", body: "Before the final pitch, mentors review your deck and delivery. The best teams come prepared — mentors make them even better." },
+              { title: "Pitch Coaching", body: "Before the final pitch, mentors review your deck and delivery. The best teams come prepared - mentors make them even better." },
             ].map((item, i) => (
               <div key={i} className="content-card card-hover h-full">
                 <div className="w-1.5 h-6 bg-ink rounded-full mb-4" />

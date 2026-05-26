@@ -1,5 +1,5 @@
 /**
- * Editorial composition for THE STORY — right column only.
+ * Editorial composition for THE STORY - right column only.
  * CSS-only (no client JS) to avoid dev HMR / RSC manifest glitches.
  */
 export function StoryVisual() {

@@ -1,10 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Mail } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+
+const CONTACT_EMAIL = "hello@terns.tech";
+
+function ApplyOverlay() {
+  return (
+    <div className="absolute inset-0 z-20 flex items-center justify-center p-4 sm:p-6">
+      <div className="content-card content-card--center shadow-elevated max-w-md w-full bg-canvas/95 backdrop-blur-sm">
+        <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-3">
+          Status
+        </span>
+        <h3 className="text-h2 text-ink mb-3">Applications Opening Soon</h3>
+        <p className="text-body text-slate-gray font-[450] mb-6">
+          We&apos;re not accepting applications yet. To get in touch, register your interest, or be the first in line, send us an email.
+        </p>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-ink text-canvas text-[15px] font-medium hover:translate-y-[1px] transition-all"
+        >
+          <Mail size={16} />
+          {CONTACT_EMAIL}
+        </a>
+      </div>
+    </div>
+  );
+}
 
 type Tab = "participant" | "volunteer" | "speaker" | "sponsor";
 
@@ -267,6 +292,8 @@ export default function ApplyPage() {
             submitted === "participant" ? (
               <SuccessState message={t.apply.participant.success} />
             ) : (
+              <div className="relative">
+                <ApplyOverlay />
               <form
                 onSubmit={handleSubmit("participant", pForm.email, pForm.fullName, {
                   github: pForm.github,
@@ -276,7 +303,8 @@ export default function ApplyPage() {
                   teamStatus: pForm.teamStatus,
                   travelNote: pForm.travelNote,
                 })}
-                className="flex flex-col gap-5"
+                aria-hidden="true"
+                className="flex flex-col gap-5 pointer-events-none blur-[3px] opacity-40 select-none"
               >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.participant.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -315,6 +343,7 @@ export default function ApplyPage() {
                   {submitting ? "Submitting…" : t.apply.participant.submit}
                 </Button>
               </form>
+              </div>
             )
           )}
 
@@ -323,13 +352,16 @@ export default function ApplyPage() {
             submitted === "volunteer" ? (
               <SuccessState message={t.apply.volunteer.success} />
             ) : (
+              <div className="relative">
+                <ApplyOverlay />
               <form
                 onSubmit={handleSubmit("volunteer", vForm.email, vForm.fullName, {
                   availability: vForm.availability,
                   role: vForm.role,
                   experience: vForm.experience,
                 })}
-                className="flex flex-col gap-5"
+                aria-hidden="true"
+                className="flex flex-col gap-5 pointer-events-none blur-[3px] opacity-40 select-none"
               >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.volunteer.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -343,6 +375,7 @@ export default function ApplyPage() {
                   {submitting ? "Submitting…" : t.apply.volunteer.submit}
                 </Button>
               </form>
+              </div>
             )
           )}
 
@@ -351,6 +384,8 @@ export default function ApplyPage() {
             submitted === "speaker" ? (
               <SuccessState message={t.apply.speaker.success} />
             ) : (
+              <div className="relative">
+                <ApplyOverlay />
               <form
                 id="speaker"
                 onSubmit={handleSubmit("speaker", sForm.email, sForm.fullName, {
@@ -359,7 +394,8 @@ export default function ApplyPage() {
                   availability: sForm.availability,
                   linkedin: sForm.linkedin,
                 })}
-                className="flex flex-col gap-5"
+                aria-hidden="true"
+                className="flex flex-col gap-5 pointer-events-none blur-[3px] opacity-40 select-none"
               >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.speaker.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -374,6 +410,7 @@ export default function ApplyPage() {
                   {submitting ? "Submitting…" : t.apply.speaker.submit}
                 </Button>
               </form>
+              </div>
             )
           )}
 
@@ -382,6 +419,8 @@ export default function ApplyPage() {
             submitted === "sponsor" ? (
               <SuccessState message={t.apply.sponsor.success} />
             ) : (
+              <div className="relative">
+                <ApplyOverlay />
               <form
                 id="sponsor"
                 onSubmit={handleSubmit("sponsor", spForm.email, spForm.name, {
@@ -389,7 +428,8 @@ export default function ApplyPage() {
                   intent: spForm.intent,
                   message: spForm.message,
                 })}
-                className="flex flex-col gap-5"
+                aria-hidden="true"
+                className="flex flex-col gap-5 pointer-events-none blur-[3px] opacity-40 select-none"
               >
                 <h2 className="text-h2 text-ink mb-2">{t.apply.sponsor.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -403,6 +443,7 @@ export default function ApplyPage() {
                   {submitting ? "Submitting…" : t.apply.sponsor.submit}
                 </Button>
               </form>
+              </div>
             )
           )}
         </div>

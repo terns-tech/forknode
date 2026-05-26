@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const steps = [
   { num: "01", title: "Agreement Signed", status: "done", detail: "Partnership agreement finalised and countersigned." },
-  { num: "02", title: "Profile Setup", status: "active", detail: "Set up your organisation profile — logo, description, contact." },
+  { num: "02", title: "Profile Setup", status: "active", detail: "Set up your organisation profile - logo, description, contact." },
   { num: "03", title: "Challenge Brief", status: "upcoming", detail: "Submit your challenge brief. Our team will review and publish when ready." },
   { num: "04", title: "Pre-event Prep Call", status: "upcoming", detail: "1-hour call with the Bridgr team to prepare your challenge presentation." },
   { num: "05", title: "Event Day", status: "upcoming", detail: "Be present for the kickoff, mentor teams throughout, and judge final pitches." },

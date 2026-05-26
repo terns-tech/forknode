@@ -145,8 +145,6 @@ export default function HomePage() {
     return () => window.removeEventListener("mousemove", handler);
   }, [mouseX, mouseY]);
 
-  const discordUrl = process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/terns";
-
   return (
     <div className="min-h-screen">
 
@@ -186,10 +184,19 @@ export default function HomePage() {
                 {t.home.hero.ctaPrimary}
                 <ArrowRight size={18} className="ml-2" />
               </LinkButton>
-              <LinkButton href={discordUrl} variant="secondary" size="lg">
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                title="Coming soon - community channel not live yet"
+                className="relative inline-flex items-center justify-center font-medium rounded-md px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px] bg-surface text-ink border-[1.5px] border-ink opacity-40 blur-[0.4px] cursor-not-allowed select-none"
+              >
                 <MessageCircle size={16} className="mr-2" />
                 {t.home.hero.ctaSecondary}
-              </LinkButton>
+                <span className="ml-3 text-[10px] uppercase tracking-[0.6px] font-bold bg-ink/10 border border-ink/25 rounded-pill px-2 py-0.5">
+                  Coming Soon
+                </span>
+              </button>
             </motion.div>
           </motion.div>
 
@@ -213,7 +220,7 @@ export default function HomePage() {
               >
                 <Image
                   src="/wallpaper.jpg"
-                  alt="Terns — Global Hackathon Ecosystem"
+                  alt="Terns - Global Hackathon Ecosystem"
                   fill
                   className="object-cover"
                   priority
@@ -244,8 +251,9 @@ export default function HomePage() {
                 transition={{ delay: 1.2, duration: 0.5 }}
               >
                 <div className="flex items-center gap-2 bg-surface/10 backdrop-blur-sm border border-white/20 rounded-pill px-4 py-2">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                   <span className="text-xs text-white font-semibold uppercase tracking-[0.5px]">
-                    HackPune 2026 · Coming Soon
+                    Save the Date · HackPune 2026 · 3-4 Oct (Sat & Sun)
                   </span>
                 </div>
               </motion.div>
@@ -281,13 +289,13 @@ export default function HomePage() {
               <Reveal delay={0.2}>
                 <div className="space-y-5 text-body text-slate-gray font-[450]">
                   <p>
-                    Arctic Terns travel <strong className="text-ink font-medium">70,000 km every year</strong> — the longest migration of any living creature. They cross entire oceans, navigate by the stars, and always find their way. They never stay in one place. But wherever they land, they build a community.
+                    Arctic Terns travel <strong className="text-ink font-medium">70,000 km every year</strong> - the longest migration of any living creature. They cross entire oceans, navigate by the stars, and always find their way. They never stay in one place. But wherever they land, they build a community.
                   </p>
                   <p>
                     We are builders who cross borders. We have lived in Pune and Hamburg, built AI systems and startups, stayed up all night hacking on ideas. We are Terns.
                   </p>
                   <p>
-                    And we built this platform for everyone like us — the developers, designers, and founders who know that the best things get built when the right people find each other, anywhere in the world.
+                    And we built this platform for everyone like us - the developers, designers, and founders who know that the best things get built when the right people find each other, anywhere in the world.
                   </p>
                 </div>
               </Reveal>
@@ -327,7 +335,7 @@ export default function HomePage() {
             <div className="lg:col-span-2 lg:row-span-1">
               <BentoCard
                 title="Real Challenges, Real Companies"
-                body="Every hackathon track is sourced from a company with a genuine, unsolved problem. No toy datasets, no made-up scenarios — real business contexts, real stakes, real outcomes."
+                body="Every hackathon track is sourced from a company with a genuine, unsolved problem. No toy datasets, no made-up scenarios - real business contexts, real stakes, real outcomes."
                 icon={Zap}
                 accent
                 large
@@ -338,7 +346,7 @@ export default function HomePage() {
             {/* Small card */}
             <BentoCard
               title="Global Community"
-              body="Builders from 15+ countries and growing. Your next co-founder is in the community."
+              body="A community of builders across borders. Your next co-founder may be in this community."
               icon={Globe}
               delay={0.1}
             />
@@ -354,7 +362,7 @@ export default function HomePage() {
             <div className="lg:col-span-2">
               <BentoCard
                 title="AI-Native Events"
-                body="Every challenge has an AI angle. We partner with leading platforms — Cursor, OpenAI, and more — to give every team access to cutting-edge tools, APIs, and compute. Builders come to Terns events to work with the best stack."
+                body="Every challenge has an AI angle. We partner with leading platforms - Cursor, OpenAI, and more - to give every team access to cutting-edge tools, APIs, and compute. Builders come to Terns events to work with the best stack."
                 icon={Map}
                 large
                 delay={0.2}
@@ -393,20 +401,48 @@ export default function HomePage() {
                 <h2 className="text-h2 text-ink mb-6">{t.home.community.title}</h2>
               </Reveal>
               <Reveal delay={0.2}>
-                <p className="text-body text-slate-gray font-[450] mb-10">
+                <p className="text-body text-slate-gray font-[450] mb-8">
                   {t.home.community.subtitle}
                 </p>
               </Reveal>
+              <Reveal delay={0.25}>
+                <div className="mb-8 inline-flex flex-col gap-1 border-l-2 border-ink pl-4">
+                  <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-ink">
+                    Save the Date
+                  </span>
+                  <span className="text-[15px] font-medium text-ink tracking-[-0.2px]">
+                    HackPune 2026 - 3 &amp; 4 October 2026 (Sat &amp; Sun) · Pune, India
+                  </span>
+                </div>
+              </Reveal>
               <Reveal delay={0.3}>
                 <div className="flex flex-wrap gap-4">
-                  <LinkButton href={discordUrl} variant="primary" size="lg">
+                  <button
+                    type="button"
+                    disabled
+                    aria-disabled="true"
+                    title="Coming soon - channel not live yet"
+                    className="relative inline-flex items-center justify-center font-medium rounded-md px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px] bg-ink text-canvas border border-ink opacity-40 blur-[0.4px] cursor-not-allowed select-none"
+                  >
                     <MessageCircle size={18} className="mr-2" />
                     {t.home.community.discord}
-                  </LinkButton>
-                  <LinkButton href="/hackpune/apply" variant="secondary" size="lg">
+                    <span className="ml-3 text-[10px] uppercase tracking-[0.6px] font-bold bg-canvas/15 border border-canvas/25 rounded-pill px-2 py-0.5">
+                      Coming Soon
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled
+                    aria-disabled="true"
+                    title="Coming soon - channel not live yet"
+                    className="relative inline-flex items-center justify-center font-medium rounded-md px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px] bg-surface text-ink border-[1.5px] border-ink opacity-40 blur-[0.4px] cursor-not-allowed select-none"
+                  >
                     <Zap size={18} className="mr-2" />
                     {t.home.community.slack}
-                  </LinkButton>
+                    <span className="ml-3 text-[10px] uppercase tracking-[0.6px] font-bold bg-ink/10 border border-ink/25 rounded-pill px-2 py-0.5">
+                      Coming Soon
+                    </span>
+                  </button>
                 </div>
               </Reveal>
             </div>
@@ -415,10 +451,10 @@ export default function HomePage() {
             <Reveal delay={0.2}>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { value: "15+", label: "Countries", sub: "Builders from around the world" },
-                  { value: "1K+", label: "Community Members", sub: "Across Discord & Slack" },
                   { value: "24h", label: "Nonstop Hacking", sub: "Per event, no sleeping" },
                   { value: "2026", label: "HackPune", sub: "Flagship event, Pune India" },
+                  { value: "Hamburg", label: "Germany", sub: "Where Terns was born" },
+                  { value: "Pune", label: "India", sub: "Our first reach - flagship city" },
                 ].map((stat, i) => (
                   <Reveal key={stat.label} delay={0.1 * i}>
                     <div className="content-card card-hover">
@@ -590,8 +626,9 @@ export default function HomePage() {
         <div className="page-container text-center relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 bg-canvas/10 border border-canvas/15 rounded-pill px-5 py-2 mb-8">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-canvas animate-pulse" />
               <span className="text-xs text-canvas font-bold uppercase tracking-[0.56px]">
-                HackPune 2026 · Applications Opening Soon
+                Save the Date · HackPune 2026 · 3-4 Oct (Sat &amp; Sun)
               </span>
             </div>
           </Reveal>
@@ -602,7 +639,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-body text-canvas/60 font-[450] max-w-xl mx-auto mb-10">
-              Join Terns — a global hackathon ecosystem built for builders, founders, hackers, and creators. Your next great project, your next co-founder, your next community — all in one place.
+              Join Terns - a global hackathon ecosystem built for builders, founders, hackers, and creators. Your next great project, your next co-founder, your next community - all in one place.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
