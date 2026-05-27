@@ -96,9 +96,9 @@ export default function SpeakerPortalPage() {
 
         {/* Contact */}
         <div className="content-card content-card--compact text-center">
-          <p className="text-body text-slate-gray font-[450] mb-2">Questions? Your Bridgr contact is here.</p>
-          <a href="mailto:speakers@bridgr.io" className="text-link-blue text-sm hover:opacity-80 transition-colors">
-            speakers@bridgr.io →
+          <p className="text-body text-slate-gray font-[450] mb-2">Questions? Your Terns contact is here.</p>
+          <a href="mailto:speakers@terns.tech" className="text-link-blue text-sm hover:opacity-80 transition-colors">
+            speakers@terns.tech →
           </a>
         </div>
       </div>

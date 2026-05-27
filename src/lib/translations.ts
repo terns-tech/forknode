@@ -113,7 +113,7 @@ export const translations = {
         stats: [
           { value: "24h", label: "Non-stop hacking" },
           { value: "300+", label: "Builders" },
-          { value: "6+", label: "Challenges" },
+          { value: "10+", label: "Challenges" },
           { value: "Pune", label: "India" },
         ],
       },
@@ -122,7 +122,7 @@ export const translations = {
         title: "No fluff. No theory. Just shipping.",
         items: [
           { color: "orange", title: "24H Hacking Nonstop", body: "Code from kickoff to sunrise. Fuel up on coffee, ambition, and the energy of 300 builders under one roof." },
-          { color: "blue", title: "Real Company Challenges", body: "Six or more challenges from companies actually building with AI. Pick the one that excites you most." },
+          { color: "blue", title: "Real Company Challenges", body: "Ten or more challenges from companies actually building with AI. Pick the one that excites you most." },
           { color: "pink", title: "Expert Mentorship", body: "Direct access to founders, engineers, and product leaders from challenge partners throughout the event." },
           { color: "orange", title: "Demo & Win", body: "Pitch your prototype on the main stage. Judges pick winners per challenge. Prizes, credits, interviews." },
           { color: "green", title: "Everything Covered", body: "Food, drinks, snacks, workspace. Just bring your laptop and your best ideas." },
@@ -213,7 +213,7 @@ export const translations = {
         subtitle: "Become a challenge partner or sponsor and connect your company directly with top engineering talent - across India and beyond.",
       },
       types: {
-        challenge: { title: "Challenge Partner", body: "Submit a real AI challenge. Get 4-6 teams building solutions for 24 hours. Keep the IP. Hire the talent." },
+        challenge: { title: "Challenge Partner", body: "Submit a real AI challenge. Get up to 8 teams building solutions for 24 hours. Keep the IP. Hire the talent." },
         tech: { title: "Tech Partner", body: "Give every participant access to your platform. Get brand visibility with 300+ active builders." },
         sponsor: { title: "Sponsor", body: "Fund the event, get stage time, branding, and direct access to participants and challenge partners." },
         community: { title: "Community Partner", body: "Amplify reach across your community. Cross-promote and co-create the event experience." },
@@ -325,6 +325,7 @@ export const translations = {
         eyebrow: "OUR MISSION",
         title: "Community-first. Builder-native. Globally-minded.",
         body: "Most hackathons are marketing exercises. Too many sponsors, too little signal, zero real outcomes. Terns is different. We start with the problem - work with companies to surface their most pressing real-world challenges - then build a curated experience around the builders best placed to solve them. Every event is designed to produce something that could actually ship. And when the event ends, the community continues. That's the Terns promise.",
+        pitch: "By connecting German industry with India's rapidly growing IT ecosystem, terns.tech creates a scalable platform for cross-border innovation, talent acquisition, and cost-efficient digital execution.",
       },
       values: [
         { color: "orange", title: "Authenticity", body: "No fake problems. No participation trophies. Real challenges from real companies with real stakes." },
@@ -442,7 +443,7 @@ export const translations = {
         eyebrow: "GLOBALES HACKATHON-ÖKOSYSTEM",
         title: "Wo die Builder\nder Welt abheben.",
         subtitle:
-          "Terns ist ein globales Ökosystem für Hackathons, Builder und Communities. Geboren aus späten Nächten, entworfen für die Welt.",
+          "Terns ist ein globales Ökosystem für Hackathons, Builder und Communities. Geboren aus späten Nächten in Hamburg, entworfen für die Welt. Wir verbinden Gründer, Entwickler, Kreative und Studierende über Grenzen hinweg.",
         ctaPrimary: "HackPune entdecken",
         ctaSecondary: "Community beitreten",
       },
@@ -452,7 +453,7 @@ export const translations = {
         subtitle:
           "Wir veranstalten keine gewöhnlichen Hackathons. Terns kuratiert echte Challenges, echte Mentoren und echte Ergebnisse.",
         cards: [
-          { color: "orange", title: "Echte Challenges", body: "Jede Track kommt von einem Unternehmen mit echtem Problem. Keine Toy-Prompts, keine gefälschten Daten." },
+          { color: "orange", title: "Echte Challenges", body: "Jede Challenge kommt von einem Unternehmen mit echtem Problem. Keine Toy-Prompts, keine erfundenen Daten – echte Geschäftskontexte." },
           { color: "blue", title: "Experten-Mentoring", body: "Direkter Zugang zu erfahrenen Ingenieuren, Produktverantwortlichen und Gründern während des Events." },
           { color: "pink", title: "Bauen & Gewinnen", body: "24 Stunden vom Null zum Prototypen. Pitch vor Challenge-Partnern. Preise, Credits, Job-Interviews." },
           { color: "orange", title: "KI-native Events", body: "Jede Challenge hat einen KI-Aspekt. Wir geben jedem Team Zugang zu modernsten Tools." },
@@ -512,13 +513,13 @@ export const translations = {
       hero: {
         eyebrow: "HACKPUNE · PUNE, INDIEN · 2026",
         title: "Baue echte KI-Lösungen\nfür echte Unternehmen.",
-        subtitle: "Terns' Flagship-Event. Indiens führender 24-Stunden-KI-Hackathon.",
+        subtitle: "Terns' Flagship-Event. Indiens führender 24-Stunden-KI-Hackathon. Wähle eine echte Challenge von einem führenden Unternehmen. Baue einen funktionierenden Prototypen. Pitche ihn. Gewinne.",
         ctaPrimary: "Jetzt bewerben",
         ctaSecondary: "Discord beitreten",
         stats: [
           { value: "24h", label: "Non-stop Hacking" },
           { value: "300+", label: "Builder" },
-          { value: "6+", label: "Challenges" },
+          { value: "10+", label: "Challenges" },
           { value: "Pune", label: "Indien" },
         ],
       },
@@ -527,7 +528,7 @@ export const translations = {
         title: "Kein Blabla. Keine Theorie. Nur Liefern.",
         items: [
           { color: "orange", title: "24h Hacking ohne Pause", body: "Code vom Kickoff bis zum Morgengrauen." },
-          { color: "blue", title: "Echte Unternehmens-Challenges", body: "Challenges von Unternehmen, die KI wirklich einsetzen." },
+          { color: "blue", title: "Echte Unternehmens-Challenges", body: "Zehn oder mehr Challenges von Unternehmen, die KI wirklich einsetzen. Wähle die, die dich am meisten begeistert." },
           { color: "pink", title: "Experten-Mentoring", body: "Direkter Zugang zu Gründern und Ingenieuren der Challenge-Partner." },
           { color: "orange", title: "Demo & Gewinnen", body: "Präsentiere deinen Prototypen auf der Hauptbühne." },
           { color: "green", title: "Alles inklusive", body: "Essen, Getränke, Workspace und Mentoring." },
@@ -615,15 +616,15 @@ export const translations = {
       hero: {
         eyebrow: "MIT TERNS PARTNERN",
         title: "Bringe deine härtesten Probleme\nzu den besten Buildern.",
-        subtitle: "Werde Challenge-Partner oder Sponsor bei Terns.",
+        subtitle: "Werde Challenge-Partner oder Sponsor bei Terns und verbinde dein Unternehmen direkt mit Top-Techtalenten in Indien und darüber hinaus.",
       },
       types: {
-        challenge: { title: "Challenge-Partner", body: "Reiche eine echte KI-Challenge ein. 4-6 Teams bauen 24 Stunden Lösungen." },
-        tech: { title: "Tech-Partner", body: "Markensichtbarkeit bei 300+ aktiven Buildern." },
-        sponsor: { title: "Sponsor", body: "Finanziere das Event, erhalte Bühnenzeit und Branding." },
-        community: { title: "Community-Partner", body: "Cross-Promotion und gemeinsame Eventgestaltung." },
+        challenge: { title: "Challenge-Partner", body: "Reiche eine echte KI-Challenge ein. Erhalte bis zu 8 Teams, die 24 Stunden lang Lösungen bauen. Du behältst das IP. Stell das Talent ein." },
+        tech: { title: "Tech-Partner", body: "Gib jedem Teilnehmer Zugang zu deiner Plattform. Markensichtbarkeit bei 300+ aktiven Buildern." },
+        sponsor: { title: "Sponsor", body: "Finanziere das Event, erhalte Bühnenzeit, Branding und direkten Zugang zu Teilnehmern und Challenge-Partnern." },
+        community: { title: "Community-Partner", body: "Erweitere deine Reichweite. Cross-Promotion und gemeinsame Eventgestaltung." },
       },
-      cta: { title: "Interesse an einer Partnerschaft?", subtitle: "Fülle das Formular aus und wir melden uns.", button: "Partnerschaftsanfrage senden" },
+      cta: { title: "Interesse an einer Partnerschaft?", subtitle: "Fülle das Partneranfrageformular aus und wir melden uns.", button: "Partnerschaftsanfrage senden" },
     },
     speakers: {
       hero: {
@@ -729,7 +730,8 @@ export const translations = {
       mission: {
         eyebrow: "UNSERE MISSION",
         title: "Community-first. Builder-native. Global gedacht.",
-        body: "Die meisten Hackathons sind Marketing-Übungen. Zu viele Sponsoren, zu wenig Signal, keine echten Ergebnisse. Terns ist anders. Wir beginnen mit dem Problem - echte Challenges von echten Unternehmen - und bauen dann eine kuratierte Erfahrung um die Builder, die am besten geeignet sind, sie zu lösen.",
+        body: "Die meisten Hackathons sind Marketing-Übungen. Zu viele Sponsoren, zu wenig Signal, keine echten Ergebnisse. Terns ist anders. Wir beginnen mit dem Problem - echte Challenges von echten Unternehmen - und bauen dann eine kuratierte Erfahrung um die Builder, die am besten geeignet sind, sie zu lösen. Wenn das Event endet, geht die Community weiter. Das ist das Terns-Versprechen.",
+        pitch: "Durch die Verbindung der deutschen Industrie mit Indiens schnell wachsendem IT-Ökosystem schafft terns.tech eine skalierbare Plattform für grenzüberschreitende Innovation, Talentgewinnung und kosteneffiziente digitale Umsetzung.",
       },
       values: [
         { color: "orange", title: "Authentizität", body: "Keine gefälschten Probleme. Echte Challenges von echten Unternehmen." },

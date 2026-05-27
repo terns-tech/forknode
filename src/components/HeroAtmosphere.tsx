@@ -1,12 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 /**
  * Full-bleed ambient lighting for the home hero.
  * Sits behind nav (z-50) and hero content (z-10) via parent stacking.
+ * On mobile or when reduced-motion is preferred, orb animations are skipped.
  */
 export function HeroAtmosphere() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div className="hero-atmosphere" aria-hidden>
       {/* Primary center wash - extends through navbar zone */}
@@ -26,15 +29,15 @@ export function HeroAtmosphere() {
       <div className="hero-vignette-edge absolute inset-y-0 left-0 w-[18%] max-w-[220px]" />
       <div className="hero-vignette-edge absolute inset-y-0 right-0 w-[18%] max-w-[220px] scale-x-[-1]" />
 
-      {/* Animated orbs (theme-aware via CSS) */}
+      {/* Animated orbs — static on mobile / reduced-motion */}
       <motion.div
         className="hero-orb absolute top-[2%] left-[5%] w-[min(520px,70vw)] h-[min(520px,70vw)] rounded-full blur-2xl opacity-80"
-        animate={{ y: [0, -20, 0], scale: [1, 1.05, 1] }}
+        animate={shouldReduceMotion ? false : { y: [0, -20, 0], scale: [1, 1.05, 1] }}
         transition={{ duration: 8, ease: "easeInOut", repeat: Infinity }}
       />
       <motion.div
         className="hero-orb hero-orb-alt absolute top-[0%] right-[0%] w-[min(440px,60vw)] h-[min(440px,60vw)] rounded-full blur-2xl opacity-60"
-        animate={{ y: [0, -16, 0], scale: [1, 1.04, 1] }}
+        animate={shouldReduceMotion ? false : { y: [0, -16, 0], scale: [1, 1.04, 1] }}
         transition={{ duration: 9, ease: "easeInOut", repeat: Infinity, delay: 2 }}
       />
     </div>

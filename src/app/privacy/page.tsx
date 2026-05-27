@@ -19,7 +19,7 @@ export default function PrivacyPage() {
           {[
             {
               heading: "1. Who we are",
-              body: "Bridgr operates the bridgr.io website and organises HackPune events. Our registered contact address is hello@bridgr.io. We are the data controller for information collected through this website.",
+              body: "Terns operates the terns.tech website and organises HackPune events. Our registered contact address is hello@terns.tech. We are the data controller for information collected through this website.",
             },
             {
               heading: "2. What data we collect",
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             },
             {
               heading: "4. Legal basis",
-              body: "For EEA/GDPR-covered individuals, we process data on the basis of legitimate interest (operating events) and, where required, explicit consent. You may withdraw consent at any time by emailing hello@bridgr.io.",
+              body: "For EEA/GDPR-covered individuals, we process data on the basis of legitimate interest (operating events) and, where required, explicit consent. You may withdraw consent at any time by emailing hello@terns.tech.",
             },
             {
               heading: "5. Data sharing",
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
             },
             {
               heading: "7. Your rights",
-              body: "You have the right to access, correct, or delete your data. Email hello@bridgr.io with the subject 'Data Request' and we will respond within 30 days.",
+              body: "You have the right to access, correct, or delete your data. Email hello@terns.tech with the subject 'Data Request' and we will respond within 30 days.",
             },
             {
               heading: "8. Cookies",
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
             },
             {
               heading: "10. Contact",
-              body: "For any privacy-related queries: hello@bridgr.io",
+              body: "For any privacy-related queries: hello@terns.tech",
             },
           ].map((section, i) => (
             <div key={i} className="mb-8">

@@ -224,7 +224,10 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="text-body text-slate-gray font-[450] leading-relaxed">{t.about.mission.body}</p>
+              <p className="text-body text-slate-gray font-[450] leading-relaxed mb-5">{t.about.mission.body}</p>
+              <p className="text-[15px] font-medium text-ink border-l-2 border-ink pl-4 leading-relaxed">
+                {t.about.mission.pitch}
+              </p>
             </Reveal>
           </div>
 

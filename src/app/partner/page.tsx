@@ -7,7 +7,7 @@ const steps = [
   { num: "01", title: "Agreement Signed", status: "done", detail: "Partnership agreement finalised and countersigned." },
   { num: "02", title: "Profile Setup", status: "active", detail: "Set up your organisation profile - logo, description, contact." },
   { num: "03", title: "Challenge Brief", status: "upcoming", detail: "Submit your challenge brief. Our team will review and publish when ready." },
-  { num: "04", title: "Pre-event Prep Call", status: "upcoming", detail: "1-hour call with the Bridgr team to prepare your challenge presentation." },
+  { num: "04", title: "Pre-event Prep Call", status: "upcoming", detail: "1-hour call with the Terns team to prepare your challenge presentation." },
   { num: "05", title: "Event Day", status: "upcoming", detail: "Be present for the kickoff, mentor teams throughout, and judge final pitches." },
 ];
 
@@ -100,9 +100,9 @@ export default function PartnerPortalPage() {
 
         {/* Contact */}
         <div className="content-card content-card--compact text-center">
-          <p className="text-body text-slate-gray font-[450] mb-2">Questions? Your Bridgr contact is available.</p>
-          <a href="mailto:partners@bridgr.io" className="text-link-blue text-sm hover:opacity-80 transition-colors">
-            partners@bridgr.io →
+          <p className="text-body text-slate-gray font-[450] mb-2">Questions? Your Terns contact is available.</p>
+          <a href="mailto:partners@terns.tech" className="text-link-blue text-sm hover:opacity-80 transition-colors">
+            partners@terns.tech →
           </a>
         </div>
       </div>

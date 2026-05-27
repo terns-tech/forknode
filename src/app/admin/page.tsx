@@ -275,8 +275,8 @@ export default function AdminPage() {
                     { label: "Location", value: "Pune, India (TBA venue)", type: "text" },
                     { label: "Date", value: "2026 - Date TBA", type: "text" },
                     { label: "Luma URL", value: "https://lu.ma/hackpune", type: "url" },
-                    { label: "Discord URL", value: "https://discord.gg/bridgr", type: "url" },
-                    { label: "Slack URL", value: "https://join.slack.com/bridgr", type: "url" },
+                    { label: "Discord URL", value: "https://discord.gg/terns", type: "url" },
+                    { label: "Slack URL", value: "https://join.slack.com/t/terns", type: "url" },
                   ].map((f) => (
                     <div key={f.label} className="flex flex-col gap-1.5">
                       <label className="text-xs font-medium text-slate-gray uppercase tracking-[0.56px]">{f.label}</label>

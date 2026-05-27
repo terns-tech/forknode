@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import { ArrowRight, Globe, Zap, Users, Trophy, Map, Star, MessageCircle } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LinkButton } from "@/components/ui/Button";
@@ -124,9 +124,16 @@ function StatPill({
 /* ─── Main Page ─────────────────────────────────────────────────────────── */
 export default function HomePage() {
   const { t } = useTranslation();
+  const shouldReduceMotion = useReducedMotion();
   const heroRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(max-width: 768px)").matches || "ontouchstart" in window);
+  }, []);
+
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const heroY = useTransform(scrollYProgress, [0, 1], isMobile || shouldReduceMotion ? ["0%", "0%"] : ["0%", "20%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const mouseX = useMotionValue(0);
@@ -135,6 +142,7 @@ export default function HomePage() {
   const smoothY = useSpring(mouseY, { stiffness: 60, damping: 20 });
 
   useEffect(() => {
+    if (isMobile || shouldReduceMotion) return;
     const handler = (e: MouseEvent) => {
       const x = (e.clientX - window.innerWidth / 2) / window.innerWidth;
       const y = (e.clientY - window.innerHeight / 2) / window.innerHeight;
@@ -143,7 +151,7 @@ export default function HomePage() {
     };
     window.addEventListener("mousemove", handler, { passive: true });
     return () => window.removeEventListener("mousemove", handler);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, isMobile, shouldReduceMotion]);
 
   return (
     <div className="min-h-screen">
@@ -213,8 +221,8 @@ export default function HomePage() {
               <motion.div
                 className="absolute inset-0"
                 style={{
-                  x: smoothX,
-                  y: smoothY,
+                  x: isMobile || shouldReduceMotion ? 0 : smoothX,
+                  y: isMobile || shouldReduceMotion ? 0 : smoothY,
                   scale: 1.08,
                 }}
               >
@@ -239,7 +247,7 @@ export default function HomePage() {
               >
                 <StatPill value="24h" label="Non-stop" delay={0} />
                 <StatPill value="300+" label="Builders" delay={0.1} />
-                <StatPill value="6+" label="Challenges" delay={0.2} />
+                <StatPill value="10+" label="Challenges" delay={0.2} />
                 <StatPill value="Global" label="Community" delay={0.3} />
               </motion.div>
 

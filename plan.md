@@ -1,8 +1,8 @@
-# Cursor/Claude Prompt — Bridgr Website (Appwrite + Supabase)
+# Cursor/Claude Prompt — Terns Website (Appwrite + Supabase)
 
 
 
-**Goal:** Generate the Bridgr website + Hackathon microsite with Appwrite + Supabase, with editable content via an Admin dashboard and light Notion sync for selected sections.
+**Goal:** Generate the Terns website (terns.tech) + Hackathon microsite with Appwrite + Supabase, with editable content via an Admin dashboard and light Notion sync for selected sections.
 
 Use [**design.md**](http://design.md) for visuals (do not invent a new design system). Take layout + UX inspiration from **ChefTreff** and modern **AI hackathon** sites.
 
@@ -34,7 +34,7 @@ Use [**design.md**](http://design.md) for visuals (do not invent a new design sy
 
 ### Public marketing
 
-- `/` — Bridgr (company) landing page
+- `/` — Terns (company) landing page
 - `/hackpune` — Hackathon main page (event overview)
 - `/hackpune/partners` — Partners info hub (for challenge partners & sponsors)
 - `/hackpune/speakers` — Speakers & mentors page (teasers; “TBA” states)
@@ -186,11 +186,11 @@ Implement:
 
 ## UI structure (copy positioning)
 
-### `/` Bridgr landing (company)
+### `/` Terns landing (company)
 
 Sections (editable):
 
-- Hero: “Bridgr connects builders and real-world challenges — upcoming AI hackathons across regions.”
+- Hero: “Terns connects builders and real-world challenges — upcoming AI hackathons across regions.”
 - What we do: curated, high-signal, problem-first events
 - How it works: partners bring real problems; builders ship prototypes
 - Upcoming: teaser for HackPune (TBA details)

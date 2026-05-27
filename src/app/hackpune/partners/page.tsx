@@ -34,8 +34,39 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Partnership types */}
+      {/* German-India bridge section */}
       <section className="section-pad bg-lifted">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="eyebrow mb-4">THE OPPORTUNITY</p>
+              <h2 className="text-h2 text-ink mb-6">India&apos;s IT scale.<br />Germany&apos;s industry depth.</h2>
+              <p className="text-body text-slate-gray font-[450] leading-relaxed mb-6">
+                By connecting German industry with India&apos;s rapidly growing IT ecosystem, terns.tech creates a scalable platform for cross-border innovation, talent acquisition, and cost-efficient digital execution.
+              </p>
+              <p className="text-body text-slate-gray font-[450] leading-relaxed">
+                For the first edition, we are actively sourcing sponsors locally — companies in Hamburg and Germany with an interest in hiring, employer branding, and product adoption among India&apos;s top engineering talent.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { value: "500K+", label: "Tech professionals in Pune" },
+                { value: "10+", label: "Challenges per event" },
+                { value: "~8", label: "Teams per challenge" },
+                { value: "Hamburg", label: "Where Terns was born" },
+              ].map((stat) => (
+                <div key={stat.label} className="content-card content-card--compact">
+                  <div className="text-2xl font-medium text-ink mb-1 tracking-tight">{stat.value}</div>
+                  <div className="text-sm text-slate-gray font-[450]">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partnership types */}
+      <section className="section-pad bg-canvas">
         <div className="page-container">
           <p className="eyebrow mb-4">PARTNERSHIP TYPES</p>
           <h2 className="text-h2 text-ink mb-14">
@@ -66,16 +97,16 @@ export default function PartnersPage() {
       {/* Benefits section */}
       <section className="section-pad bg-canvas">
         <div className="page-container">
-          <p className="eyebrow mb-4">WHY PARTNER WITH BRIDGR</p>
+          <p className="eyebrow mb-4">WHY PARTNER WITH TERNS</p>
           <h2 className="text-h2 text-ink mb-14">
-            More than sponsorship - direct talent access.
+            More than sponsorship — direct talent access at scale.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
                 title: "Direct IP Access",
-                body: "Challenge partners retain all IP from solutions built on their problem. You get 4-6 working prototypes with full source code after the event.",
+                body: "Challenge partners retain all IP from solutions built on their problem. Get up to 8 working prototypes per challenge with full source code after the event.",
               },
               {
                 title: "Hire the Best",
