@@ -433,11 +433,11 @@ body {
 }
 
 .founder-photo {
-  filter: grayscale(100%);
+  filter: grayscale(100%) contrast(1.1) brightness(0.94);
   transition: filter 0.4s ease, transform 0.7s ease;
 }
 .group:hover .founder-photo {
-  filter: grayscale(80%);
+  filter: grayscale(65%) contrast(1.06) brightness(1);
 }
 
 .hero-atmosphere {

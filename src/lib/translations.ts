@@ -112,9 +112,9 @@ export const translations = {
         ctaSecondary: "Join Discord",
         stats: [
           { value: "24h", label: "Non-stop hacking" },
-          { value: "300+", label: "Builders" },
-          { value: "10+", label: "Challenges" },
-          { value: "Pune", label: "India" },
+          { value: "100", label: "Curated builders" },
+          { value: "8", label: "Challenges" },
+          { value: "3–4 Oct", label: "2026 · Pune" },
         ],
       },
       expect: {
@@ -154,41 +154,87 @@ export const translations = {
           { phase: "Phase 2", title: "Applications Close", status: "upcoming", detail: "Deadline TBA" },
           { phase: "Phase 3", title: "Acceptance Notifications", status: "upcoming", detail: "Within 2 weeks of close" },
           { phase: "Phase 4", title: "Team Matching", status: "upcoming", detail: "Skills + preferences based matching" },
-          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "24h hackathon - Pune, 2026" },
+          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "3–4 October 2026 · 24h hackathon · Pune" },
           { phase: "Phase 6", title: "Winners & Celebration", status: "upcoming", detail: "Final pitches, awards, networking" },
         ],
       },
       schedule: {
         eyebrow: "24 HOURS · TWO DAYS · ONE GOAL",
-        title: "The schedule",
+        title: "Provisional schedule",
         subtitle:
-          "From first coffee to final pitch - the key moments that shape your HackPune weekend. Exact times may shift slightly as we finalise the venue.",
+          "3 & 4 October 2026 (Sat & Sun) · Pune, India. Inspired by ChefTreff AI Hackathon 2026. Times are provisional and may shift as we finalise the venue.",
         items: [
           {
-            time: "Day 1 · 9:00",
-            title: "Welcome & orientation",
+            time: "Sat 3 Oct · 08:30",
+            title: "Check-in & breakfast",
             details: [
-              "9:30 - Challenge presentations by all partners (5 min each)",
-              "10:15 - Team assignments & challenge deep-dives",
+              "Collect your kit (T-shirt, badge, swag) and find your seat.",
+              "09:00 — Welcome by Terns · 09:30 — Team building for solo applicants",
             ],
           },
           {
-            time: "Day 1 · 11:00",
-            title: "Start hacking",
-            details: ["Lunch, dinner, snacks & drinks throughout the day and night"],
-          },
-          {
-            time: "Day 2 · 10:00",
-            title: "Pre-pitches (internal per challenge)",
+            time: "Sat 3 Oct · 10:00",
+            title: "Challenge partner presentations",
             details: [
-              "Each team presents in 3 minutes - sharp, concise, straight to the point.",
-              "Jury gives feedback and selects finalists for the main stage.",
+              "All 8 partners pitch their challenge (3–5 min each).",
+              "10:30 — Tech partner onboarding (Cursor, OpenAI, etc. — TBA)",
+              "11:30 — Challenge onboarding with mentors",
             ],
           },
           {
-            time: "Day 2 · 11:30",
-            title: "Final pitches in the auditorium",
-            details: ["13:00 - Winners announced, group photo, lunch & celebration"],
+            time: "Sat 3 Oct · 12:00",
+            title: "Hack begins",
+            details: [
+              "13:00 — Lunch · 14:00 — Speed dating with challenge partners (3-min rotations)",
+              "16:00 — Women in AI coffee session · 18:00 — Dinner · 22:00 — Snacks & code freeze",
+            ],
+          },
+          {
+            time: "Sun 4 Oct · 09:00",
+            title: "Breakfast & finalize",
+            details: [
+              "Judges review overnight submissions. Teams polish demos.",
+              "Submit: GitHub repo + 3-min demo video + pitch deck (max 4 slides)",
+            ],
+          },
+          {
+            time: "Sun 4 Oct · 10:30",
+            title: "Pitches & jury",
+            details: [
+              "4-min pitch + 3-min Q&A per team. Top 2 teams per challenge on main stage.",
+              "One judge per challenge (from partner company) + Terns jury member.",
+            ],
+          },
+          {
+            time: "Sun 4 Oct · 13:00",
+            title: "Awards & closing",
+            details: [
+              "8 winners announced (one per challenge). Group photo.",
+              "13:30 — Networking, lunch & official end.",
+            ],
+          },
+        ],
+      },
+      program: {
+        eyebrow: "PROGRAM HIGHLIGHTS",
+        title: "More than just hacking.",
+        subtitle: "Structured like ChefTreff AI Hackathon 2026 — keynote, mentoring, inclusivity, and recruiting built in.",
+        items: [
+          {
+            title: "Opening keynote",
+            body: "30-minute keynote from a European challenge partner (TBA). Visual-first, peer-to-peer — hoodie not suit.",
+          },
+          {
+            title: "Speed dating with partners",
+            body: "Day 1, 14:00–15:00. 3-minute rotations at each challenge table. Clarify scope, find teammates, start recruiting conversations.",
+          },
+          {
+            title: "Women in AI",
+            body: "Day 1, 16:00–17:00 coffee session. We target 30% women participants. Deposit waiver available for underrepresented applicants.",
+          },
+          {
+            title: "Mentors & jury",
+            body: "1 mentor + 1 judge per challenge partner. Mentors on-site Day 1 (09:00–22:00). Judges score Day 2 pitches — top 2 teams per challenge, one winner each.",
           },
         ],
       },
@@ -220,11 +266,29 @@ export const translations = {
       },
       cta: { title: "Interested in partnering?", subtitle: "Fill in the sponsor inquiry form and we'll get back to you.", button: "Submit Partnership Inquiry" },
     },
-    speakers: {
+      speakers: {
       hero: {
         eyebrow: "SPEAKERS & MENTORS",
         title: "Learn from builders\nwho ship.",
-        subtitle: "Speakers and mentors will be announced as confirmations come in. We're in conversations with leading voices from AI, product, and engineering globally.",
+        subtitle: "Opening keynote, challenge mentors, and jury members — structured like ChefTreff AI Hackathon 2026. Confirmations announced on the updates page.",
+      },
+      roles: {
+        keynote: {
+          title: "Opening keynote",
+          body: "30-minute keynote from a European challenge partner (TBA). Visual-first slides, peer-to-peer tone. Day 1, ~10:00 slot (provisional).",
+        },
+        mentors: {
+          title: "Challenge mentors",
+          body: "1 mentor per challenge partner on-site Day 1 (09:00–22:00). IT, ML, AI, data science profiles. Maximum time with teams — overnight stay not required.",
+        },
+        judges: {
+          title: "Challenge judges",
+          body: "1 judge per challenge for Day 2 pitches (07:30–13:30). Top 2 teams per challenge pitch on main stage. 4-min pitch + 3-min Q&A. One winner per challenge.",
+        },
+        workshop: {
+          title: "Optional mid-hack session",
+          body: "AI tools / workflow automation workshop (~10:00 Day 1, TBA). Speakers and mentors confirmed via updates page.",
+        },
       },
       tba: "Speakers announced soon.",
       cta: { title: "Want to speak or mentor?", subtitle: "Submit your interest and we'll reach out.", button: "Apply as Speaker/Mentor" },
@@ -235,7 +299,9 @@ export const translations = {
       subtitle:
         "Get answers to your questions about HackPune, Terns, and how to participate.",
       items: [
-        { q: "What is HackPune?", a: "HackPune is Terns' flagship 24-hour AI hackathon in Pune, India. Participants work on real challenges from leading companies and pitch working prototypes to judges." },
+        { q: "When is HackPune 2026?", a: "3 & 4 October 2026 (Saturday & Sunday) in Pune, India. The provisional schedule is on terns.tech/hackpune — exact times may shift as we finalise the venue." },
+        { q: "How does judging work?", a: "Each challenge partner provides one judge. Top 2 teams per challenge pitch on the main stage (4 min + 3 min Q&A). One winner per challenge — 8 winners total." },
+        { q: "Is there a Women in AI session?", a: "Yes. Day 1, 16:00–17:00 — an open coffee roundtable for women participants, mentors, and guests. We target 30% women participants." },
         { q: "What is Terns?", a: "Terns is a global hackathon ecosystem - a platform and community for builders, founders, hackers, and creators worldwide. HackPune is our flagship event in Pune, India." },
         { q: "Do I need to be a developer?", a: "No. We need engineers, designers, product managers, and strategic thinkers. Every team benefits from diverse skill sets." },
         { q: "Is it free to participate?", a: "Participation details including any fees will be announced with applications. Stay tuned for updates." },
@@ -356,7 +422,7 @@ export const translations = {
             role: "COO & Founder",
             bio: "AI & HPC Engineer at C-DAC's PARAM National Supercomputing Facility - India's premier AI infrastructure. He works on LLM systems, contributes to multi-node GPU cluster operations, and was personally recognized by India's Ministry of Electronics for his contributions to the IndiaAI Impact Summit 2026. CGPA 9.69. Deeply technical, deeply hands-on.",
             image: "/yash_profile.jpeg",
-            linkedin: "https://linkedin.com/in/yash-pawar",
+            linkedin: "https://www.linkedin.com/in/yash-pawar-2167b7207",
             email: "yash.pawar@terns.tech",
           },
           {
@@ -364,8 +430,8 @@ export const translations = {
             role: "CFO & Founder",
             bio: "Serial entrepreneur and economics student in Hamburg. Co-founded MRBL Studios, Pettoo (a pet-tech startup), and Naturstein Tilmes. His motto is simple: \"Dream as long as the dream becomes reality.\" He ran a marathon. He finds investors. He closes deals. And he makes every room he walks into more alive.",
             image: "/elias_profile.jpeg",
-            linkedin: "https://linkedin.com/in/elias-tilmes",
-            email: "elias@terns.tech",
+            linkedin: "https://www.linkedin.com/in/elias-tilmes-9a5a70201",
+            email: "elias.tilmes@terns.tech",
           },
         ],
       },
@@ -477,7 +543,7 @@ export const translations = {
         title: "HackPune - Indiens KI-Hackathon",
         body: "Terns' Flagship-Event in Pune, Indien. Ein 24-Stunden-KI-Hackathon an der Schnittstelle von Talent, Ambition und echten Problemen.",
         location: "Pune, Indien",
-        date: "2026 - Datum folgt",
+        date: "3–4 October 2026",
         cta: "Mehr erfahren",
       },
       pune: {
@@ -518,9 +584,9 @@ export const translations = {
         ctaSecondary: "Discord beitreten",
         stats: [
           { value: "24h", label: "Non-stop Hacking" },
-          { value: "300+", label: "Builder" },
-          { value: "10+", label: "Challenges" },
-          { value: "Pune", label: "Indien" },
+          { value: "100", label: "Kuratierte Builder" },
+          { value: "8", label: "Challenges" },
+          { value: "3–4 Okt", label: "2026 · Pune" },
         ],
       },
       expect: {
@@ -560,41 +626,87 @@ export const translations = {
           { phase: "Phase 2", title: "Bewerbungsschluss", status: "upcoming", detail: "Deadline folgt" },
           { phase: "Phase 3", title: "Zusagen", status: "upcoming", detail: "Innerhalb von 2 Wochen" },
           { phase: "Phase 4", title: "Team-Matching", status: "upcoming", detail: "Fähigkeitsbasiertes Matching" },
-          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "24h Hackathon - Pune, 2026" },
+          { phase: "Phase 5", title: "HackPune Event", status: "upcoming", detail: "3.–4. Oktober 2026 · 24h Hackathon · Pune" },
           { phase: "Phase 6", title: "Gewinner & Feier", status: "upcoming", detail: "Final-Pitches, Awards, Networking" },
         ],
       },
       schedule: {
         eyebrow: "24 STUNDEN · ZWEI TAGE · EIN ZIEL",
-        title: "Der Ablauf",
+        title: "Vorläufiger Ablauf",
         subtitle:
-          "Vom ersten Kaffee bis zum Final Pitch - die wichtigsten Momente deines HackPune-Wochenendes. Genaue Zeiten können sich leicht ändern.",
+          "3. & 4. Oktober 2026 (Sa & So) · Pune, Indien. Inspiriert vom ChefTreff AI Hackathon 2026. Zeiten sind vorläufig und können sich ändern.",
         items: [
           {
-            time: "Tag 1 · 9:00",
-            title: "Willkommen & Orientierung",
+            time: "Sa 3 Okt · 08:30",
+            title: "Check-in & Frühstück",
             details: [
-              "9:30 - Challenge-Präsentationen aller Partner (je 5 Min.)",
-              "10:15 - Team-Zuweisung & Challenge Deep-Dives",
+              "Kit abholen (T-Shirt, Badge, Swag) und Platz finden.",
+              "09:00 — Welcome by Terns · 09:30 — Teambuilding für Solo-Teilnehmende",
             ],
           },
           {
-            time: "Tag 1 · 11:00",
-            title: "Hacking startet",
-            details: ["Mittagessen, Abendessen, Snacks & Getränke den ganzen Tag und die Nacht"],
-          },
-          {
-            time: "Tag 2 · 10:00",
-            title: "Pre-Pitches (intern pro Challenge)",
+            time: "Sa 3 Okt · 10:00",
+            title: "Challenge-Partner-Präsentationen",
             details: [
-              "Jedes Team präsentiert in 3 Minuten - prägnant und auf den Punkt.",
-              "Jury gibt Feedback und wählt Finalisten für die Hauptbühne.",
+              "Alle 8 Partner stellen ihre Challenge vor (3–5 Min. je Partner).",
+              "10:30 — Tech-Partner-Onboarding (Cursor, OpenAI, etc. — TBA)",
+              "11:30 — Challenge-Onboarding mit Mentoren",
             ],
           },
           {
-            time: "Tag 2 · 11:30",
-            title: "Final Pitches im Auditorium",
-            details: ["13:00 - Gewinner, Gruppenfoto, Mittagessen & Feier"],
+            time: "Sa 3 Okt · 12:00",
+            title: "Hack startet",
+            details: [
+              "13:00 — Mittagessen · 14:00 — Speed Dating mit Challenge-Partnern (3-Min-Rotationen)",
+              "16:00 — Women in AI Coffee · 18:00 — Abendessen · 22:00 — Snacks & Code Freeze",
+            ],
+          },
+          {
+            time: "So 4 Okt · 09:00",
+            title: "Frühstück & Finalisierung",
+            details: [
+              "Jury prüft Einreichungen über Nacht. Teams polieren Demos.",
+              "Einreichung: GitHub-Repo + 3-Min-Demo-Video + Pitch-Deck (max. 4 Slides)",
+            ],
+          },
+          {
+            time: "So 4 Okt · 10:30",
+            title: "Pitches & Jury",
+            details: [
+              "4 Min. Pitch + 3 Min. Q&A pro Team. Top 2 Teams pro Challenge auf der Hauptbühne.",
+              "Eine Jury-Person pro Challenge (vom Partner) + Terns-Jury-Mitglied.",
+            ],
+          },
+          {
+            time: "So 4 Okt · 13:00",
+            title: "Preisverleihung & Abschluss",
+            details: [
+              "8 Gewinner (einer pro Challenge). Gruppenfoto.",
+              "13:30 — Networking, Mittagessen & offizielles Ende.",
+            ],
+          },
+        ],
+      },
+      program: {
+        eyebrow: "PROGRAMM-HIGHLIGHTS",
+        title: "Mehr als nur Hacken.",
+        subtitle: "Strukturiert wie der ChefTreff AI Hackathon 2026 — Keynote, Mentoring, Inklusion und Recruiting inklusive.",
+        items: [
+          {
+            title: "Opening Keynote",
+            body: "30-Minuten-Keynote eines europäischen Challenge-Partners (TBA). Visuell, peer-to-peer — Hoodie statt Anzug.",
+          },
+          {
+            title: "Speed Dating mit Partnern",
+            body: "Tag 1, 14:00–15:00. 3-Minuten-Rotationen an jedem Challenge-Tisch. Scope klären, Team finden, Recruiting starten.",
+          },
+          {
+            title: "Women in AI",
+            body: "Tag 1, 16:00–17:00 Coffee-Session. Ziel: 30% Frauen unter den Teilnehmenden. Deposit-Waiver für underrepresented Bewerberinnen.",
+          },
+          {
+            title: "Mentoren & Jury",
+            body: "1 Mentor + 1 Juror pro Challenge-Partner. Mentoren vor Ort Tag 1 (09:00–22:00). Jury bewertet Tag-2-Pitches — Top 2 pro Challenge, ein Gewinner.",
           },
         ],
       },
@@ -630,7 +742,25 @@ export const translations = {
       hero: {
         eyebrow: "SPEAKER & MENTOREN",
         title: "Lerne von Buildern,\ndie liefern.",
-        subtitle: "Speaker werden bekannt gegeben, sobald Bestätigungen vorliegen.",
+        subtitle: "Opening Keynote, Challenge-Mentoren und Jury — strukturiert wie ChefTreff AI Hackathon 2026. Bestätigungen auf der Updates-Seite.",
+      },
+      roles: {
+        keynote: {
+          title: "Opening Keynote",
+          body: "30-Minuten-Keynote eines europäischen Challenge-Partners (TBA). Visuelle Slides, peer-to-peer. Tag 1, ~10:00 (vorläufig).",
+        },
+        mentors: {
+          title: "Challenge-Mentoren",
+          body: "1 Mentor pro Challenge-Partner vor Ort Tag 1 (09:00–22:00). IT, ML, AI, Data Science. Maximale Zeit mit Teams — Übernachtung nicht nötig.",
+        },
+        judges: {
+          title: "Challenge-Jury",
+          body: "1 Juror pro Challenge für Tag-2-Pitches (07:30–13:30). Top 2 Teams pro Challenge auf der Hauptbühne. 4 Min. Pitch + 3 Min. Q&A.",
+        },
+        workshop: {
+          title: "Optionale Mid-Hack-Session",
+          body: "AI-Tools / Workflow-Automation-Workshop (~10:00 Tag 1, TBA). Bestätigungen über Updates-Seite.",
+        },
       },
       tba: "Speaker werden bald angekündigt.",
       cta: { title: "Möchtest du sprechen oder mentoren?", subtitle: "Reiche dein Interesse ein.", button: "Als Speaker/Mentor bewerben" },
@@ -641,6 +771,9 @@ export const translations = {
       subtitle:
         "Antworten auf deine Fragen zu HackPune, Terns und deiner Teilnahme.",
       items: [
+        { q: "Wann ist HackPune 2026?", a: "3. & 4. Oktober 2026 (Samstag & Sonntag) in Pune, Indien. Der vorläufige Ablauf steht auf terns.tech/hackpune." },
+        { q: "Wie funktioniert die Jury?", a: "Jeder Challenge-Partner stellt einen Juror. Top 2 Teams pro Challenge pitchen auf der Hauptbühne (4 Min. + 3 Min. Q&A). Ein Gewinner pro Challenge — 8 Gewinner insgesamt." },
+        { q: "Gibt es eine Women-in-AI-Session?", a: "Ja. Tag 1, 16:00–17:00 — offene Coffee-Runde für Frauen unter Teilnehmenden, Mentoren und Gästen. Ziel: 30% Frauen." },
         { q: "Was ist HackPune?", a: "HackPune ist Terns' Flagship-Hackathon in Pune, Indien. 24 Stunden, echte Challenges, echte Unternehmen." },
         { q: "Was ist Terns?", a: "Terns ist ein globales Hackathon-Ökosystem. HackPune ist unser Flagship-Event in Pune, Indien." },
         { q: "Muss ich Entwickler sein?", a: "Nein. Wir brauchen Ingenieure, Designer, Produktmanager und strategische Denker." },
@@ -762,7 +895,7 @@ export const translations = {
             role: "COO & Gründer",
             bio: "KI- & HPC-Ingenieur am nationalen PARAM-Supercomputer Indiens (C-DAC). Arbeitet an LLM-Systemen und an Multi-Node-GPU-Cluster-Betrieb. Von MeitY für Beiträge zum IndiaAI Impact Summit 2026 ausgezeichnet.",
             image: "/yash_profile.jpeg",
-            linkedin: "https://linkedin.com/in/yash-pawar",
+            linkedin: "https://www.linkedin.com/in/yash-pawar-2167b7207",
             email: "yash.pawar@terns.tech",
           },
           {
@@ -770,8 +903,8 @@ export const translations = {
             role: "CFO & Gründer",
             bio: "Serieller Unternehmer und BWL-Student in Hamburg. Mitgründer von MRBL Studios, Pettoo und Naturstein Tilmes. Sein Motto: \"Träume, solange der Traum Wirklichkeit wird.\" Er hat einen Marathon gelaufen. Er holt die Investoren.",
             image: "/elias_profile.jpeg",
-            linkedin: "https://linkedin.com/in/elias-tilmes",
-            email: "elias@terns.tech",
+            linkedin: "https://www.linkedin.com/in/elias-tilmes-9a5a70201",
+            email: "elias.tilmes@terns.tech",
           },
         ],
       },

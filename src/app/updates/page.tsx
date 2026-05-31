@@ -58,16 +58,7 @@ export default function UpdatesPage() {
             <div className="relative pl-8">
               <div className="absolute left-[-5px] top-3 w-2.5 h-2.5 rounded-full bg-border border-2 border-canvas" />
               <p className="text-xs text-slate-gray py-3">
-                More updates coming soon - join{" "}
-                <a
-                  href={process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/terns"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-link-blue hover:opacity-80 transition-colors"
-                >
-                  Discord
-                </a>{" "}
-                for real-time announcements.
+                More updates coming soon — join Discord for real-time announcements when our community channel launches.
               </p>
             </div>
           </div>

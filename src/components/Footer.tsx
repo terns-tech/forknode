@@ -4,17 +4,9 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { TernsLogo } from "@/components/TernsLogo";
 
-const socialLinks = [
-  { label: "LinkedIn", href: "https://linkedin.com/company/ternstech", icon: "in" },
-  { label: "X", href: "https://x.com/ternstech", icon: "𝕏" },
-  { label: "Discord", href: "https://discord.gg/terns", icon: "D" },
-  { label: "GitHub", href: "https://github.com/terns-tech", icon: "G" },
-];
-
 export function Footer() {
   const { t } = useTranslation();
 
-  const discordUrl = process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/terns";
   const slackUrl = process.env.NEXT_PUBLIC_SLACK_URL || "https://join.slack.com/terns";
 
   const cols = [
@@ -39,7 +31,7 @@ export function Footer() {
       label: t.footer.links.resources,
       links: [
         { label: t.footer.resources[0], href: "/hackpune/faq" },
-        { label: t.footer.resources[1], href: discordUrl, external: true },
+        { label: t.footer.resources[1], comingSoon: true },
         { label: t.footer.resources[2], href: slackUrl, external: true },
       ],
     },
@@ -80,7 +72,14 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    {"external" in link && link.external ? (
+                    {"comingSoon" in link && link.comingSoon ? (
+                      <span
+                        title="Coming soon - channel not live yet"
+                        className="text-[14px] font-[450] footer-link opacity-40 blur-[0.4px] cursor-not-allowed select-none"
+                      >
+                        {link.label}
+                      </span>
+                    ) : "external" in link && link.external ? (
                       <a
                         href={link.href}
                         target="_blank"
@@ -105,43 +104,14 @@ export function Footer() {
           <p className="text-[11px] font-bold uppercase tracking-[0.56px] footer-subtle mb-3">
             Contact
           </p>
-          <div className="footer-contact-grid">
-            {[
-              { label: "General", email: "hello@terns.tech" },
-              { label: "Partnerships", email: "partnerships@terns.tech" },
-              { label: "Events", email: "events@terns.tech" },
-              { label: "Support", email: "support@terns.tech" },
-              { label: "Founders", email: "founders@terns.tech" },
-            ].map((item) => (
-              <div key={item.email} className="flex items-center gap-2">
-                <span className="text-[11px] footer-faint uppercase tracking-wider">{item.label}</span>
-                <a href={`mailto:${item.email}`} className="text-[13px] font-[450] footer-body footer-link">
-                  {item.email}
-                </a>
-              </div>
-            ))}
-          </div>
+          <a href="mailto:hello@terns.tech" className="text-[13px] font-[450] footer-body footer-link">
+            hello@terns.tech
+          </a>
         </div>
 
-        <div className="pt-6 border-t footer-divider flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
-            <p className="text-xs footer-subtle">{t.footer.copyright}</p>
-            <p className="text-xs footer-faint">{t.footer.madeIn}</p>
-          </div>
-          <div className="flex items-center gap-3">
-            {socialLinks.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="footer-icon-btn w-8 h-8 rounded-full border flex items-center justify-center text-xs font-bold"
-              >
-                {s.icon}
-              </a>
-            ))}
-          </div>
+        <div className="pt-6 border-t footer-divider flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+          <p className="text-xs footer-subtle">{t.footer.copyright}</p>
+          <p className="text-xs footer-faint">{t.footer.madeIn}</p>
         </div>
       </div>
     </footer>

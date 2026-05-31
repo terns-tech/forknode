@@ -22,25 +22,27 @@ export default function SpeakersPage() {
         </div>
       </section>
 
-      {/* Coming soon */}
+      {/* Roles — keynote, mentors, judges */}
       <section className="section-pad bg-lifted">
         <div className="page-container">
-          <p className="eyebrow mb-4">SPEAKERS &amp; MENTORS</p>
-          <div className="content-card content-card--center max-w-2xl mx-auto py-16">
-            <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-4">
-              Status
-            </span>
-            <h2 className="text-h2 text-ink mb-4">Coming Soon</h2>
-            <p className="text-body text-slate-gray font-[450] max-w-lg mx-auto">
-              We&apos;re lining up speakers and mentors for HackPune 2026. Confirmations will be shared on the updates page as soon as they&apos;re official.
-            </p>
-            <a
-              href="/updates"
-              className="mt-6 inline-flex items-center gap-2 text-link-blue hover:opacity-80 transition-colors text-sm font-medium"
-            >
-              Follow the updates <ArrowRight size={14} />
-            </a>
+          <p className="eyebrow mb-4">{t.speakers.hero.eyebrow}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            {Object.values(t.speakers.roles).map((role, i) => (
+              <div key={i} className="content-card card-hover h-full">
+                <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-3 block">
+                  {t.speakers.tba}
+                </span>
+                <h3 className="text-h3 text-ink mb-3">{role.title}</h3>
+                <p className="text-body text-slate-gray font-[450]">{role.body}</p>
+              </div>
+            ))}
           </div>
+          <a
+            href="/updates"
+            className="inline-flex items-center gap-2 text-link-blue hover:opacity-80 transition-colors text-sm font-medium"
+          >
+            Follow the updates <ArrowRight size={14} />
+          </a>
         </div>
       </section>
 

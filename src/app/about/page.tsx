@@ -64,7 +64,7 @@ function FounderCard({
               src={image}
               alt={name}
               fill
-              className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              className="founder-photo object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               sizes="168px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/25 via-transparent to-transparent opacity-60" />
@@ -134,7 +134,7 @@ const founders = [
   {
     name: "Yash Pawar",
     image: "/yash_profile.jpeg",
-    linkedin: "https://linkedin.com/in/yash-pawar",
+    linkedin: "https://www.linkedin.com/in/yash-pawar-2167b7207",
     email: "yash.pawar@terns.tech",
     bio: "Works in India's national AI supercomputing space - building LLM systems at scale and contributing to complex HPC operations.",
     highlights: [
@@ -145,8 +145,8 @@ const founders = [
   {
     name: "Elias Tilmes",
     image: "/elias_profile.jpeg",
-    linkedin: "https://linkedin.com/in/elias-tilmes",
-    email: "elias@terns.tech",
+    linkedin: "https://www.linkedin.com/in/elias-tilmes-9a5a70201",
+    email: "elias.tilmes@terns.tech",
     bio: "Serial entrepreneur with a gift for partnerships and momentum. Turns vision into deals, events, and community energy.",
     highlights: [
       "Economics, University of Hamburg",
@@ -373,13 +373,6 @@ export default function AboutPage() {
               <LinkButton href="/hackpune/partners" variant="secondary" size="lg">
                 Become a Partner
               </LinkButton>
-              <a
-                href="mailto:founders@terns.tech"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border text-ink text-[15px] font-medium hover:bg-lifted transition-all"
-              >
-                <Mail size={16} />
-                founders@terns.tech
-              </a>
             </div>
           </Reveal>
         </div>

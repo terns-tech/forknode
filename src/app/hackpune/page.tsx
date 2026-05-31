@@ -136,6 +136,25 @@ export default function HackPunePage() {
 
       <EventSchedule />
 
+      {/* ─── PROGRAM HIGHLIGHTS ──────────────────────────────── */}
+      <section className="section-pad bg-lifted">
+        <div className="page-container">
+          <p className="eyebrow mb-4">{t.hackpune.program.eyebrow}</p>
+          <h2 className="text-h2 text-ink mb-4 max-w-3xl">{t.hackpune.program.title}</h2>
+          <p className="text-body text-slate-gray font-[450] max-w-2xl mb-14">
+            {t.hackpune.program.subtitle}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {t.hackpune.program.items.map((item, i) => (
+              <div key={i} className="content-card card-hover h-full">
+                <h3 className="text-h3 text-ink mb-3">{item.title}</h3>
+                <p className="text-body text-slate-gray font-[450]">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── TIMELINE ────────────────────────────────────────── */}
       <section className="section-pad bg-canvas">
         <div className="page-container">
