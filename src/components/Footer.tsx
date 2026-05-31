@@ -4,12 +4,16 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { TernsLogo } from "@/components/TernsLogo";
 
+type FooterLink =
+  | { label: string; href: string; external?: boolean }
+  | { label: string; comingSoon: true };
+
 export function Footer() {
   const { t } = useTranslation();
 
   const slackUrl = process.env.NEXT_PUBLIC_SLACK_URL || "https://join.slack.com/terns";
 
-  const cols = [
+  const cols: { label: string; links: FooterLink[] }[] = [
     {
       label: t.footer.links.company,
       links: [
@@ -72,14 +76,14 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    {"comingSoon" in link && link.comingSoon ? (
+                    {"comingSoon" in link ? (
                       <span
                         title="Coming soon - channel not live yet"
                         className="text-[14px] font-[450] footer-link opacity-40 blur-[0.4px] cursor-not-allowed select-none"
                       >
                         {link.label}
                       </span>
-                    ) : "external" in link && link.external ? (
+                    ) : link.external ? (
                       <a
                         href={link.href}
                         target="_blank"
