@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { ArrowRight, Globe, Zap, Users, Trophy, Map, Star, MessageCircle } from "lucide-react";
+import { ArrowRight, Zap, MessageCircle } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LinkButton } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { HeroAtmosphere } from "@/components/HeroAtmosphere";
 import { StoryVisual } from "@/components/StoryVisual";
+import { TeamProfiles } from "@/components/TeamProfiles";
 
 /* ─── Animation Variants ─────────────────────────────────────────────────── */
 const fadeUp = {
@@ -48,51 +49,6 @@ function Reveal({
   );
 }
 
-
-/* ─── Bento Card ─────────────────────────────────────────────────────────── */
-function BentoCard({
-  title,
-  body,
-  icon: Icon,
-  accent = false,
-  large = false,
-  delay = 0,
-}: {
-  title: string;
-  body: string;
-  icon: React.ElementType;
-  accent?: boolean;
-  large?: boolean;
-  delay?: number;
-}) {
-  return (
-    <Reveal delay={delay}>
-      <motion.div
-        className={`relative content-card card-hover h-full ${
-          accent ? "content-card--accent" : ""
-        }`}
-        whileHover={{ scale: 1.015 }}
-        transition={{ duration: 0.25, ease: "easeOut" }}
-      >
-        {/* Background decoration */}
-        {accent && (
-          <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-ink/5 pointer-events-none" />
-        )}
-
-        <Icon
-          size={28}
-          className={`mb-5 ${accent ? "text-canvas/80" : "text-ink"}`}
-        />
-        <h3 className={`text-h3 mb-3 ${accent ? "text-canvas" : "text-ink"}`}>
-          {title}
-        </h3>
-        <p className={`text-[15px] font-[450] leading-relaxed ${accent ? "text-canvas/70" : "text-slate-gray"}`}>
-          {body}
-        </p>
-      </motion.div>
-    </Reveal>
-  );
-}
 
 /* ─── Stat Pill ─────────────────────────────────────────────────────────── */
 function StatPill({
@@ -313,7 +269,7 @@ export default function HomePage() {
                     href="/about"
                     className="inline-flex items-center gap-2 text-ink font-medium text-[15px] tracking-[-0.3px] hover:opacity-70 transition-opacity"
                   >
-                    Meet the founders <ArrowRight size={16} />
+                    Meet the team <ArrowRight size={16} />
                   </Link>
                 </div>
               </Reveal>
@@ -326,76 +282,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── FEATURES BENTO GRID ────────────────────────────────────────── */}
-      <section className="section-pad bg-canvas">
-        <div className="page-container">
-          <Reveal>
-            <div className="mb-14 max-w-2xl">
-              <p className="eyebrow mb-4">{t.home.what.eyebrow}</p>
-              <h2 className="text-h2 text-ink mb-5">{t.home.what.title}</h2>
-              <p className="text-body text-slate-gray font-[450]">{t.home.what.subtitle}</p>
-            </div>
-          </Reveal>
-
-          {/* Bento grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-            {/* Large accent card */}
-            <div className="lg:col-span-2 lg:row-span-1">
-              <BentoCard
-                title="Real Challenges, Real Companies"
-                body="Every hackathon track is sourced from a company with a genuine, unsolved problem. No toy datasets, no made-up scenarios - real business contexts, real stakes, real outcomes."
-                icon={Zap}
-                accent
-                large
-                delay={0}
-              />
-            </div>
-
-            {/* Small card */}
-            <BentoCard
-              title="Global Community"
-              body="A community of builders across borders. Your next co-founder may be in this community."
-              icon={Globe}
-              delay={0.1}
-            />
-
-            <BentoCard
-              title="Expert Mentorship"
-              body="Direct access to founders, engineers, and product leaders throughout every event."
-              icon={Star}
-              delay={0.15}
-            />
-
-            {/* Large card */}
-            <div className="lg:col-span-2">
-              <BentoCard
-                title="AI-Native Events"
-                body="Every challenge has an AI angle. We partner with leading platforms - Cursor, OpenAI, and more - to give every team access to cutting-edge tools, APIs, and compute. Builders come to Terns events to work with the best stack."
-                icon={Map}
-                large
-                delay={0.2}
-              />
-            </div>
-
-            <BentoCard
-              title="Ship & Win"
-              body="24 hours. Zero to prototype. Pitch to judges. Win prizes, job interviews, and a network that lasts."
-              icon={Trophy}
-              delay={0.25}
-            />
-
-            <div className="md:col-span-2 lg:col-span-2">
-              <BentoCard
-                title="Community Forever"
-                body="The event lasts 24 hours. The community is permanent. Discord servers, monthly meetups, and a global network of builders. Terns doesn't end when the hackathon does."
-                icon={Users}
-                delay={0.3}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <TeamProfiles />
 
       {/* ─── GLOBAL COMMUNITY ───────────────────────────────────────────── */}
       <section className="section-pad bg-lifted">

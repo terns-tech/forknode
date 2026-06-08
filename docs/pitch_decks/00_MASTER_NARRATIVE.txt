@@ -1,0 +1,264 @@
+==============================================================================
+TERNs HACKPUNE 2026 — MASTER NARRATIVE (EN + DE)
+==============================================================================
+
+MASTER NARRATIVE — HACKPUNE 2026
+════════════════════════════════
+
+ONE-LINER
+─────────
+Terns connects German startups and companies with 160 curated Indian hackers
+through a 24-hour AI hackathon in Pune — real problems, real prototypes,
+real recruiting signals.
+
+WHY WE ARE DOING THIS (expanded)
+────────────────────────────────
+Germany faces a structural IT and AI talent gap that cannot be closed quickly
+through domestic hiring alone. At the same time, India produces millions of STEM
+graduates — but employers increasingly demand applied, demonstrable AI skills,
+not theory alone. The gap is not volume. It is access, signal, and trust.
+
+HackPune exists to give German companies a low-risk, high-signal way to:
+  • Test a real internal AI problem with Indian builders in 24 hours
+  • Observe talent under pressure before any hiring commitment
+  • Build an Indo-German employer brand story in Pune's top tech ecosystem
+  • Validate India expansion interest before consulting or full hiring spend
+
+This is NOT logistics-first event planning. Per docs/info.md, the biggest risk is
+investing months of effort and discovering German companies do not want to
+participate. HackPune validates demand first.
+
+EVENT FACTS (current plan)
+──────────────────────────
+Date:           3–4 October 2026 (Saturday–Sunday)
+Location:       Pune, India (venue TBA)
+Participants:   160 Indian hackers total (accept ~180, seat 160)
+Profile mix:    40% students · 40% professional workers · 20% anyone
+Nationality:    All participants Indian residents
+Challenges:     8 — ALL from German startups and companies
+Format:         24-hour AI hackathon · English · free food + workspace
+Prizes:         NOT FIXED YET — to be decided with each challenge partner
+Partnerships:   NONE CONFIRMED YET — all institutional names are outreach targets
+
+PARTICIPANT MIX (detail)
+────────────────────────
+40% Students
+  Target colleges: COEP, VIT Pune, PICT, SPPU, IIT Bombay, BITS Pilani Goa
+  Selection: GitHub/portfolio + challenge-fit statement + AI interest
+
+40% Professional workers
+  AI/ML engineers, full-stack developers, data scientists, product managers
+  Working in Pune, Bengaluru, Mumbai or remote-for-India roles
+
+20% Anyone (open category)
+  Founders, designers, strategists, indie builders, career-switchers
+  No single profile required — must demonstrate builder mindset and AI interest
+
+Curated applications only. Refundable registration deposit (amount TBD in EUR equivalent).
+Target 30% women participants. Women in AI session on Day 1.
+
+GERMAN CHALLENGE MODEL (all 8 slots)
+────────────────────────────────────
+Every challenge is owned by a German startup or company. No Indian company challenges.
+Each German challenge partner provides:
+  • One real internal problem statement
+  • Dataset, API, or sandbox environment
+  • One mentor for 24 hours (on-site or remote)
+  • One judge for final pitches
+  • Prize for winning team — AMOUNT TBD per partner
+
+Each German challenge partner receives:
+  • Multiple working prototypes (typically 4+ teams per challenge track)
+  • Direct access to 160 vetted Indian builders
+  • Speed-dating recruiting conversations (Day 1, 14:00)
+  • 5-minute stage pitch slot at opening
+  • Optional 30-minute keynote (for partners attending in person)
+  • Brand visibility across event materials and post-event recap
+
+ECONOMICS (EUR only)
+────────────────────
+Challenge slot:         €3,500 – €5,500 per German company
+Title sponsor:          €5,500 (1 slot)
+Founder sponsor:        €100 – €500 (community tier)
+Institutional partner:  €1,000 – €2,000 (potential ecosystem partners)
+Tool/cloud sponsors:    In-kind (€30,000 – €50,000 combined toolkit value target)
+Operating budget:       ~€12,000 – €15,000 (venue, food, AV, ops, contingency)
+Prizes:                 TBD — decided individually with each challenge partner
+
+Pitch to German companies:
+"You are not sponsoring an event. You are buying 24 hours of focused AI engineering
+on your exact problem from curated Indian builders — and you keep what they build."
+
+POTENTIAL COLLABORATIONS (not confirmed)
+──────────────────────────────────────────
+Priority A outreach targets:
+  • GINSEP (BMWK-backed Indo-German startup network)
+  • AHK / IGCC India (Pune office — 4,500–6,000 member companies)
+  • DWIH New Delhi + DAAD (InnoXchange programme alignment)
+  • German Accelerator India alumni companies
+  • EU-India Innocenter
+  • India Week Hamburg (announcement platform)
+
+Priority B outreach targets:
+  • NASSCOM Pune chapter
+  • SINE IIT Bombay
+  • Fraunhofer India (advisor / intro channel — not a confirmed partner)
+  • MCCIA Pune
+  • GDG Cloud Pune, MLH (volunteers / recruitment)
+  • Devfolio (applications platform)
+  • Media: YourStory, Inc42, TheDialog
+
+University venue options (not partners — venue exploration only):
+  1. COEP Technological University, Pune
+  2. Savitribai Phule Pune University — Dept. of Technology
+  3. WeWork Pune (Kalyani Nagar / Kharadi — in-kind pitch)
+  4. Innov8 Coworking Pune
+
+Note: No institutional or company names should be presented as confirmed partners
+until MoUs are signed. Use "potential collaboration" language in all external materials.
+
+SUCCESS METRICS
+───────────────
+  • 8 German challenge partners confirmed by end of July 2026
+  • 160 Indian participants seated
+  • 8 working prototypes delivered
+  • ≥3 qualified hire/intent signals per challenge partner
+  • Event operating costs covered via challenge + sponsor revenue
+
+TEAM (Terns)
+────────────
+  • Omkar Kondhalkar — Founder, AI/CV engineer, Hamburg; event vision & German outreach
+  • Elias Tilmes — Finance & legal, Hamburg
+  • Sebastian Steltzer — PMO & investor relations; AHK/GINSEP outreach
+  • Luna Schreiner — Policy & government relations; BMWK grant channels
+  • Yash Pawar — India operations lead, Pune (ground logistics)
+  • Antje Ute Bauer — Pune community & Indo-German network
+  • Florian Burka — Agentic AI advisor
+  • Rasika Deshmukh — Operations & participant management
+  • Magdalena Geissler — Workshop facilitation
+
+Contact: hello@terns.tech · +49 176 43380383 · terns.tech/hackpune
+
+──────────────────────────────────────────────────────────────────────────────
+MASTER-NARRATIV — HACKPUNE 2026
+═══════════════════════════════
+
+ONE-LINER
+─────────
+Terns verbindet deutsche Startups und Unternehmen mit 160 kuratierten indischen
+Hackern in einem 24-Stunden-AI-Hackathon in Pune — echte Probleme, echte
+Prototypen, echte Recruiting-Signale.
+
+WARUM WIR DAS TUN (ausfuehrlich)
+────────────────────────────────
+Deutschland hat eine strukturelle IT- und KI-Fachkraefteluecke. Indien produziert
+Millionen STEM-Absolventen — aber Arbeitgeber verlangen zunehmend angewandte,
+nachweisbare AI-Skills. Die Luecke ist nicht Volumen. Es sind Zugang, Signal und Vertrauen.
+
+HackPune gibt deutschen Unternehmen einen risikoarmen, hochsignifikanten Weg:
+  • Ein echtes internes AI-Problem in 24h mit indischen Buildern testen
+  • Talent unter Druck erleben, bevor Hiring-Entscheidungen fallen
+  • Indo-German Employer Brand in Punes Top-Tech-Oekosystem aufbauen
+  • Indien-Interesse validieren, bevor Consulting- oder Voll-Hiring-Budgets fliessen
+
+Das groesste Risiko ist nicht das Venue. Es ist, dass deutsche Unternehmen nach
+Monaten Outreach nicht mitmachen wollen. HackPune validiert Nachfrage zuerst.
+
+EVENT-FAKTEN (aktueller Plan)
+─────────────────────────────
+Datum:          3.–4. Oktober 2026
+Ort:            Pune, Indien (Venue TBA)
+Teilnehmende:   160 indische Hacker (ca. 180 angenommen, 160 Plaetze)
+Mix:            40 % Studierende · 40 % Berufstaetige · 20 % alle
+Nationalitaet:  Alle Teilnehmenden aus Indien
+Challenges:     8 — ALLE von deutschen Startups und Unternehmen
+Format:         24h AI-Hackathon · Englisch · kostenlos inkl. Verpflegung
+Preise:         NOCH NICHT FESTGELEGT — mit jedem Partner individuell
+Partnerschaften: NOCH KEINE BESTAETIGT — alle Namen sind Outreach-Ziele
+
+DEUTSCHES CHALLENGE-MODELL (alle 8 Slots)
+──────────────────────────────────────────
+Jede Challenge gehoert einem deutschen Startup oder Unternehmen.
+Jeder Partner liefert: Problem, Daten/API, Mentor, Judge, Preis (TBD).
+Jeder Partner erhaelt: Prototypen, Recruiting-Zugang, Buehnenzeit, Sichtbarkeit.
+
+OEKONOMIE (nur EUR)
+───────────────────
+Challenge Slot:     3.500 – 5.500 EUR
+Title Sponsor:      5.500 EUR
+Founder Sponsor:      100 – 500 EUR
+Institutionell:       1.000 – 2.000 EUR
+Betriebsbudget:       ca. 12.000 – 15.000 EUR
+Preise:             TBD
+
+POTENZIELLE KOOPERATIONEN (nicht bestaetigt)
+────────────────────────────────────────────
+GINSEP · AHK/IGCC · DWIH/DAAD · German Accelerator · EU-India Innocenter
+NASSCOM · SINE · MCCIA · GDG Cloud Pune · Devfolio · YourStory · Inc42
+
+Uni-Venue-Optionen: COEP · SPPU · WeWork · Innov8
+
+ERFOLGSKENNZAHLEN
+──────────────────
+8 deutsche Challenge Partner bis Ende Juli 2026 · 160 Teilnehmende · 8 Prototypen
+
+KONTAKT: hello@terns.tech · +49 176 43380383
+
+REFERENCES (verified through May/June 2026)
+────────────────────────────────────────────
+[1]  Bitkom — IT-Fachkräfte Studie 2025
+     https://www.bitkom.org/sites/main/files/2026-01/bitkom-studienbericht-it-fachkraefte-2025.pdf
+     109,000 unfilled IT roles · 85% report shortage · 79% expect worsening · 7.7 months avg. fill time
+
+[2]  APRIORI HR:LAB Q1 2026
+     https://www.apriori.de/app/uploads/2026/03/APRIORI_HRLAB_Arbeitsmarkt_2026.pdf
+
+[3]  PM India — India-Germany Joint Statement (Jan 2026)
+     https://www.pmindia.gov.in/en/news_updates/india-germany-joint-statement/
+     Bilateral trade > USD 50 billion · Innovation & Technology Partnership Roadmap
+
+[4]  PM India — 7th Indo-German IGC (Oct 2024)
+     https://www.pmindia.gov.in/en/news_updates/joint-statement-7th-india-germany-inter-governmental-consultations-igc/
+
+[5]  DWIH — Indo-German InnoXchange Programme (2026)
+     https://www.dwih-newdelhi.org/en/2026/03/28/indo-german-innoxchange-programme/
+     DST + DAAD + DWIH · first delegation June 2026
+
+[6]  GINSEP — German Indian Startup Exchange Program
+     https://www.ginsep.co/
+     1,500+ startups · 70+ market entries · BMWK-backed (POTENTIAL partner)
+
+[7]  IGCC / AHK India
+     https://igtcindia.com/about-igcc/
+     4,500–6,000 members · Pune office (POTENTIAL partner)
+
+[8]  Inc42 — Pune emerging startup hub (May 2025)
+     https://inc42.com/features/from-hyderabad-to-pune-which-city-holds-indias-startup-hub-baton/
+     $5.1B / 421 deals since 2014
+
+[9]  Zinnov / IMP.NEWS — Pune GCC surge
+     https://imp.news/industry/punes-surge-in-gccs-talent-specialization-and-real-estate-wins-62034/
+     360+ GCCs · ~90,000 graduates/year
+
+[10] NITI Aayog — AI Economy Job Creation Roadmap (2025)
+     https://niti.gov.in/sites/default/files/2025-10/Roadmap_for_Job_Creation_in_the_AI_Economy.pdf
+     AI demand 800k–850k → 1.25M+ by 2026–27
+
+[11] NASSCOM + Indeed — India's AI Talent Inflection Point
+     https://community.nasscom.in/communities/nasscom-insights/indias-ai-talent-inflection-point-skill-gaps-competitive-advantage
+     40% prefer demonstrable AI skills over degrees
+
+[12] STEM Pipeline India (UDISE+ / AISHE)
+     https://educationforallinindia.com/wp-content/uploads/2026/03/The-STEM-Pipeline-in-India-From-Science-Classrooms-to-STEM-Degrees-UDISEPlus-2024-25-AISHE-2021-22.pdf
+     ~2.55 million STEM graduates/year
+
+[13] ChefTreff AI Hackathon 2026 (reference format)
+     https://chef-treff.de/en/hackathon/
+     300–350 builders · 9 real challenges · 24h · Hamburg
+
+[14] terns.tech
+     https://terns.tech
+     HackPune 2026 · 3–4 October · Pune
+
+[15] Internal: docs/info.md, docs/pre1.pdf, docs/Ceo.pdf, Notion HackPune Wiki
+==============================================================================

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Terns",
   },
   description:
-    "Terns is a global hackathon ecosystem connecting builders, founders, hackers, and creators across borders. Born from friendship, designed for the world. Join our flagship event HackPune 2026.",
+    "Terns is a global hackathon ecosystem connecting builders, founders, hackers, and creators across borders. Designed for the world. Join our flagship event HackPune 2026.",
   keywords: [
     "hackathon", "global hackathon", "builders", "Terns",
     "HackPune", "AI hackathon", "Pune", "India", "Germany", "Hamburg",

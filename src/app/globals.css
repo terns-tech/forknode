@@ -440,6 +440,79 @@ body {
   filter: grayscale(65%) contrast(1.06) brightness(1);
 }
 
+/* Team profile portraits — round, B&W, face-focused crop */
+.team-portrait {
+  position: relative;
+  width: min(52.5vw, 210px);
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 0.5px solid var(--ink);
+  border-radius: 50%;
+  background: var(--canvas);
+}
+@media (min-width: 640px) {
+  .team-portrait {
+    width: 220px;
+  }
+}
+@media (min-width: 1024px) {
+  .team-portrait {
+    width: 235px;
+  }
+}
+
+.team-portrait__photo {
+  object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.14);
+  filter: grayscale(100%) contrast(1.08);
+}
+
+.team-portrait__fallback {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.team-card__role {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--slate-gray);
+}
+
+.team-card__name {
+  font-size: clamp(1.125rem, 2.2vw, 1.3125rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.team-card__details {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.team-card__detail {
+  font-size: 0.8125rem;
+  font-weight: 450;
+  line-height: 1.45;
+  color: var(--slate-gray);
+}
+
 .hero-atmosphere {
   position: absolute;
   inset: 0;

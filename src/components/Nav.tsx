@@ -11,6 +11,9 @@ import { cn } from "@/lib/utils";
 import { LinkButton } from "@/components/ui/Button";
 import { TernsLogo } from "@/components/TernsLogo";
 
+const navLinkClass =
+  "relative text-[15px] font-medium tracking-[-0.3px] transition-colors duration-150 whitespace-nowrap py-1";
+
 export function Nav() {
   const { t, locale, setLocale } = useTranslation();
   const { theme, toggleTheme } = useTheme();
@@ -39,7 +42,6 @@ export function Nav() {
     { href: "/hackpune", label: t.nav.hackpune },
     { href: "/hackpune/partners", label: t.nav.partners },
     { href: "/hackpune/speakers", label: t.nav.speakers },
-    { href: "/about", label: t.nav.about },
     { href: "/updates", label: t.nav.updates },
   ];
 
@@ -77,10 +79,7 @@ export function Nav() {
                     key={link.href}
                     href={link.href}
                     aria-current={active ? "page" : undefined}
-                    className={cn(
-                      "relative text-[15px] font-medium tracking-[-0.3px] transition-colors duration-150 whitespace-nowrap py-1",
-                      active ? "text-ink" : "text-ink/60 hover:text-ink"
-                    )}
+                    className={cn(navLinkClass, active ? "text-ink" : "text-ink/60 hover:text-ink")}
                   >
                     {link.label}
                     <span

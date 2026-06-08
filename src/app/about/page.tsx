@@ -29,8 +29,9 @@ function Reveal({
   );
 }
 
-function FounderCard({
+function TeamMemberCard({
   name,
+  role,
   bio,
   highlights,
   image,
@@ -40,6 +41,7 @@ function FounderCard({
   reverse = false,
 }: {
   name: string;
+  role: string;
   bio: string;
   highlights: [string, string];
   image: string;
@@ -74,7 +76,7 @@ function FounderCard({
         <div className="flex-1 min-w-0 flex flex-col">
           <div className={`flex items-start justify-between gap-4 mb-4 ${reverse ? "sm:flex-row-reverse" : ""}`}>
             <div className={reverse ? "sm:text-right" : ""}>
-              <p className="eyebrow mb-2 text-slate-gray/80">Co-founder</p>
+              <p className="eyebrow mb-2 text-slate-gray/80">{role}</p>
               <h3 className="text-[22px] sm:text-[24px] font-semibold text-ink tracking-[-0.48px] leading-tight">
                 {name}
               </h3>
@@ -119,9 +121,10 @@ function FounderCard({
   );
 }
 
-const founders = [
+const teamLeads = [
   {
     name: "Omkar Kondhalkar",
+    role: "Head of Management",
     image: "/omkar_profile.jpg",
     linkedin: "https://linkedin.com/in/omkar-kondhalkar",
     email: "omkar@terns.tech",
@@ -133,6 +136,7 @@ const founders = [
   },
   {
     name: "Yash Pawar",
+    role: "Head of Operations (Volunteer)",
     image: "/yash_profile.jpeg",
     linkedin: "https://www.linkedin.com/in/yash-pawar-2167b7207",
     email: "yash.pawar@terns.tech",
@@ -144,13 +148,14 @@ const founders = [
   },
   {
     name: "Elias Tilmes",
+    role: "Head of Finance",
     image: "/elias_profile.jpeg",
     linkedin: "https://www.linkedin.com/in/elias-tilmes-9a5a70201",
     email: "elias.tilmes@terns.tech",
     bio: "Serial entrepreneur with a gift for partnerships and momentum. Turns vision into deals, events, and community energy.",
     highlights: [
       "Economics, University of Hamburg",
-      "Co-founder, Pettoo & MRBL Studios",
+      "Pettoo & MRBL Studios",
     ] as [string, string],
   },
 ];
@@ -254,7 +259,7 @@ export default function AboutPage() {
           className="ghost-headline absolute top-0 right-0 translate-x-8 opacity-40 pointer-events-none select-none"
           aria-hidden
         >
-          FOUNDERS
+          TEAM
         </div>
 
         <div className="page-container relative z-10">
@@ -271,8 +276,8 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col gap-5 max-w-4xl">
-            {founders.map((founder, i) => (
-              <FounderCard key={founder.name} {...founder} delay={i * 0.12} reverse={i % 2 === 1} />
+            {teamLeads.map((member, i) => (
+              <TeamMemberCard key={member.name} {...member} delay={i * 0.12} reverse={i % 2 === 1} />
             ))}
           </div>
 
@@ -284,7 +289,7 @@ export default function AboutPage() {
                   &ldquo;We met building things and decided to build something bigger. Not for the exit. For the builders who deserve a better ecosystem.&rdquo;
                 </blockquote>
                 <p className="text-[15px] text-canvas/60 font-[450]">
-                  Omkar, Yash & Elias, Terns Founders
+                  Omkar, Yash & Elias — Terns team
                 </p>
               </div>
             </div>

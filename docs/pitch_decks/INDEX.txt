@@ -1,0 +1,32 @@
+TERNs HACKPUNE 2026 — PITCH DECK FILES INDEX
+==================================================
+Languages: English (en) and German (de) only.
+
+KEY FACTS (current plan):
+  • 160 Indian hackers (40% students · 40% professionals · 20% anyone)
+  • 8 challenges — ALL from German startups and companies
+  • All figures in EUR · Prizes TBD · No confirmed partners yet
+
+PPTX:
+  • Terns_HackPune_2026_company_de.pptx
+  • Terns_HackPune_2026_company_en.pptx
+  • Terns_HackPune_2026_participant_university_de.pptx
+  • Terns_HackPune_2026_participant_university_en.pptx
+  • Terns_HackPune_2026_sponsor_partner_de.pptx
+  • Terns_HackPune_2026_sponsor_partner_en.pptx
+
+TXT:
+  • 00_MASTER_NARRATIVE.txt
+  • Terns_HackPune_2026_company_de.txt
+  • Terns_HackPune_2026_company_en.txt
+  • Terns_HackPune_2026_participant_university_de.txt
+  • Terns_HackPune_2026_participant_university_en.txt
+  • Terns_HackPune_2026_sponsor_partner_de.txt
+  • Terns_HackPune_2026_sponsor_partner_en.txt
+
+GENERATORS:
+  • generate_pptx_decks.py
+  • generate_txt_companions.py
+
+ZIP: Terns_HackPune_2026_pitch_decks_EN_DE.zip
+Total EN/DE TXT companions: 7

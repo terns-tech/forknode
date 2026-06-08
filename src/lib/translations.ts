@@ -384,9 +384,9 @@ export const translations = {
     },
     about: {
       eyebrow: "ABOUT TERNS",
-      title: "Friends turned founders.\nBuilt for the world.",
+      title: "Built for the world.",
       subtitle:
-        "Terns was born from a simple belief: the world's best builders deserve a global home. Three friends - an AI engineer, an HPC specialist, and a serial entrepreneur - came together to build it.",
+        "Terns was born from a simple belief: the world's best builders deserve a global home. A team spanning Hamburg and Pune is building the ecosystem to make that real.",
       mission: {
         eyebrow: "OUR MISSION",
         title: "Community-first. Builder-native. Globally-minded.",
@@ -405,13 +405,13 @@ export const translations = {
         body: "Terns was born in Hamburg, but Pune is where we land first. From the tech parks of Hinjewadi to the startup corridors of Koregaon Park, Pune's builder culture is electric. We want every engineer, designer, and founder here to have access to the kind of event that can change a career. And then we want to do that in every city on earth.",
       },
       team: {
-        eyebrow: "THE FOUNDERS",
-        title: "Three builders. One vision.",
-        subtitle: "Friends before founders. We met building things - and decided to build something bigger together.",
+        eyebrow: "THE TEAM",
+        title: "One vision. Global team.",
+        subtitle: "We met building things — and decided to build a global home for builders everywhere.",
         members: [
           {
             name: "Omkar Kondhalkar",
-            role: "CEO & Founder",
+            role: "Head of Management",
             bio: "AI engineer and data scientist currently building computer vision systems to detect landmines at reGround.systems in Hamburg. MSc Data Science & AI at Universität Hamburg. Originally from Pune - Terns' first reach city. He carries the technical depth and the product clarity that turns ideas into real systems.",
             image: "/omkar_profile.jpg",
             linkedin: "https://linkedin.com/in/omkar-kondhalkar",
@@ -419,7 +419,7 @@ export const translations = {
           },
           {
             name: "Yash Pawar",
-            role: "COO & Founder",
+            role: "Head of Operations (Volunteer)",
             bio: "AI & HPC Engineer at C-DAC's PARAM National Supercomputing Facility - India's premier AI infrastructure. He works on LLM systems, contributes to multi-node GPU cluster operations, and was personally recognized by India's Ministry of Electronics for his contributions to the IndiaAI Impact Summit 2026. CGPA 9.69. Deeply technical, deeply hands-on.",
             image: "/yash_profile.jpeg",
             linkedin: "https://www.linkedin.com/in/yash-pawar-2167b7207",
@@ -427,8 +427,8 @@ export const translations = {
           },
           {
             name: "Elias Tilmes",
-            role: "CFO & Founder",
-            bio: "Serial entrepreneur and economics student in Hamburg. Co-founded MRBL Studios, Pettoo (a pet-tech startup), and Naturstein Tilmes. His motto is simple: \"Dream as long as the dream becomes reality.\" He ran a marathon. He finds investors. He closes deals. And he makes every room he walks into more alive.",
+            role: "Head of Finance",
+            bio: "Serial entrepreneur and economics student in Hamburg. Built MRBL Studios, Pettoo (a pet-tech startup), and Naturstein Tilmes. His motto is simple: \"Dream as long as the dream becomes reality.\" He ran a marathon. He finds investors. He closes deals. And he makes every room he walks into more alive.",
             image: "/elias_profile.jpeg",
             linkedin: "https://www.linkedin.com/in/elias-tilmes-9a5a70201",
             email: "elias.tilmes@terns.tech",
@@ -444,7 +444,7 @@ export const translations = {
         { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We're spinning up Discord and Slack channels for the Terns community. Join us as we open the doors - early conversations set the tone." },
         { date: "March 2026", tag: "Partnership", title: "Exploring AI platform partnerships", body: "We're in active conversations with Cursor, OpenAI, Lovable, Manus, and several other leading AI platforms about tech partnerships for HackPune. Nothing confirmed yet - announcements coming." },
         { date: "February 2026", tag: "Milestone", title: "Terns is live", body: "We've officially launched Terns - a global hackathon ecosystem. The mission: connect the world's builders across borders, through community-first events." },
-        { date: "January 2026", tag: "Team", title: "Three friends. One vision.", body: "Omkar, Yash, and Elias - three builders who met across Hamburg and Pune - came together to build something bigger: a global home for builders everywhere." },
+        { date: "January 2026", tag: "Team", title: "Terns team forms", body: "Omkar, Yash, and Elias — builders across Hamburg and Pune — launched Terns: a global home for hackathons and the builder community." },
       ],
     },
     footer: {
@@ -857,7 +857,7 @@ export const translations = {
     },
     about: {
       eyebrow: "ÜBER TERNS",
-      title: "Freunde wurden Gründer.\nGebaut für die Welt.",
+      title: "Gebaut für die Welt.",
       subtitle:
         "Terns entstand aus einer einfachen Überzeugung: Die besten Builder der Welt verdienen ein globales Zuhause.",
       mission: {
@@ -878,13 +878,13 @@ export const translations = {
         body: "Terns wurde in Hamburg geboren, aber Pune ist unsere erste Zielstadt. Von den Tech-Parks in Hinjewadi bis zu den Startup-Korridoren in Koregaon Park ist Punes Builder-Kultur elektrisch. Und dann wollen wir das in jede Stadt der Welt bringen.",
       },
       team: {
-        eyebrow: "DIE GRÜNDER",
-        title: "Drei Builder. Eine Vision.",
-        subtitle: "Zuerst Freunde, dann Gründer. Wir haben uns beim Bauen kennengelernt - und beschlossen, etwas Größeres zu bauen.",
+        eyebrow: "DAS TEAM",
+        title: "Eine Vision. Globales Team.",
+        subtitle: "Wir haben uns beim Bauen kennengelernt — und beschlossen, ein globales Zuhause für Builder zu schaffen.",
         members: [
           {
             name: "Omkar Kondhalkar",
-            role: "CEO & Gründer",
+            role: "Leitung Management",
             bio: "KI-Ingenieur und Data Scientist, der Computer-Vision-Systeme zur Minenentdeckung bei reGround.systems in Hamburg entwickelt. MSc Data Science & KI an der Universität Hamburg. Aus Pune - Terns' erste Zielstadt.",
             image: "/omkar_profile.jpg",
             linkedin: "https://linkedin.com/in/omkar-kondhalkar",
@@ -892,7 +892,7 @@ export const translations = {
           },
           {
             name: "Yash Pawar",
-            role: "COO & Gründer",
+            role: "Leitung Operations (Ehrenamtlich)",
             bio: "KI- & HPC-Ingenieur am nationalen PARAM-Supercomputer Indiens (C-DAC). Arbeitet an LLM-Systemen und an Multi-Node-GPU-Cluster-Betrieb. Von MeitY für Beiträge zum IndiaAI Impact Summit 2026 ausgezeichnet.",
             image: "/yash_profile.jpeg",
             linkedin: "https://www.linkedin.com/in/yash-pawar-2167b7207",
@@ -900,8 +900,8 @@ export const translations = {
           },
           {
             name: "Elias Tilmes",
-            role: "CFO & Gründer",
-            bio: "Serieller Unternehmer und BWL-Student in Hamburg. Mitgründer von MRBL Studios, Pettoo und Naturstein Tilmes. Sein Motto: \"Träume, solange der Traum Wirklichkeit wird.\" Er hat einen Marathon gelaufen. Er holt die Investoren.",
+            role: "Leitung Finanzen",
+            bio: "Serieller Unternehmer und BWL-Student in Hamburg. MRBL Studios, Pettoo und Naturstein Tilmes. Sein Motto: \"Träume, solange der Traum Wirklichkeit wird.\" Er hat einen Marathon gelaufen. Er holt die Investoren.",
             image: "/elias_profile.jpeg",
             linkedin: "https://www.linkedin.com/in/elias-tilmes-9a5a70201",
             email: "elias.tilmes@terns.tech",
@@ -917,7 +917,7 @@ export const translations = {
         { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir starten unsere Discord- und Slack-Kanäle. Die ersten Gespräche prägen den Ton - sei dabei." },
         { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Aktive Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
         { date: "Februar 2026", tag: "Meilenstein", title: "Terns ist live", body: "Wir haben offiziell Terns gestartet - ein globales Hackathon-Ökosystem." },
-        { date: "Januar 2026", tag: "Team", title: "Drei Freunde. Eine Vision.", body: "Omkar, Yash und Elias kamen aus Hamburg und Pune zusammen, um etwas Größeres zu bauen." },
+        { date: "Januar 2026", tag: "Team", title: "Terns-Team gegründet", body: "Omkar, Yash und Elias — Builder aus Hamburg und Pune — starteten Terns: ein globales Zuhause für Hackathons und die Builder-Community." },
       ],
     },
     footer: {
