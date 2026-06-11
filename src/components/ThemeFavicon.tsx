@@ -1,12 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { useTheme } from "@/contexts/ThemeContext";
-
-const APPLE_TOUCH = {
-  light: "/apple-touch-icon-light.png",
-  dark: "/apple-touch-icon-dark.png",
-} as const;
 
 function setAppleTouchIcon(href: string) {
   let link = document.querySelector<HTMLLinkElement>(
@@ -24,15 +18,12 @@ function setAppleTouchIcon(href: string) {
 }
 
 export function ThemeFavicon() {
-  const { theme } = useTheme();
-
   useEffect(() => {
-    const variant = theme === "dark" ? "dark" : "light";
-    setAppleTouchIcon(APPLE_TOUCH[variant]);
+    setAppleTouchIcon("/apple-touch-icon-light.png");
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "dark" ? "#0f0f0e" : "#F3F0EE");
-  }, [theme]);
+      ?.setAttribute("content", "#F3F0EE");
+  }, []);
 
   return null;
 }

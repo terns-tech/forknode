@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
-import { useTheme } from "@/contexts/ThemeContext";
 import { type Locale } from "@/lib/translations";
 import { cn } from "@/lib/utils";
 import { LinkButton } from "@/components/ui/Button";
@@ -16,7 +15,6 @@ const navLinkClass =
 
 export function Nav() {
   const { t, locale, setLocale } = useTranslation();
-  const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -40,13 +38,10 @@ export function Nav() {
 
   const links = [
     { href: "/hackpune", label: t.nav.hackpune },
-    { href: "/hackpune/partners", label: t.nav.partners },
     { href: "/hackpune/speakers", label: t.nav.speakers },
     { href: "/updates", label: t.nav.updates },
   ];
 
-  // Pick only the single best (longest prefix) match so just one nav item
-  // is underlined at a time. Exact match wins over prefix match.
   const activeHref = (() => {
     const exact = links.find((l) => l.href === pathname);
     if (exact) return exact.href;
@@ -95,14 +90,6 @@ export function Nav() {
             </div>
 
             <div className="hidden lg:flex items-center gap-3 shrink-0">
-              <button
-                type="button"
-                onClick={toggleTheme}
-                className="touch-target w-9 h-9 rounded-full border border-border flex items-center justify-center text-ink/70 hover:text-ink transition-colors"
-                aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              >
-                {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-              </button>
               <div className="flex items-center border border-border rounded-pill overflow-hidden">
                 {(["en", "de"] as Locale[]).map((lang) => (
                   <button
@@ -124,14 +111,6 @@ export function Nav() {
             </div>
 
             <div className="lg:hidden flex items-center gap-1.5 shrink-0">
-              <button
-                type="button"
-                onClick={toggleTheme}
-                className="touch-target w-9 h-9 rounded-full border border-border flex items-center justify-center text-ink/70"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-              </button>
               <button
                 type="button"
                 className="touch-target text-ink/70 hover:text-ink p-2 transition-colors"

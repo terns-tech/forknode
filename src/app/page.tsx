@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/Badge";
 import { HeroAtmosphere } from "@/components/HeroAtmosphere";
 import { StoryVisual } from "@/components/StoryVisual";
 import { TeamProfiles } from "@/components/TeamProfiles";
+import { EventAssetsCarousel } from "@/components/EventAssetsCarousel";
 
 /* ─── Animation Variants ─────────────────────────────────────────────────── */
 const fadeUp = {
@@ -50,33 +51,6 @@ function Reveal({
 }
 
 
-/* ─── Stat Pill ─────────────────────────────────────────────────────────── */
-function StatPill({
-  value,
-  label,
-  delay = 0,
-}: {
-  value: string;
-  label: string;
-  delay?: number;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8 + delay, duration: 0.5, ease: "easeOut" }}
-      className="glass-card px-5 py-3 flex flex-col items-center"
-    >
-      <span className="text-2xl font-semibold text-white tracking-tight leading-none mb-0.5">
-        {value}
-      </span>
-      <span className="text-[10px] uppercase tracking-[0.6px] text-white/60 font-bold">
-        {label}
-      </span>
-    </motion.div>
-  );
-}
-
 /* ─── Main Page ─────────────────────────────────────────────────────────── */
 export default function HomePage() {
   const { t } = useTranslation();
@@ -90,7 +64,6 @@ export default function HomePage() {
 
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroY = useTransform(scrollYProgress, [0, 1], isMobile || shouldReduceMotion ? ["0%", "0%"] : ["0%", "20%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -196,17 +169,6 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-r from-ink/30 to-transparent" />
 
-              {/* Bottom-left: stats overlay */}
-              <motion.div
-                className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto flex flex-wrap gap-2 sm:gap-3 max-w-full"
-                style={{ opacity: heroOpacity }}
-              >
-                <StatPill value="24h" label="Non-stop" delay={0} />
-                <StatPill value="300+" label="Builders" delay={0.1} />
-                <StatPill value="10+" label="Challenges" delay={0.2} />
-                <StatPill value="Global" label="Community" delay={0.3} />
-              </motion.div>
-
               {/* Bottom-right: badge */}
               <motion.div
                 className="absolute bottom-6 right-6 hidden md:flex"
@@ -301,8 +263,8 @@ export default function HomePage() {
                 </p>
               </Reveal>
               <Reveal delay={0.25}>
-                <div className="mb-8 inline-flex flex-col gap-1 border-l-2 border-ink pl-4">
-                  <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-ink">
+                <div className="mb-8 inline-flex flex-col gap-1 border-l-2 border-[#621bff] pl-4">
+                  <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-[#621bff]">
                     Save the Date
                   </span>
                   <span className="text-[15px] font-medium text-ink tracking-[-0.2px]">
@@ -432,44 +394,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── HOW IT WORKS ───────────────────────────────────────────────── */}
-      <section className="section-pad bg-lifted">
-        <div className="page-container">
-          <Reveal>
-            <div className="mb-14">
-              <p className="eyebrow mb-4">{t.home.howItWorks.eyebrow}</p>
-              <h2 className="text-h2 text-ink">{t.home.howItWorks.title}</h2>
-            </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-            {t.home.howItWorks.steps.map((step, i) => (
-              <Reveal key={i} delay={i * 0.07}>
-                <motion.div
-                  className="content-card card-hover h-full"
-                  whileHover={{ scale: 1.015 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <span className="text-xs font-bold uppercase tracking-[0.56px] text-slate-gray mb-4 block">
-                    {step.number}
-                  </span>
-                  <h3 className="text-h3 text-ink mb-3">{step.title}</h3>
-                  <p className="text-body text-slate-gray font-[450]">{step.body}</p>
-                </motion.div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.3}>
-            <div className="mt-10 flex justify-center">
-              <LinkButton href="/hackpune/apply" variant="primary" size="lg">
-                Apply Now
-                <ArrowRight size={18} className="ml-2" />
-              </LinkButton>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      {/* ─── EVENT ASSETS ─────────────────────────────────────────────── */}
+      <EventAssetsCarousel />
 
       {/* ─── UPDATES ────────────────────────────────────────────────────── */}
       <section className="section-pad bg-canvas">
@@ -521,19 +447,19 @@ export default function HomePage() {
         <div className="page-container text-center relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 bg-canvas/10 border border-canvas/15 rounded-pill px-5 py-2 mb-8">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-canvas animate-pulse" />
-              <span className="text-xs text-canvas font-bold uppercase tracking-[0.56px]">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+              <span className="text-xs text-white font-bold uppercase tracking-[0.56px]">
                 Save the Date · HackPune 2026 · 3-4 Oct (Sat &amp; Sun)
               </span>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-h2 text-canvas mb-6 max-w-2xl mx-auto">
+            <h2 className="text-h2 text-white mb-6 max-w-2xl mx-auto">
               Ready to take flight?
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="text-body text-canvas/60 font-[450] max-w-xl mx-auto mb-10">
+            <p className="text-body text-white font-[450] max-w-xl mx-auto mb-10">
               Join Terns - a global hackathon ecosystem built for builders, founders, hackers, and creators. Your next great project, your next co-founder, your next community - all in one place.
             </p>
           </Reveal>

@@ -8,14 +8,14 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-canvas">
       <section className="bg-canvas py-16 lg:py-20">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        <div className="page-container">
           <h1 className="text-4xl font-semibold text-ink mb-2">{t.privacy.title}</h1>
           <p className="text-slate-gray text-sm">{t.privacy.lastUpdated}</p>
         </div>
       </section>
 
       <section className="py-14 bg-canvas">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 prose prose-invert prose-sm max-w-none">
+        <div className="page-container prose prose-invert prose-sm max-w-none">
           {[
             {
               heading: "1. Who we are",

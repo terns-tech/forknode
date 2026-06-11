@@ -4,51 +4,26 @@ import {
   createContext,
   useContext,
   useEffect,
-  useState,
   type ReactNode,
 } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light";
 
 interface ThemeContextValue {
   theme: Theme;
-  toggleTheme: () => void;
-  setTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const stored = localStorage.getItem("terns-theme") as Theme | null;
-  if (stored === "light" || stored === "dark") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
-
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setThemeState(getInitialTheme());
-    setMounted(true);
+    const root = document.documentElement;
+    root.classList.remove("dark");
+    localStorage.setItem("terns-theme", "light");
   }, []);
 
-  useEffect(() => {
-    if (!mounted) return;
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("terns-theme", theme);
-  }, [theme, mounted]);
-
-  const setTheme = (next: Theme) => setThemeState(next);
-  const toggleTheme = () =>
-    setThemeState((prev) => (prev === "light" ? "dark" : "light"));
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme: "light" }}>
       {children}
     </ThemeContext.Provider>
   );

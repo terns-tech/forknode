@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Clock, Users, Zap, MessageCircle, Target, Coffee } from "lucide-react";
+import { ArrowRight, Users, Zap, MessageCircle, Target, Coffee } from "lucide-react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LinkButton } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 import { EventSchedule } from "@/components/EventSchedule";
 import { TechPartnersGrid } from "@/components/TechPartnersGrid";
 import { FAQSection } from "@/components/FAQSection";
+import { PdfViewerSection } from "@/components/PdfViewerSection";
+import { LottieAnimation } from "@/components/LottieAnimation";
 
 export default function HackPunePage() {
   const { t } = useTranslation();
@@ -67,42 +68,34 @@ export default function HackPunePage() {
         </div>
       </section>
 
-      {/* ─── WHAT TO EXPECT ──────────────────────────────────── */}
-      <section className="section-pad bg-lifted">
-        <div className="page-container">
-          <p className="eyebrow mb-4">{t.hackpune.expect.eyebrow}</p>
-          <h2 className="text-h2 text-ink mb-14">
-            {t.hackpune.expect.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {t.hackpune.expect.items.map((item, i) => (
-              <div key={i} className="content-card card-hover h-full">
-                <h3 className="text-h3 text-ink mb-3">{item.title}</h3>
-                <p className="text-body text-slate-gray font-[450]">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ─── PDF VIEWER ──────────────────────────────────────── */}
+      <PdfViewerSection />
 
       {/* ─── CHALLENGES ──────────────────────────────────────── */}
       <section className="section-pad bg-canvas">
         <div className="page-container">
           <p className="eyebrow mb-4">{t.hackpune.tracks.eyebrow}</p>
-          <div className="content-card content-card--center max-w-2xl mx-auto py-16">
-            <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-4">
-              Status
-            </span>
-            <h2 className="text-h2 text-ink mb-4">Coming Soon</h2>
-            <p className="text-body text-slate-gray font-[450] max-w-lg mx-auto">
-              We&apos;re lining up challenge partners and tracks for HackPune 2026. Confirmations will be shared on the updates page as soon as they&apos;re official.
-            </p>
-            <a
-              href="/updates"
-              className="mt-6 inline-flex items-center gap-2 text-link-blue hover:opacity-80 transition-colors text-sm font-medium"
-            >
-              Follow the updates <ArrowRight size={14} />
-            </a>
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_auto]">
+            <div className="content-card content-card--center py-16">
+              <span className="text-[11px] uppercase tracking-[0.6px] font-bold text-slate-gray mb-4">
+                Status
+              </span>
+              <h2 className="text-h2 text-ink mb-4">Coming Soon</h2>
+              <p className="text-body text-slate-gray font-[450] max-w-lg mx-auto">
+                We&apos;re lining up challenge partners and tracks for HackPune 2026. Confirmations will be shared on the updates page as soon as they&apos;re official.
+              </p>
+              <a
+                href="/updates"
+                className="mt-6 inline-flex items-center gap-2 text-link-blue hover:opacity-80 transition-colors text-sm font-medium"
+              >
+                Follow the updates <ArrowRight size={14} />
+              </a>
+            </div>
+            <LottieAnimation
+              src="/animations/waiting-cat.json"
+              variant="accent"
+              className="mx-auto h-36 w-52 md:mx-0 md:h-40 md:w-56 [filter:saturate(0.85)_hue-rotate(15deg)]"
+            />
           </div>
         </div>
       </section>
@@ -155,39 +148,6 @@ export default function HackPunePage() {
         </div>
       </section>
 
-      {/* ─── TIMELINE ────────────────────────────────────────── */}
-      <section className="section-pad bg-canvas">
-        <div className="page-container">
-          <p className="eyebrow mb-4">{t.hackpune.timeline.eyebrow}</p>
-          <h2 className="text-h2 text-ink mb-4">
-            {t.hackpune.timeline.title}
-          </h2>
-          <p className="text-body text-slate-gray font-[450] mb-14">{t.hackpune.timeline.subtitle}</p>
-
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-5 top-0 bottom-0 w-px bg-border hidden md:block" />
-            <div className="flex flex-col gap-6">
-              {t.hackpune.timeline.milestones.map((m, i) => (
-                <div key={i} className="flex gap-6 items-start">
-                  <div className="hidden md:flex shrink-0 w-10 h-10 rounded-full border border-border bg-white items-center justify-center z-10 relative">
-                    <div className="w-2 h-2 rounded-full bg-ink" />
-                  </div>
-                  <div className="flex-1 content-card content-card--compact min-w-0">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xs font-medium text-ink">{m.phase}</span>
-                      <Badge variant="outline">{m.status === "upcoming" ? "Upcoming" : "Done"}</Badge>
-                    </div>
-                    <h3 className="text-h3 text-ink mb-1">{m.title}</h3>
-                    <p className="text-body text-slate-gray font-[450]">{m.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── TECH PARTNERS IN CONVERSATION ──────────────────── */}
       <section className="section-pad bg-lifted">
         <div className="page-container">
@@ -225,7 +185,7 @@ export default function HackPunePage() {
       {/* ─── CTA ─────────────────────────────────────────────── */}
       <section className="section-pad bg-lifted">
         <div className="page-container">
-          <div className="content-card content-card--center shadow-elevated max-w-3xl mx-auto">
+          <div className="content-card content-card--center shadow-elevated">
             <div className="inline-flex items-center gap-2 bg-lifted rounded-pill px-3 py-1.5 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-ink" />
               <span className="text-xs text-ink font-medium uppercase tracking-[0.56px]">Applications opening soon</span>

@@ -116,8 +116,8 @@ body {
 
 /* ─── Responsive layout system ──────────────────────────────────────────── */
 .page-container {
-  width: 100%;
-  max-width: 80rem;
+  width: 80%;
+  max-width: 100%;
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vw, 2rem);
 }
@@ -433,14 +433,10 @@ body {
 }
 
 .founder-photo {
-  filter: grayscale(100%) contrast(1.1) brightness(0.94);
-  transition: filter 0.4s ease, transform 0.7s ease;
-}
-.group:hover .founder-photo {
-  filter: grayscale(65%) contrast(1.06) brightness(1);
+  transition: transform 0.7s ease;
 }
 
-/* Team profile portraits — round, B&W, face-focused crop */
+/* Team profile portraits, round, face-focused crop */
 .team-portrait {
   position: relative;
   width: min(52.5vw, 210px);
@@ -466,7 +462,6 @@ body {
   object-fit: cover;
   object-position: center 18%;
   transform: scale(1.14);
-  filter: grayscale(100%) contrast(1.08);
 }
 
 .team-portrait__fallback {

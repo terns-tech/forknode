@@ -22,7 +22,7 @@ export default function SpeakersPage() {
         </div>
       </section>
 
-      {/* Roles — keynote, mentors, judges */}
+      {/* Roles, keynote, mentors, judges */}
       <section className="section-pad bg-lifted">
         <div className="page-container">
           <p className="eyebrow mb-4">{t.speakers.hero.eyebrow}</p>
@@ -70,7 +70,7 @@ export default function SpeakersPage() {
       {/* Speaker CTA */}
       <section className="section-pad bg-lifted">
         <div className="page-container">
-          <div className="content-card content-card--center shadow-elevated max-w-3xl mx-auto">
+          <div className="content-card content-card--center shadow-elevated">
             <h2 className="text-h2 text-ink mb-5">
               {t.speakers.cta.title}
             </h2>

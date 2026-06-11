@@ -45,14 +45,14 @@ export default function PartnersPage() {
                 By connecting German industry with India&apos;s rapidly growing IT ecosystem, terns.tech creates a scalable platform for cross-border innovation, talent acquisition, and cost-efficient digital execution.
               </p>
               <p className="text-body text-slate-gray font-[450] leading-relaxed">
-                For the first edition, we are actively sourcing sponsors locally — companies in Hamburg and Germany with an interest in hiring, employer branding, and product adoption among India&apos;s top engineering talent.
+                For the first edition, we are actively sourcing sponsors locally, companies in Hamburg and Germany with an interest in hiring, employer branding, and product adoption among India&apos;s top engineering talent.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { value: "500K+", label: "Tech professionals in Pune" },
-                { value: "10+", label: "Challenges per event" },
-                { value: "~8", label: "Teams per challenge" },
+                { value: "160", label: "Curated builders" },
+                { value: "8", label: "German challenges" },
+                { value: "~20", label: "Builders per challenge" },
                 { value: "Hamburg", label: "Where Terns was born" },
               ].map((stat) => (
                 <div key={stat.label} className="content-card content-card--compact">
@@ -99,7 +99,7 @@ export default function PartnersPage() {
         <div className="page-container">
           <p className="eyebrow mb-4">WHY PARTNER WITH TERNS</p>
           <h2 className="text-h2 text-ink mb-14">
-            More than sponsorship — direct talent access at scale.
+            More than sponsorship, direct talent access at scale.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -110,7 +110,7 @@ export default function PartnersPage() {
               },
               {
                 title: "Hire the Best",
-                body: "Get a front-row view of how 300+ builders work under pressure. Several challenge partners actively hire from HackPune participants.",
+                body: "Get a front-row view of how 160 curated builders work under pressure. Challenge partners actively hire from HackPune participants.",
               },
               {
                 title: "Brand Authority",
@@ -122,7 +122,7 @@ export default function PartnersPage() {
               },
               {
                 title: "Community Reach",
-                body: "HackPune marketing reaches Pune's 500,000+ tech professionals. Sponsor visibility across Discord, Slack, LinkedIn, and event collateral.",
+                body: "HackPune marketing reaches Pune's 500K+ tech professionals. Sponsor visibility across Discord, Slack, LinkedIn, event collateral, and the Terns pitch decks.",
               },
               {
                 title: "Post-Event Pilots",
@@ -155,9 +155,9 @@ export default function PartnersPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-pad bg-canvas">
+      <section className="section-pad bg-lifted">
         <div className="page-container">
-          <div className="content-card content-card--center shadow-elevated max-w-3xl mx-auto">
+          <div className="content-card content-card--center shadow-elevated">
             <h2 className="text-h2 text-ink mb-5">
               {t.partners.cta.title}
             </h2>

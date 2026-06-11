@@ -14,7 +14,7 @@ const steps = [
 export default function PartnerPortalPage() {
   return (
     <div className="min-h-screen bg-canvas">
-      <div className="max-w-3xl mx-auto px-6 lg:px-8 py-16">
+      <div className="page-container py-16">
         <div className="flex items-center justify-between mb-10">
           <div>
             <p className="eyebrow mb-2">PARTNER PORTAL</p>

@@ -244,7 +244,7 @@ export default function ApplyPage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="bg-canvas py-20 lg:py-28 relative overflow-hidden">
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 page-container">
           <p className="eyebrow mb-6">{t.apply.eyebrow}</p>
           <h1 className="text-h1 text-ink mb-6">
             {t.apply.title}
@@ -255,7 +255,7 @@ export default function ApplyPage() {
 
       {/* Form */}
       <section className="py-16 lg:py-24 bg-lifted">
-        <div className="max-w-2xl mx-auto px-6 lg:px-8">
+        <div className="page-container">
           {submitError && (
             <div className="mb-6 p-4 border border-border rounded-lg bg-surface text-sm text-ink">
               {submitError}

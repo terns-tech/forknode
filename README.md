@@ -10,6 +10,10 @@ Terns is a global hackathon ecosystem built for founders, hackers, creators, and
 
 **Flagship Event:** HackPune 2026 — a 24-hour AI hackathon in Pune, India.
 
+### Navigation note
+
+The site includes **About** (`/about`) and **Partners** (`/hackpune/partners`) pages, but they are **not linked in the main header** yet. They remain reachable via direct URLs and footer links.
+
 ---
 
 ## Tech Stack

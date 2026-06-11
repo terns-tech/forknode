@@ -105,14 +105,14 @@ export const translations = {
     },
     hackpune: {
       hero: {
-        eyebrow: "HACKPUNE · PUNE, INDIA · 2026",
+        eyebrow: "INDO-GERMAN AI HACKATHON · PUNE, INDIA · 2026",
         title: "Build real AI solutions\nfor real companies.",
-        subtitle: "Terns' flagship event. India's premier 24-hour AI hackathon. Pick a real challenge from a leading company. Build a working prototype. Pitch it. Win.",
+        subtitle: "Terns' flagship Indo-German AI hackathon. 160 curated Indian builders. 8 German company challenges. 24 hours to ship a working AI prototype, and meet mentors, judges, and recruiters.",
         ctaPrimary: "Apply Now",
         ctaSecondary: "Join Discord",
         stats: [
           { value: "24h", label: "Non-stop hacking" },
-          { value: "100", label: "Curated builders" },
+          { value: "160", label: "Curated builders" },
           { value: "8", label: "Challenges" },
           { value: "3–4 Oct", label: "2026 · Pune" },
         ],
@@ -121,8 +121,8 @@ export const translations = {
         eyebrow: "WHAT TO EXPECT",
         title: "No fluff. No theory. Just shipping.",
         items: [
-          { color: "orange", title: "24H Hacking Nonstop", body: "Code from kickoff to sunrise. Fuel up on coffee, ambition, and the energy of 300 builders under one roof." },
-          { color: "blue", title: "Real Company Challenges", body: "Ten or more challenges from companies actually building with AI. Pick the one that excites you most." },
+          { color: "orange", title: "24H Hacking Nonstop", body: "Code from kickoff to sunrise. Fuel up on coffee, ambition, and the energy of 160 builders under one roof." },
+          { color: "blue", title: "8 German Company Challenges", body: "8 challenges from German companies with real problems. Pick the one that excites you most and build something they can actually use." },
           { color: "pink", title: "Expert Mentorship", body: "Direct access to founders, engineers, and product leaders from challenge partners throughout the event." },
           { color: "orange", title: "Demo & Win", body: "Pitch your prototype on the main stage. Judges pick winners per challenge. Prizes, credits, interviews." },
           { color: "green", title: "Everything Covered", body: "Food, drinks, snacks, workspace. Just bring your laptop and your best ideas." },
@@ -169,7 +169,7 @@ export const translations = {
             title: "Check-in & breakfast",
             details: [
               "Collect your kit (T-shirt, badge, swag) and find your seat.",
-              "09:00 — Welcome by Terns · 09:30 — Team building for solo applicants",
+              "09:00 · Welcome by Terns · 09:30 · Team building for solo applicants",
             ],
           },
           {
@@ -177,16 +177,16 @@ export const translations = {
             title: "Challenge partner presentations",
             details: [
               "All 8 partners pitch their challenge (3–5 min each).",
-              "10:30 — Tech partner onboarding (Cursor, OpenAI, etc. — TBA)",
-              "11:30 — Challenge onboarding with mentors",
+              "10:30 · Tech partner onboarding (Cursor, OpenAI, etc., TBA)",
+              "11:30 · Challenge onboarding with mentors",
             ],
           },
           {
             time: "Sat 3 Oct · 12:00",
             title: "Hack begins",
             details: [
-              "13:00 — Lunch · 14:00 — Speed dating with challenge partners (3-min rotations)",
-              "16:00 — Women in AI coffee session · 18:00 — Dinner · 22:00 — Snacks & code freeze",
+              "13:00 · Lunch · 14:00 · Speed dating with challenge partners (3-min rotations)",
+              "16:00 · Women in AI coffee session · 18:00 · Dinner · 22:00 · Snacks & code freeze",
             ],
           },
           {
@@ -210,7 +210,7 @@ export const translations = {
             title: "Awards & closing",
             details: [
               "8 winners announced (one per challenge). Group photo.",
-              "13:30 — Networking, lunch & official end.",
+              "13:30 · Networking, lunch & official end.",
             ],
           },
         ],
@@ -218,11 +218,11 @@ export const translations = {
       program: {
         eyebrow: "PROGRAM HIGHLIGHTS",
         title: "More than just hacking.",
-        subtitle: "Structured like ChefTreff AI Hackathon 2026 — keynote, mentoring, inclusivity, and recruiting built in.",
+        subtitle: "Structured like ChefTreff AI Hackathon 2026, keynote, mentoring, inclusivity, and recruiting built in.",
         items: [
           {
             title: "Opening keynote",
-            body: "30-minute keynote from a European challenge partner (TBA). Visual-first, peer-to-peer — hoodie not suit.",
+            body: "30-minute keynote from a European challenge partner (TBA). Visual-first, peer-to-peer, hoodie not suit.",
           },
           {
             title: "Speed dating with partners",
@@ -234,7 +234,7 @@ export const translations = {
           },
           {
             title: "Mentors & jury",
-            body: "1 mentor + 1 judge per challenge partner. Mentors on-site Day 1 (09:00–22:00). Judges score Day 2 pitches — top 2 teams per challenge, one winner each.",
+            body: "1 mentor + 1 judge per challenge partner. Mentors on-site Day 1 (09:00–22:00). Judges score Day 2 pitches, top 2 teams per challenge, one winner each.",
           },
         ],
       },
@@ -270,7 +270,7 @@ export const translations = {
       hero: {
         eyebrow: "SPEAKERS & MENTORS",
         title: "Learn from builders\nwho ship.",
-        subtitle: "Opening keynote, challenge mentors, and jury members — structured like ChefTreff AI Hackathon 2026. Confirmations announced on the updates page.",
+        subtitle: "Opening keynote, challenge mentors, and jury members, structured like ChefTreff AI Hackathon 2026. Confirmations announced on the updates page.",
       },
       roles: {
         keynote: {
@@ -279,7 +279,7 @@ export const translations = {
         },
         mentors: {
           title: "Challenge mentors",
-          body: "1 mentor per challenge partner on-site Day 1 (09:00–22:00). IT, ML, AI, data science profiles. Maximum time with teams — overnight stay not required.",
+          body: "1 mentor per challenge partner on-site Day 1 (09:00–22:00). IT, ML, AI, data science profiles. Maximum time with teams, overnight stay not required.",
         },
         judges: {
           title: "Challenge judges",
@@ -299,12 +299,12 @@ export const translations = {
       subtitle:
         "Get answers to your questions about HackPune, Terns, and how to participate.",
       items: [
-        { q: "When is HackPune 2026?", a: "3 & 4 October 2026 (Saturday & Sunday) in Pune, India. The provisional schedule is on terns.tech/hackpune — exact times may shift as we finalise the venue." },
-        { q: "How does judging work?", a: "Each challenge partner provides one judge. Top 2 teams per challenge pitch on the main stage (4 min + 3 min Q&A). One winner per challenge — 8 winners total." },
-        { q: "Is there a Women in AI session?", a: "Yes. Day 1, 16:00–17:00 — an open coffee roundtable for women participants, mentors, and guests. We target 30% women participants." },
+        { q: "When is HackPune 2026?", a: "3 & 4 October 2026 (Saturday & Sunday) in Pune, India. The provisional schedule is on terns.tech/hackpune, exact times may shift as we finalise the venue." },
+        { q: "How does judging work?", a: "Each challenge partner provides one judge. Top 2 teams per challenge pitch on the main stage (4 min + 3 min Q&A). One winner per challenge, 8 winners total." },
+        { q: "Is there a Women in AI session?", a: "Yes. Day 1, 16:00–17:00 · an open coffee roundtable for women participants, mentors, and guests. We target 30% women participants." },
         { q: "What is Terns?", a: "Terns is a global hackathon ecosystem - a platform and community for builders, founders, hackers, and creators worldwide. HackPune is our flagship event in Pune, India." },
         { q: "Do I need to be a developer?", a: "No. We need engineers, designers, product managers, and strategic thinkers. Every team benefits from diverse skill sets." },
-        { q: "Is it free to participate?", a: "Participation details including any fees will be announced with applications. Stay tuned for updates." },
+        { q: "Is it free to participate?", a: "HackPune is free for selected builders. Applications are reviewed and curated, 160 spots for the best applicants. There is no participation fee for accepted hackers." },
         { q: "Can I apply as a team?", a: "Yes. You can apply solo or with a team of up to 4-6 people. We also help with team matching based on skills." },
         { q: "What happens after the hackathon?", a: "Winners receive prizes and recognition from challenge partners. Some partners actively hire. The Terns community stays active year-round globally." },
         { q: "Where will the event take place?", a: "HackPune is in Pune, India. The exact venue is TBA and will be announced with the event details." },
@@ -407,7 +407,7 @@ export const translations = {
       team: {
         eyebrow: "THE TEAM",
         title: "One vision. Global team.",
-        subtitle: "We met building things — and decided to build a global home for builders everywhere.",
+        subtitle: "We met building things, and decided to build a global home for builders everywhere.",
         members: [
           {
             name: "Omkar Kondhalkar",
@@ -444,7 +444,7 @@ export const translations = {
         { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We're spinning up Discord and Slack channels for the Terns community. Join us as we open the doors - early conversations set the tone." },
         { date: "March 2026", tag: "Partnership", title: "Exploring AI platform partnerships", body: "We're in active conversations with Cursor, OpenAI, Lovable, Manus, and several other leading AI platforms about tech partnerships for HackPune. Nothing confirmed yet - announcements coming." },
         { date: "February 2026", tag: "Milestone", title: "Terns is live", body: "We've officially launched Terns - a global hackathon ecosystem. The mission: connect the world's builders across borders, through community-first events." },
-        { date: "January 2026", tag: "Team", title: "Terns team forms", body: "Omkar, Yash, and Elias — builders across Hamburg and Pune — launched Terns: a global home for hackathons and the builder community." },
+        { date: "January 2026", tag: "Team", title: "Terns team forms", body: "Omkar, Yash, and Elias, builders across Hamburg and Pune, launched Terns: a global home for hackathons and the builder community." },
       ],
     },
     footer: {
@@ -577,14 +577,14 @@ export const translations = {
     },
     hackpune: {
       hero: {
-        eyebrow: "HACKPUNE · PUNE, INDIEN · 2026",
+        eyebrow: "INDO-GERMAN AI HACKATHON · PUNE, INDIEN · 2026",
         title: "Baue echte KI-Lösungen\nfür echte Unternehmen.",
-        subtitle: "Terns' Flagship-Event. Indiens führender 24-Stunden-KI-Hackathon. Wähle eine echte Challenge von einem führenden Unternehmen. Baue einen funktionierenden Prototypen. Pitche ihn. Gewinne.",
+        subtitle: "Terns' Flagship Indo-German AI Hackathon. 160 kuratierte indische Builder. 8 Challenges von deutschen Unternehmen. 24 Stunden, um einen funktionierenden KI-Prototypen zu bauen, und Mentoren, Jury und Recruiter zu treffen.",
         ctaPrimary: "Jetzt bewerben",
         ctaSecondary: "Discord beitreten",
         stats: [
           { value: "24h", label: "Non-stop Hacking" },
-          { value: "100", label: "Kuratierte Builder" },
+          { value: "160", label: "Kuratierte Builder" },
           { value: "8", label: "Challenges" },
           { value: "3–4 Okt", label: "2026 · Pune" },
         ],
@@ -641,7 +641,7 @@ export const translations = {
             title: "Check-in & Frühstück",
             details: [
               "Kit abholen (T-Shirt, Badge, Swag) und Platz finden.",
-              "09:00 — Welcome by Terns · 09:30 — Teambuilding für Solo-Teilnehmende",
+              "09:00 · Welcome by Terns · 09:30 · Teambuilding für Solo-Teilnehmende",
             ],
           },
           {
@@ -649,16 +649,16 @@ export const translations = {
             title: "Challenge-Partner-Präsentationen",
             details: [
               "Alle 8 Partner stellen ihre Challenge vor (3–5 Min. je Partner).",
-              "10:30 — Tech-Partner-Onboarding (Cursor, OpenAI, etc. — TBA)",
-              "11:30 — Challenge-Onboarding mit Mentoren",
+              "10:30 · Tech-Partner-Onboarding (Cursor, OpenAI, etc., TBA)",
+              "11:30 · Challenge-Onboarding mit Mentoren",
             ],
           },
           {
             time: "Sa 3 Okt · 12:00",
             title: "Hack startet",
             details: [
-              "13:00 — Mittagessen · 14:00 — Speed Dating mit Challenge-Partnern (3-Min-Rotationen)",
-              "16:00 — Women in AI Coffee · 18:00 — Abendessen · 22:00 — Snacks & Code Freeze",
+              "13:00 · Mittagessen · 14:00 · Speed Dating mit Challenge-Partnern (3-Min-Rotationen)",
+              "16:00 · Women in AI Coffee · 18:00 · Abendessen · 22:00 · Snacks & Code Freeze",
             ],
           },
           {
@@ -682,7 +682,7 @@ export const translations = {
             title: "Preisverleihung & Abschluss",
             details: [
               "8 Gewinner (einer pro Challenge). Gruppenfoto.",
-              "13:30 — Networking, Mittagessen & offizielles Ende.",
+              "13:30 · Networking, Mittagessen & offizielles Ende.",
             ],
           },
         ],
@@ -690,11 +690,11 @@ export const translations = {
       program: {
         eyebrow: "PROGRAMM-HIGHLIGHTS",
         title: "Mehr als nur Hacken.",
-        subtitle: "Strukturiert wie der ChefTreff AI Hackathon 2026 — Keynote, Mentoring, Inklusion und Recruiting inklusive.",
+        subtitle: "Strukturiert wie der ChefTreff AI Hackathon 2026, Keynote, Mentoring, Inklusion und Recruiting inklusive.",
         items: [
           {
             title: "Opening Keynote",
-            body: "30-Minuten-Keynote eines europäischen Challenge-Partners (TBA). Visuell, peer-to-peer — Hoodie statt Anzug.",
+            body: "30-Minuten-Keynote eines europäischen Challenge-Partners (TBA). Visuell, peer-to-peer, Hoodie statt Anzug.",
           },
           {
             title: "Speed Dating mit Partnern",
@@ -706,7 +706,7 @@ export const translations = {
           },
           {
             title: "Mentoren & Jury",
-            body: "1 Mentor + 1 Juror pro Challenge-Partner. Mentoren vor Ort Tag 1 (09:00–22:00). Jury bewertet Tag-2-Pitches — Top 2 pro Challenge, ein Gewinner.",
+            body: "1 Mentor + 1 Juror pro Challenge-Partner. Mentoren vor Ort Tag 1 (09:00–22:00). Jury bewertet Tag-2-Pitches, Top 2 pro Challenge, ein Gewinner.",
           },
         ],
       },
@@ -742,7 +742,7 @@ export const translations = {
       hero: {
         eyebrow: "SPEAKER & MENTOREN",
         title: "Lerne von Buildern,\ndie liefern.",
-        subtitle: "Opening Keynote, Challenge-Mentoren und Jury — strukturiert wie ChefTreff AI Hackathon 2026. Bestätigungen auf der Updates-Seite.",
+        subtitle: "Opening Keynote, Challenge-Mentoren und Jury, strukturiert wie ChefTreff AI Hackathon 2026. Bestätigungen auf der Updates-Seite.",
       },
       roles: {
         keynote: {
@@ -751,7 +751,7 @@ export const translations = {
         },
         mentors: {
           title: "Challenge-Mentoren",
-          body: "1 Mentor pro Challenge-Partner vor Ort Tag 1 (09:00–22:00). IT, ML, AI, Data Science. Maximale Zeit mit Teams — Übernachtung nicht nötig.",
+          body: "1 Mentor pro Challenge-Partner vor Ort Tag 1 (09:00–22:00). IT, ML, AI, Data Science. Maximale Zeit mit Teams, Übernachtung nicht nötig.",
         },
         judges: {
           title: "Challenge-Jury",
@@ -772,12 +772,12 @@ export const translations = {
         "Antworten auf deine Fragen zu HackPune, Terns und deiner Teilnahme.",
       items: [
         { q: "Wann ist HackPune 2026?", a: "3. & 4. Oktober 2026 (Samstag & Sonntag) in Pune, Indien. Der vorläufige Ablauf steht auf terns.tech/hackpune." },
-        { q: "Wie funktioniert die Jury?", a: "Jeder Challenge-Partner stellt einen Juror. Top 2 Teams pro Challenge pitchen auf der Hauptbühne (4 Min. + 3 Min. Q&A). Ein Gewinner pro Challenge — 8 Gewinner insgesamt." },
-        { q: "Gibt es eine Women-in-AI-Session?", a: "Ja. Tag 1, 16:00–17:00 — offene Coffee-Runde für Frauen unter Teilnehmenden, Mentoren und Gästen. Ziel: 30% Frauen." },
+        { q: "Wie funktioniert die Jury?", a: "Jeder Challenge-Partner stellt einen Juror. Top 2 Teams pro Challenge pitchen auf der Hauptbühne (4 Min. + 3 Min. Q&A). Ein Gewinner pro Challenge, 8 Gewinner insgesamt." },
+        { q: "Gibt es eine Women-in-AI-Session?", a: "Ja. Tag 1, 16:00–17:00 · offene Coffee-Runde für Frauen unter Teilnehmenden, Mentoren und Gästen. Ziel: 30% Frauen." },
         { q: "Was ist HackPune?", a: "HackPune ist Terns' Flagship-Hackathon in Pune, Indien. 24 Stunden, echte Challenges, echte Unternehmen." },
         { q: "Was ist Terns?", a: "Terns ist ein globales Hackathon-Ökosystem. HackPune ist unser Flagship-Event in Pune, Indien." },
         { q: "Muss ich Entwickler sein?", a: "Nein. Wir brauchen Ingenieure, Designer, Produktmanager und strategische Denker." },
-        { q: "Ist die Teilnahme kostenlos?", a: "Details werden mit dem Bewerbungsstart bekanntgegeben." },
+        { q: "Ist die Teilnahme kostenlos?", a: "HackPune ist kostenlos für ausgewählte Builder. Bewerbungen werden geprüft, 160 Plätze für die besten Bewerber. Für angenommene Hacker gibt es keine Teilnahmegebühr." },
         { q: "Kann ich mich als Team bewerben?", a: "Ja. Solo oder mit einem Team von bis zu 4-6 Personen." },
         { q: "Was passiert nach dem Hackathon?", a: "Gewinner erhalten Preise. Die Terns-Community bleibt das ganze Jahr aktiv." },
         { q: "Wo findet das Event statt?", a: "Pune, Indien. Genaue Location folgt." },
@@ -880,7 +880,7 @@ export const translations = {
       team: {
         eyebrow: "DAS TEAM",
         title: "Eine Vision. Globales Team.",
-        subtitle: "Wir haben uns beim Bauen kennengelernt — und beschlossen, ein globales Zuhause für Builder zu schaffen.",
+        subtitle: "Wir haben uns beim Bauen kennengelernt, und beschlossen, ein globales Zuhause für Builder zu schaffen.",
         members: [
           {
             name: "Omkar Kondhalkar",
@@ -917,7 +917,7 @@ export const translations = {
         { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir starten unsere Discord- und Slack-Kanäle. Die ersten Gespräche prägen den Ton - sei dabei." },
         { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Aktive Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
         { date: "Februar 2026", tag: "Meilenstein", title: "Terns ist live", body: "Wir haben offiziell Terns gestartet - ein globales Hackathon-Ökosystem." },
-        { date: "Januar 2026", tag: "Team", title: "Terns-Team gegründet", body: "Omkar, Yash und Elias — Builder aus Hamburg und Pune — starteten Terns: ein globales Zuhause für Hackathons und die Builder-Community." },
+        { date: "Januar 2026", tag: "Team", title: "Terns-Team gegründet", body: "Omkar, Yash und Elias, Builder aus Hamburg und Pune, starteten Terns: ein globales Zuhause für Hackathons und die Builder-Community." },
       ],
     },
     footer: {

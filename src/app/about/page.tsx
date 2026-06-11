@@ -263,7 +263,7 @@ export default function AboutPage() {
         </div>
 
         <div className="page-container relative z-10">
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-16">
             <Reveal>
               <p className="eyebrow mb-4">{t.about.team.eyebrow}</p>
             </Reveal>
@@ -275,7 +275,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="flex flex-col gap-5 max-w-4xl">
+          <div className="flex flex-col gap-5">
             {teamLeads.map((member, i) => (
               <TeamMemberCard key={member.name} {...member} delay={i * 0.12} reverse={i % 2 === 1} />
             ))}
@@ -283,13 +283,13 @@ export default function AboutPage() {
 
           <Reveal delay={0.4}>
             <div className="mt-16 content-card content-card--accent relative overflow-hidden">
-              <div className="relative z-10 max-w-3xl">
+              <div className="relative z-10">
                 <p className="eyebrow mb-5 text-canvas/60">THE STORY</p>
                 <blockquote className="text-[22px] lg:text-[28px] font-medium tracking-[-0.5px] leading-[1.3] mb-6">
                   &ldquo;We met building things and decided to build something bigger. Not for the exit. For the builders who deserve a better ecosystem.&rdquo;
                 </blockquote>
                 <p className="text-[15px] text-canvas/60 font-[450]">
-                  Omkar, Yash & Elias — Terns team
+                  Omkar, Yash & Elias, Terns team
                 </p>
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function UpdatesPage() {
 
       {/* Updates list */}
       <section className="py-16 lg:py-24 bg-lifted">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        <div className="page-container">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
@@ -58,7 +58,7 @@ export default function UpdatesPage() {
             <div className="relative pl-8">
               <div className="absolute left-[-5px] top-3 w-2.5 h-2.5 rounded-full bg-border border-2 border-canvas" />
               <p className="text-xs text-slate-gray py-3">
-                More updates coming soon — join Discord for real-time announcements when our community channel launches.
+                More updates coming soon, join Discord for real-time announcements when our community channel launches.
               </p>
             </div>
           </div>

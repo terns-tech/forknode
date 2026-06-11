@@ -50,7 +50,7 @@ export function Footer() {
 
   return (
     <footer className="footer-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-16 pb-10 sm:pb-12 lg:pt-24 lg:pb-16">
+      <div className="page-container pt-12 sm:pt-16 pb-10 sm:pb-12 lg:pt-24 lg:pb-16">
         <div className="mb-14">
           <TernsLogo
             size="md"

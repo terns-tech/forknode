@@ -60,7 +60,7 @@ const yash: TeamMember = {
 
 const antje: TeamMember = {
   name: "Antje Ute Bauer",
-  role: "Advisor — Consulting & Community (Pune)",
+  role: "Advisor, Consulting & Community (Pune)",
   work: "Transformation Consultant & Coach, StrengthMiner® Consulting LLP",
   image: "/antja-bg.png",
   portraitFocus: "center 15%",

@@ -109,7 +109,7 @@ function TeamRow({ members, baseDelay = 0 }: { members: TeamMember[]; baseDelay?
       className={`grid gap-x-6 gap-y-14 sm:gap-x-8 sm:gap-y-16 ${
         members.length === 3
           ? "grid-cols-1 sm:grid-cols-3"
-          : "grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto w-full"
+          : "grid-cols-1 sm:grid-cols-2 w-full"
       }`}
     >
       {members.map((member, i) => (
@@ -124,11 +124,11 @@ export function TeamProfiles() {
     <section className="section-pad bg-lifted">
       <div className="page-container">
         <Reveal>
-          <div className="mb-14 max-w-2xl mx-auto text-center sm:text-left">
+          <div className="mb-14 text-center sm:text-left">
             <p className="eyebrow mb-4">THE TEAM</p>
             <h2 className="text-h2 text-ink mb-4">Core team</h2>
             <p className="text-body text-slate-gray font-[450]">
-              The team building Terns and HackPune — connecting Hamburg and Pune for builders worldwide.
+              The team building Terns and HackPune, connecting Hamburg and Pune for builders worldwide.
             </p>
           </div>
         </Reveal>

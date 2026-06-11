@@ -95,7 +95,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon-light.png" sizes="360x360" type="image/png" data-terns-theme />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('terns-theme');var d=t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark');var a=document.querySelector('link[rel="apple-touch-icon"][data-terns-theme]');if(a)a.href=d?'/apple-touch-icon-dark.png':'/apple-touch-icon-light.png'}catch(e){}})()`,
+            __html: `(function(){try{document.documentElement.classList.remove('dark');localStorage.setItem('terns-theme','light');var a=document.querySelector('link[rel="apple-touch-icon"][data-terns-theme]');if(a)a.href='/apple-touch-icon-light.png'}catch(e){}})()`,
           }}
         />
       </head>
