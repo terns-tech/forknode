@@ -25,11 +25,11 @@ export default function HomePage() {
       {/* HERO + Nav (shared video background) */}
       <section className="relative overflow-hidden">
         <div
-          className="absolute inset-0 z-0 opacity-40 mix-blend-screen"
+          className="absolute inset-0 z-0 opacity-20 mix-blend-screen"
           style={{ overflow: "hidden", isolation: "isolate" }}
         >
           <video
-            src="/animations/hero2.mp4"
+            src="/animations/hero5.mp4"
             muted
             playsInline
             preload="metadata"
