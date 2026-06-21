@@ -33,6 +33,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Sofia Sans", "Arial", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        dot: ["DotGothic16", "sans-serif"],
       },
       fontSize: {
         h1: ["64px", { lineHeight: "64px", letterSpacing: "-1.28px", fontWeight: "500" }],

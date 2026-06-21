@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,400;0,450;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,400;0,450;0,500;0,600;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ─── Light theme ─────────────────────────────────────────────────────────── */
 :root {
@@ -109,10 +109,17 @@ html {
 body {
   background-color: var(--canvas);
   color: var(--ink);
-  font-family: 'DotGothic16', 'Sofia Sans', Arial, sans-serif;
+  font-family: 'Sofia Sans', Arial, sans-serif;
   min-height: 100vh;
   overflow-x: clip;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Display headings — DotGothic16 per design system */
+h1, h2, h3,
+.text-h1, .text-h2, .text-h3,
+.font-dot {
+  font-family: 'DotGothic16', sans-serif;
 }
 
 /* ─── Responsive layout system ──────────────────────────────────────────── */
@@ -1095,12 +1102,10 @@ body {
    Faithful port of the Nexura Creative Agency reference. All helpers are
    scoped under `.nexura` so they never leak into the Terns site pages. */
 .nexura {
-  font-family: 'DotGothic16', sans-serif;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
 }
 
-/* DotGothic16 is used for everything on the landing page (per request). */
 .nexura .font-dot { font-family: 'DotGothic16', sans-serif; }
-.nexura .font-mono { font-family: 'DotGothic16', sans-serif; }
 
 .nexura .kanban-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
 .nexura .kanban-scroll::-webkit-scrollbar-track { background: transparent; }
@@ -1222,11 +1227,10 @@ body {
 
 /* ─── Nexura site pages (matches landing; does NOT affect `/`) ───────────── */
 .nexura-site {
-  font-family: 'DotGothic16', sans-serif;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
 }
 
-.nexura-site .font-dot,
-.nexura-site .font-mono {
+.nexura-site .font-dot {
   font-family: 'DotGothic16', sans-serif;
 }
 
@@ -1502,7 +1506,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 9999px;
   font-size: 0.875rem;
-  font-family: 'DotGothic16', sans-serif;
+  font-family: inherit;
 }
 
 .nexura-site textarea {
