@@ -23,40 +23,6 @@ const PDFS = [
       "/pitches/pages_hackers-7.png",
     ],
   },
-  {
-    id: "partners",
-    label: "Partners",
-    name: "Partners & Collaborations",
-    pdf: "/pitches/Pitchdeck_Terns_partners.pdf",
-    filename: "HackPune_2026_Partners.pdf",
-    thumb: "/pitches/thumb_partners-1.png",
-    pages: [
-      "/pitches/pages_partners-1.png",
-      "/pitches/pages_partners-2.png",
-      "/pitches/pages_partners-3.png",
-      "/pitches/pages_partners-4.png",
-      "/pitches/pages_partners-5.png",
-      "/pitches/pages_partners-6.png",
-      "/pitches/pages_partners-7.png",
-    ],
-  },
-  {
-    id: "startup",
-    label: "Startups",
-    name: "Startup & Company Brief",
-    pdf: "/pitches/Pitchdeck_Terns_startup.pdf",
-    filename: "HackPune_2026_Startup.pdf",
-    thumb: "/pitches/thumb_startup-1.png",
-    pages: [
-      "/pitches/pages_startup-1.png",
-      "/pitches/pages_startup-2.png",
-      "/pitches/pages_startup-3.png",
-      "/pitches/pages_startup-4.png",
-      "/pitches/pages_startup-5.png",
-      "/pitches/pages_startup-6.png",
-      "/pitches/pages_startup-7.png",
-    ],
-  },
 ];
 
 const SWIPE_THRESHOLD = 50;
@@ -161,8 +127,8 @@ export function PdfViewerSection() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-col items-center gap-4">
-            <div className="flex flex-wrap justify-center gap-2.5">
+            <div className="mt-6 flex flex-col items-center gap-4">
+            <div className="flex flex-wrap justify-center gap-2.5 w-full">
               {PDFS.map((deck, i) => (
                 <button
                   key={deck.id}
@@ -170,7 +136,7 @@ export function PdfViewerSection() {
                   onClick={() => switchPdf(i)}
                   aria-label={`Switch to ${deck.name}`}
                   aria-pressed={i === activePdfIdx}
-                  className={`flex flex-col text-left w-[168px] shrink-0 rounded-md overflow-hidden border-2 transition-all duration-200 focus:outline-none ${
+                  className={`flex flex-col text-left w-full max-w-[168px] sm:w-[168px] shrink-0 rounded-md overflow-hidden border-2 transition-all duration-200 focus:outline-none ${
                     i === activePdfIdx
                       ? "border-ink shadow-md"
                       : "border-border opacity-70 hover:opacity-100 hover:border-ink/50"

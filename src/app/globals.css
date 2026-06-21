@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,400;0,450;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ─── Light theme ─────────────────────────────────────────────────────────── */
 :root {
@@ -48,31 +49,31 @@
   );
 }
 
-/* ─── Dark theme ──────────────────────────────────────────────────────────── */
+/* ─── Dark theme (Nexura palette) ─────────────────────────────────────────── */
 .dark {
-  --canvas: #0f0f0e;
-  --lifted: #181817;
-  --surface: #1f1f1e;
-  --soft-bone: #2a2a28;
-  --ink: #F3F0EE;
-  --charcoal: #E8E2DA;
-  --slate-gray: #999999;
-  --granite: #AAAAAA;
-  --graphite: #888888;
-  --dust-taupe: #555555;
-  --signal-orange: #F3F0EE;
-  --signal-orange-light: #999999;
-  --clay-brown: #CCCCCC;
-  --link-blue: #6B8FD4;
-  --border: rgba(243, 240, 238, 0.12);
-  --ghost-headline: #1a1a19;
-  --nav-bg: rgba(15, 15, 14, 0.52);
-  --hero-glow-primary: rgba(243, 240, 238, 0.09);
-  --hero-glow-secondary: rgba(243, 240, 238, 0.05);
-  --hero-glow-tertiary: rgba(120, 115, 108, 0.06);
-  --hero-glow-horizon: rgba(243, 240, 238, 0.04);
-  --hero-orb: rgba(243, 240, 238, 0.07);
-  --hero-orb-alt: rgba(153, 153, 153, 0.05);
+  --canvas: #0B0F19;
+  --lifted: #14161C;
+  --surface: #1C1F26;
+  --soft-bone: #262A34;
+  --ink: #FFFFFF;
+  --charcoal: #E5E7EB;
+  --slate-gray: #9CA3AF;
+  --granite: #9CA3AF;
+  --graphite: #6B7280;
+  --dust-taupe: rgba(255, 255, 255, 0.18);
+  --signal-orange: #FFFFFF;
+  --signal-orange-light: #9CA3AF;
+  --clay-brown: #93C5FD;
+  --link-blue: #60A5FA;
+  --border: rgba(255, 255, 255, 0.08);
+  --ghost-headline: #14161C;
+  --nav-bg: rgba(11, 15, 25, 0.55);
+  --hero-glow-primary: rgba(59, 130, 246, 0.12);
+  --hero-glow-secondary: rgba(168, 85, 247, 0.10);
+  --hero-glow-tertiary: rgba(59, 130, 246, 0.07);
+  --hero-glow-horizon: rgba(255, 255, 255, 0.04);
+  --hero-orb: rgba(59, 130, 246, 0.12);
+  --hero-orb-alt: rgba(168, 85, 247, 0.10);
   --hero-vignette-top: linear-gradient(
     180deg,
     #000000 0%,
@@ -84,12 +85,12 @@
     #000000 0%,
     transparent 100%
   );
-  --footer-bg: #0a0a09;
-  --footer-text: #F3F0EE;
-  --shadow-nav: rgba(0, 0, 0, 0.3) 0px 4px 24px 0px;
-  --shadow-elevated: rgba(0, 0, 0, 0.4) 0px 24px 48px 0px;
-  --focus-ring: #F3F0EE;
-  --selection-bg: rgba(243, 240, 238, 0.15);
+  --footer-bg: #0B0F19;
+  --footer-text: #FFFFFF;
+  --shadow-nav: rgba(0, 0, 0, 0.45) 0px 4px 24px 0px;
+  --shadow-elevated: rgba(0, 0, 0, 0.6) 0px 24px 48px 0px;
+  --focus-ring: #FFFFFF;
+  --selection-bg: rgba(59, 130, 246, 0.3);
 }
 
 * {
@@ -108,7 +109,7 @@ html {
 body {
   background-color: var(--canvas);
   color: var(--ink);
-  font-family: 'Sofia Sans', Arial, sans-serif;
+  font-family: 'DotGothic16', 'Sofia Sans', Arial, sans-serif;
   min-height: 100vh;
   overflow-x: clip;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -229,6 +230,27 @@ body {
 
 ::selection {
   background: var(--selection-bg);
+  color: var(--ink);
+}
+
+/* Dark form fields — overrides hardcoded `bg-white` inputs on the dark theme.
+   `.dark input` (0,1,1) outranks the `.bg-white` utility (0,1,0). */
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+.dark textarea,
+.dark select {
+  background-color: var(--surface);
+  color: var(--ink);
+  border-color: var(--border);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--slate-gray);
+  opacity: 0.7;
+}
+
+.dark select option {
+  background-color: var(--surface);
   color: var(--ink);
 }
 
@@ -1067,4 +1089,490 @@ body {
   text-align: center;
   max-width: 42rem;
   margin-inline: auto;
+}
+
+/* ─── Nexura landing system (scoped) ───────────────────────────────────────
+   Faithful port of the Nexura Creative Agency reference. All helpers are
+   scoped under `.nexura` so they never leak into the Terns site pages. */
+.nexura {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+/* DotGothic16 is used for everything on the landing page (per request). */
+.nexura .font-dot { font-family: 'DotGothic16', sans-serif; }
+.nexura .font-mono { font-family: 'DotGothic16', sans-serif; }
+
+.nexura .kanban-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
+.nexura .kanban-scroll::-webkit-scrollbar-track { background: transparent; }
+.nexura .kanban-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.nexura .grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.nexura .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(8px);
+  transition: opacity .8s ease-out, transform .8s ease-out, filter .8s ease-out;
+}
+.nexura .reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.nexura .reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  filter: blur(8px);
+  transition: opacity .8s ease-out, transform .8s ease-out, filter .8s ease-out;
+}
+.nexura .reveal-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+.nexura .reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  filter: blur(8px);
+  transition: opacity .8s ease-out, transform .8s ease-out, filter .8s ease-out;
+}
+.nexura .reveal-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+.nexura .reveal-fade {
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity .8s ease-out, filter .8s ease-out;
+}
+.nexura .reveal-fade.in-view {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexura .reveal,
+  .nexura .reveal-left,
+  .nexura .reveal-right,
+  .nexura .reveal-fade {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* Shared content shell — matches landing page section centering */
+.nexura-shell,
+.nexura-site .page-container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .nexura-shell,
+  .nexura-site .page-container {
+    padding-inline: 2.5rem;
+  }
+}
+
+.nexura-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  border: none;
+  background: rgba(11, 15, 25, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.nexura-mobile-panel {
+  position: fixed;
+  top: calc(4.25rem + 0.5rem);
+  left: 1rem;
+  right: 1rem;
+  z-index: 50;
+  max-height: calc(100dvh - 5.5rem);
+  overflow-y: auto;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(28, 31, 38, 0.96);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+  padding: 0.5rem;
+}
+
+.nexura-mobile-panel__footer {
+  padding: 0.75rem 0.5rem 0.5rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Nexura site pages (matches landing; does NOT affect `/`) ───────────── */
+.nexura-site {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.nexura-site .font-dot,
+.nexura-site .font-mono {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.nexura-site .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(8px);
+  transition: opacity .8s ease-out, transform .8s ease-out, filter .8s ease-out;
+}
+.nexura-site .reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.nexura-site .reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  filter: blur(8px);
+  transition: opacity .8s ease-out, transform .8s ease-out, filter .8s ease-out;
+}
+.nexura-site .reveal-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+.nexura-site .reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  filter: blur(8px);
+  transition: opacity .8s ease-out, transform .8s ease-out, filter .8s ease-out;
+}
+.nexura-site .reveal-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+.nexura-site .reveal-fade {
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity .8s ease-out, filter .8s ease-out;
+}
+.nexura-site .reveal-fade.in-view {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexura-site .reveal,
+  .nexura-site .reveal-left,
+  .nexura-site .reveal-right,
+  .nexura-site .reveal-fade {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* Layout — inner pages use same centered column as landing sections */
+.nexura-site .section-pad {
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+/* Section backgrounds — let ambient layer show through */
+.nexura-site .bg-canvas,
+.nexura-site .bg-lifted {
+  background-color: transparent !important;
+}
+
+/* Typography — landing scale */
+.nexura-site .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 0.75rem;
+}
+
+.nexura-site .text-h1 {
+  font-family: 'DotGothic16', sans-serif !important;
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+}
+
+.nexura-site .text-h2 {
+  font-family: 'DotGothic16', sans-serif !important;
+  font-size: clamp(2rem, 2.5vw + 1rem, 3rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+}
+
+.nexura-site .text-h3 {
+  font-family: 'DotGothic16', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+}
+
+.nexura-site .text-body {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: #9CA3AF;
+}
+
+.nexura-site .text-ink { color: #fff; }
+.nexura-site .text-slate-gray,
+.nexura-site .text-charcoal { color: #9CA3AF; }
+.nexura-site .text-link-blue { color: #60A5FA; }
+.nexura-site .text-granite,
+.nexura-site .text-graphite { color: #6B7280; }
+
+.nexura-site h1,
+.nexura-site h2,
+.nexura-site h3 {
+  font-family: 'DotGothic16', sans-serif;
+  color: #fff;
+}
+
+.nexura-site p,
+.nexura-site li {
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+/* Surfaces & borders */
+.nexura-site .bg-surface { background-color: #1C1F26; }
+.nexura-site .border-border { border-color: rgba(255, 255, 255, 0.05); }
+.nexura-site .divide-border > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Cards — landing box design */
+.nexura-site .content-card {
+  background: #1C1F26;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 0.75rem;
+}
+
+.nexura-site .content-card--compact {
+  padding: 1.25rem;
+  gap: 0.5rem;
+}
+
+.nexura-site .content-card--accent {
+  background: #262A34;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nexura-site .content-card--accent .text-slate-gray,
+.nexura-site .content-card--accent .text-body {
+  color: #9CA3AF;
+}
+
+.nexura-site .content-card--dashed {
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(28, 31, 38, 0.6);
+}
+
+.nexura-site .content-card--on-dark {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nexura-site .content-card .text-h2,
+.nexura-site .content-card .text-h3,
+.nexura-site .content-card h1,
+.nexura-site .content-card h2,
+.nexura-site .content-card h3 {
+  max-width: none;
+}
+
+.nexura-site .card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: none;
+  box-shadow: none;
+}
+
+/* FAQ */
+.nexura-site .faq-section__header .text-h2 {
+  margin-bottom: 1rem;
+}
+
+.nexura-site .faq-item {
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.nexura-site .faq-col .faq-item:last-child {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.nexura-site .faq-item summary {
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.nexura-site .faq-item summary:hover {
+  color: #E5E7EB;
+}
+
+.nexura-site .faq-question {
+  font-size: 0.9375rem;
+}
+
+.nexura-site .faq-answer {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+}
+
+.nexura-site .faq-cta {
+  background: #1C1F26;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.nexura-site .faq-chevron {
+  color: #9CA3AF;
+}
+
+/* Buttons — landing pill style */
+.nexura-site a.inline-flex.rounded-md,
+.nexura-site button.inline-flex.rounded-md {
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+}
+
+.nexura-site a.bg-ink.text-canvas,
+.nexura-site button.bg-ink.text-canvas {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.nexura-site a.bg-ink.text-canvas:hover,
+.nexura-site button.bg-ink.text-canvas:hover {
+  background: #E5E7EB !important;
+  opacity: 1 !important;
+}
+
+.nexura-site a.bg-surface.text-ink,
+.nexura-site button.bg-surface.text-ink,
+.nexura-site a.border-ink.text-ink:not(.bg-ink) {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Form fields */
+.nexura-site input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+.nexura-site textarea,
+.nexura-site select {
+  background-color: #1C1F26;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.nexura-site textarea {
+  border-radius: 1rem;
+}
+
+.nexura-site input::placeholder,
+.nexura-site textarea::placeholder {
+  color: #6B7280;
+}
+
+/* Badges */
+.nexura-site .inline-flex.rounded-pill.uppercase {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #D1D5DB;
+}
+
+/* Misc components */
+.nexura-site .arc-divider {
+  opacity: 0.2;
+}
+
+.nexura-site .ghost-headline {
+  color: #14161C;
+}
+
+.nexura-site .nav-mobile-backdrop,
+.nexura-site .nav-mobile-panel,
+.nexura-site .nav-surface {
+  display: none;
+}
+
+.nexura-site .footer-surface {
+  display: none;
+}
+
+.nexura-site .partners-float-panel {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nexura-site .event-schedule__track,
+.nexura-site .event-schedule__grid::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nexura-site .event-schedule__marker {
+  background: #fff;
+  box-shadow: 0 0 0 4px #0B0F19;
+}
+
+.nexura-site .glass-card {
+  background: rgba(28, 31, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+}
+
+/* Gradient-border card utility for inner pages */
+.nexura-site .nexura-gradient-border {
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.05), transparent);
+}
+
+.nexura-site .nexura-gradient-border > .nexura-gradient-inner {
+  background: #1C1F26;
+  border-radius: calc(1rem - 1px);
 }

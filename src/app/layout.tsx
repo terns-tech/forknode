@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
-import { LanguageProvider } from "@/contexts/LanguageContext";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { ThemeFavicon } from "@/components/ThemeFavicon";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -85,29 +87,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="theme-color" content="#F3F0EE" />
+        <meta name="theme-color" content="#0B0F19" />
         <link rel="icon" href="/favicon-dark.ico" sizes="48x48" type="image/x-icon" />
         <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon-light.png" sizes="360x360" type="image/png" data-terns-theme />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-dark.png" sizes="360x360" type="image/png" data-terns-theme />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{document.documentElement.classList.remove('dark');localStorage.setItem('terns-theme','light');var a=document.querySelector('link[rel="apple-touch-icon"][data-terns-theme]');if(a)a.href='/apple-touch-icon-light.png'}catch(e){}})()`,
+            __html: `(function(){try{document.documentElement.classList.add('dark');localStorage.setItem('terns-theme','dark');var a=document.querySelector('link[rel="apple-touch-icon"][data-terns-theme]');if(a)a.href='/apple-touch-icon-dark.png'}catch(e){}})()`,
           }}
+        />
+        <Script
+          src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+          strategy="beforeInteractive"
         />
       </head>
       <body className="bg-canvas text-ink antialiased">
-        <ThemeProvider>
-          <ThemeFavicon />
-          <LanguageProvider>
-            <Nav />
-            <main className="min-w-0 overflow-x-clip">{children}</main>
-            <Footer />
-          </LanguageProvider>
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

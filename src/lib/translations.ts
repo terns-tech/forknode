@@ -440,8 +440,8 @@ export const translations = {
       eyebrow: "UPDATES",
       title: "What's happening at Terns.",
       all: [
-        { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue for HackPune 2026. Applications will open imminently — join Discord to be first in line." },
-        { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We've moved community chat to Discord. Join us — early conversations set the tone." },
+        { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue for HackPune 2026. Applications will open imminently. Join Discord to be first in line." },
+        { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We've moved community chat to Discord. Join us. Early conversations set the tone." },
         { date: "March 2026", tag: "Partnership", title: "Exploring AI platform partnerships", body: "We're in active conversations with Cursor, OpenAI, Lovable, Manus, and several other leading AI platforms about tech partnerships for HackPune. Nothing confirmed yet - announcements coming." },
         { date: "February 2026", tag: "Milestone", title: "Terns is live", body: "We've officially launched Terns - a global hackathon ecosystem. The mission: connect the world's builders across borders, through community-first events." },
         { date: "January 2026", tag: "Team", title: "Terns team forms", body: "Omkar, Yash, and Elias, builders across Hamburg and Pune, launched Terns: a global home for hackathons and the builder community." },
@@ -914,7 +914,7 @@ export const translations = {
       title: "Was bei Terns passiert.",
       all: [
         { date: "Mai 2026", tag: "Ankündigung", title: "HackPune-Bewerbungen öffnen bald", body: "Wir finalisieren Challenge-Partner und Veranstaltungsort für HackPune 2026." },
-        { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Community-Chat läuft jetzt auf Discord. Die ersten Gespräche prägen den Ton — sei dabei." },
+        { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Community-Chat läuft jetzt auf Discord. Die ersten Gespräche prägen den Ton. Sei dabei." },
         { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Aktive Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
         { date: "Februar 2026", tag: "Meilenstein", title: "Terns ist live", body: "Wir haben offiziell Terns gestartet - ein globales Hackathon-Ökosystem." },
         { date: "Januar 2026", tag: "Team", title: "Terns-Team gegründet", body: "Omkar, Yash und Elias, Builder aus Hamburg und Pune, starteten Terns: ein globales Zuhause für Hackathons und die Builder-Community." },

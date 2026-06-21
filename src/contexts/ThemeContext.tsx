@@ -7,7 +7,7 @@ import {
   type ReactNode,
 } from "react";
 
-type Theme = "light";
+type Theme = "dark";
 
 interface ThemeContextValue {
   theme: Theme;
@@ -18,12 +18,12 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.remove("dark");
-    localStorage.setItem("terns-theme", "light");
+    root.classList.add("dark");
+    localStorage.setItem("terns-theme", "dark");
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme: "light" }}>
+    <ThemeContext.Provider value={{ theme: "dark" }}>
       {children}
     </ThemeContext.Provider>
   );

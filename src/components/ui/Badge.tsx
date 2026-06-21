@@ -10,13 +10,13 @@ export function Badge({ children, variant = "default", className }: BadgeProps) 
   const base = "inline-flex items-center px-3 py-1 text-xs font-semibold tracking-[0.56px] rounded-pill uppercase";
 
   const variants = {
-    default: "bg-lifted text-ink",
-    purple: "bg-white text-ink border border-ink",
-    pink: "bg-white text-ink border border-ink",
-    blue: "bg-white text-ink border border-ink",
-    orange: "bg-white text-ink border border-ink",
-    green: "bg-white text-ink border border-ink",
-    outline: "bg-transparent border border-ink text-ink",
+    default: "bg-lifted text-ink border border-border",
+    purple: "bg-white/10 text-ink border border-white/15",
+    pink: "bg-white/10 text-ink border border-white/15",
+    blue: "bg-white/10 text-ink border border-white/15",
+    orange: "bg-white/10 text-ink border border-white/15",
+    green: "bg-white/10 text-ink border border-white/15",
+    outline: "bg-transparent border border-ink/30 text-ink",
   };
 
   return (

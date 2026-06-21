@@ -115,7 +115,6 @@ export function Footer() {
 
         <div className="pt-6 border-t footer-divider flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
           <p className="text-xs footer-subtle">{t.footer.copyright}</p>
-          <p className="text-xs footer-faint">{t.footer.madeIn}</p>
         </div>
       </div>
     </footer>

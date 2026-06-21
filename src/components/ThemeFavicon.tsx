@@ -19,10 +19,10 @@ function setAppleTouchIcon(href: string) {
 
 export function ThemeFavicon() {
   useEffect(() => {
-    setAppleTouchIcon("/apple-touch-icon-light.png");
+    setAppleTouchIcon("/apple-touch-icon-dark.png");
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", "#F3F0EE");
+      ?.setAttribute("content", "#0B0F19");
   }, []);
 
   return null;

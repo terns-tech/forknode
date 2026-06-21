@@ -13,7 +13,11 @@ const config: Config = {
         canvas: "var(--canvas)",
         lifted: "var(--lifted)",
         surface: "var(--surface)",
-        white: "var(--surface)",
+        // True white with alpha support so `bg-white/10`, `border-white/5`, etc.
+        // resolve to translucent white (required by the Nexura landing + various
+        // dark overlays). In the light-only Terns theme `--surface` is #FFFFFF,
+        // so solid `bg-white`/`text-white` are visually unchanged.
+        white: "rgb(255 255 255 / <alpha-value>)",
         "soft-bone": "var(--soft-bone)",
         ink: "var(--ink)",
         charcoal: "var(--charcoal)",

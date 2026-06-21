@@ -14,24 +14,6 @@ const DECKS = [
     pdf: "/pitches/Pitchdeck_Terns_hackers.pdf",
     filename: "HackPune_2026_Hackers.pdf",
   },
-  {
-    id: "partners",
-    title: "Partners & Collaborations",
-    description:
-      "An Indo-German AI bridge in Pune, built for institutions, sponsors, and ecosystem partners who want talent discovery, prototypes, and long-term collaboration.",
-    thumb: "/pitches/thumb_partners-1.png",
-    pdf: "/pitches/Pitchdeck_Terns_partners.pdf",
-    filename: "HackPune_2026_Partners.pdf",
-  },
-  {
-    id: "startup",
-    title: "Startup & Company Brief",
-    description:
-      "24 hours of applied AI and agentic prototyping on your real problem, delivered by 160 curated Indian builders in Pune.",
-    thumb: "/pitches/thumb_startup-1.png",
-    pdf: "/pitches/Pitchdeck_Terns_startup.pdf",
-    filename: "HackPune_2026_Startup.pdf",
-  },
 ];
 
 interface DeckCardProps {
@@ -108,7 +90,7 @@ export function PitchDecksSection() {
             Everything you need, ready to share.
           </h2>
           <p className="text-body text-slate-gray font-[450] max-w-xl">
-            Download the pitch deck that matches your role, whether you&apos;re a hacker looking to join, a company with a challenge, or a German startup seeking AI talent.
+            Download the pitch deck for hackers looking to join HackPune.
           </p>
         </motion.div>
 
