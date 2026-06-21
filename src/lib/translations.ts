@@ -90,7 +90,7 @@ export const translations = {
         title: "Join builders from around the world.",
         subtitle: "Connect with founders, hackers, creators, and students before, during, and after every event. This is a movement, not just a meetup.",
         discord: "Join Discord",
-        slack: "Join Slack",
+        slack: "Slack (deprecated)",
       },
       updates: {
         eyebrow: "LATEST UPDATES",
@@ -98,7 +98,7 @@ export const translations = {
         viewAll: "View all updates →",
         items: [
           { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue. Sign up to be the first to apply." },
-          { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We're growing our Discord and Slack channels. Join the conversation as we open the doors." },
+          { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We've moved to Discord. Join the conversation as we open applications for HackPune 2026." },
           { date: "March 2026", tag: "Partnership", title: "Exploring partnerships with leading AI platforms", body: "In conversations with Cursor, OpenAI, Lovable, Manus, and more. Announcements coming." },
         ],
       },
@@ -310,7 +310,7 @@ export const translations = {
         { q: "Where will the event take place?", a: "HackPune is in Pune, India. The exact venue is TBA and will be announced with the event details." },
         { q: "What's covered?", a: "Food, drinks, workspace, and mentorship are included. Travel is not covered unless announced otherwise." },
         { q: "Who are the challenge partners?", a: "We're in conversations with multiple companies. All confirmed partners will be announced via our updates page and Discord." },
-        { q: "How do I stay updated?", a: "Join our Discord or Slack community, follow us on LinkedIn, or sign up for updates at hello@terns.tech" },
+        { q: "How do I stay updated?", a: "Join our Discord community, follow us on LinkedIn, or sign up for updates at hello@terns.tech" },
       ],
     },
     apply: {
@@ -440,8 +440,8 @@ export const translations = {
       eyebrow: "UPDATES",
       title: "What's happening at Terns.",
       all: [
-        { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue for HackPune 2026. Applications will open imminently - sign up to be first in line via Discord or Slack." },
-        { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We're spinning up Discord and Slack channels for the Terns community. Join us as we open the doors - early conversations set the tone." },
+        { date: "May 2026", tag: "Announcement", title: "HackPune applications opening soon", body: "We're finalising challenge partners and the venue for HackPune 2026. Applications will open imminently — join Discord to be first in line." },
+        { date: "April 2026", tag: "Community", title: "Building the Terns community", body: "We've moved community chat to Discord. Join us — early conversations set the tone." },
         { date: "March 2026", tag: "Partnership", title: "Exploring AI platform partnerships", body: "We're in active conversations with Cursor, OpenAI, Lovable, Manus, and several other leading AI platforms about tech partnerships for HackPune. Nothing confirmed yet - announcements coming." },
         { date: "February 2026", tag: "Milestone", title: "Terns is live", body: "We've officially launched Terns - a global hackathon ecosystem. The mission: connect the world's builders across borders, through community-first events." },
         { date: "January 2026", tag: "Team", title: "Terns team forms", body: "Omkar, Yash, and Elias, builders across Hamburg and Pune, launched Terns: a global home for hackathons and the builder community." },
@@ -457,7 +457,7 @@ export const translations = {
       },
       company: ["About", "Updates", "Contact"],
       events: ["HackPune", "Partners", "Speakers", "Apply"],
-      resources: ["FAQ", "Discord", "Slack"],
+      resources: ["FAQ", "Discord", "Slack (deprecated)"],
       legal: ["Privacy Policy", "Terms of Service"],
       copyright: "© 2026 Terns. All rights reserved.",
       madeIn: "Made with love in India & Germany",
@@ -562,7 +562,7 @@ export const translations = {
         title: "Builder aus aller Welt.",
         subtitle: "Vernetze dich mit Gründern, Hackern, Kreativen und Studierenden weltweit.",
         discord: "Discord beitreten",
-        slack: "Slack beitreten",
+        slack: "Slack (eingestellt)",
       },
       updates: {
         eyebrow: "NEUESTE UPDATES",
@@ -570,7 +570,7 @@ export const translations = {
         viewAll: "Alle Updates ansehen →",
         items: [
           { date: "Mai 2026", tag: "Ankündigung", title: "HackPune-Bewerbungen öffnen bald", body: "Wir finalisieren Challenge-Partner und Veranstaltungsort." },
-          { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir starten unsere Discord- und Slack-Kanäle. Sei dabei, wenn wir die Türen öffnen." },
+          { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir sind auf Discord umgezogen. Sei dabei, wenn wir die Bewerbungen für HackPune 2026 öffnen." },
           { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
         ],
       },
@@ -783,7 +783,7 @@ export const translations = {
         { q: "Wo findet das Event statt?", a: "Pune, Indien. Genaue Location folgt." },
         { q: "Was ist inklusive?", a: "Essen, Getränke, Workspace und Mentoring." },
         { q: "Wer sind die Challenge-Partner?", a: "Bestätigte Partner werden über Updates und Discord angekündigt." },
-        { q: "Wie bleibe ich auf dem Laufenden?", a: "Discord, Slack oder LinkedIn. Oder schreib uns: hello@terns.tech" },
+        { q: "Wie bleibe ich auf dem Laufenden?", a: "Discord oder LinkedIn. Oder schreib uns: hello@terns.tech" },
       ],
     },
     apply: {
@@ -914,7 +914,7 @@ export const translations = {
       title: "Was bei Terns passiert.",
       all: [
         { date: "Mai 2026", tag: "Ankündigung", title: "HackPune-Bewerbungen öffnen bald", body: "Wir finalisieren Challenge-Partner und Veranstaltungsort für HackPune 2026." },
-        { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Wir starten unsere Discord- und Slack-Kanäle. Die ersten Gespräche prägen den Ton - sei dabei." },
+        { date: "April 2026", tag: "Community", title: "Wir bauen die Terns-Community auf", body: "Community-Chat läuft jetzt auf Discord. Die ersten Gespräche prägen den Ton — sei dabei." },
         { date: "März 2026", tag: "Partnerschaft", title: "KI-Plattform-Partnerschaften in Verhandlung", body: "Aktive Gespräche mit Cursor, OpenAI, Lovable, Manus und weiteren." },
         { date: "Februar 2026", tag: "Meilenstein", title: "Terns ist live", body: "Wir haben offiziell Terns gestartet - ein globales Hackathon-Ökosystem." },
         { date: "Januar 2026", tag: "Team", title: "Terns-Team gegründet", body: "Omkar, Yash und Elias, Builder aus Hamburg und Pune, starteten Terns: ein globales Zuhause für Hackathons und die Builder-Community." },
@@ -930,7 +930,7 @@ export const translations = {
       },
       company: ["Über uns", "Updates", "Kontakt"],
       events: ["HackPune", "Partner", "Speaker", "Bewerben"],
-      resources: ["FAQ", "Discord", "Slack"],
+      resources: ["FAQ", "Discord", "Slack (deprecated)"],
       legal: ["Datenschutzerklärung", "Nutzungsbedingungen"],
       copyright: "© 2026 Terns. Alle Rechte vorbehalten.",
       madeIn: "Mit Liebe in Indien & Deutschland gemacht",

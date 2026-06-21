@@ -54,6 +54,7 @@ function Reveal({
 /* ─── Main Page ─────────────────────────────────────────────────────────── */
 export default function HomePage() {
   const { t } = useTranslation();
+  const discordUrl = process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/terns";
   const shouldReduceMotion = useReducedMotion();
   const heroRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -274,30 +275,26 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={0.3}>
                 <div className="flex flex-wrap gap-4">
-                  <button
-                    type="button"
-                    disabled
-                    aria-disabled="true"
-                    title="Coming soon - channel not live yet"
-                    className="relative inline-flex items-center justify-center font-medium rounded-md px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px] bg-ink text-canvas border border-ink opacity-40 blur-[0.4px] cursor-not-allowed select-none"
+                  <a
+                    href={discordUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative inline-flex items-center justify-center font-medium rounded-md px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px] bg-ink text-canvas border border-ink hover:opacity-90 transition-opacity"
                   >
                     <MessageCircle size={18} className="mr-2" />
                     {t.home.community.discord}
-                    <span className="ml-3 text-[10px] uppercase tracking-[0.6px] font-bold bg-canvas/15 border border-canvas/25 rounded-pill px-2 py-0.5">
-                      Coming Soon
-                    </span>
-                  </button>
+                  </a>
                   <button
                     type="button"
                     disabled
                     aria-disabled="true"
-                    title="Coming soon - channel not live yet"
+                    title="Slack is deprecated — we moved to Discord"
                     className="relative inline-flex items-center justify-center font-medium rounded-md px-7 py-3 text-[16px] tracking-[-0.32px] min-h-[48px] bg-surface text-ink border-[1.5px] border-ink opacity-40 blur-[0.4px] cursor-not-allowed select-none"
                   >
                     <Zap size={18} className="mr-2" />
                     {t.home.community.slack}
                     <span className="ml-3 text-[10px] uppercase tracking-[0.6px] font-bold bg-ink/10 border border-ink/25 rounded-pill px-2 py-0.5">
-                      Coming Soon
+                      Deprecated
                     </span>
                   </button>
                 </div>

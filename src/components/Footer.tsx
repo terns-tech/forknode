@@ -11,7 +11,7 @@ type FooterLink =
 export function Footer() {
   const { t } = useTranslation();
 
-  const slackUrl = process.env.NEXT_PUBLIC_SLACK_URL || "https://join.slack.com/terns";
+  const discordUrl = process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/terns";
 
   const cols: { label: string; links: FooterLink[] }[] = [
     {
@@ -35,8 +35,8 @@ export function Footer() {
       label: t.footer.links.resources,
       links: [
         { label: t.footer.resources[0], href: "/hackpune/faq" },
-        { label: t.footer.resources[1], comingSoon: true },
-        { label: t.footer.resources[2], href: slackUrl, external: true },
+        { label: t.footer.resources[1], href: discordUrl, external: true },
+        { label: t.footer.resources[2], comingSoon: true },
       ],
     },
     {
